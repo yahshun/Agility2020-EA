@@ -10,7 +10,7 @@ Task – Create an Active Directory AAA Object
 
 |image0|
 
-2. Navigate to Authentication>Active Directory, then **click** the + symbol to create a new AAA object
+2. Navigate to Authentication >> Active Directory, then **click** the + symbol to create a new AAA object
 
 |image1|
 
@@ -44,6 +44,7 @@ Task – Create a RADIUS AAA Object
 
 - Name: **RADIUS_SERVERS**
 - Server Pool Name: **RADIUS_POOL**
+- Server Addresses: **10.1.20.8**
 - secret password: **secret**
 - **Click** Finished
 
@@ -52,10 +53,8 @@ Task – Create a RADIUS AAA Object
 
 
 
-
-
-.. |image0| image:: /media/image000.png
-.. |image1| image:: /media/image001.png
-.. |image2| image:: /media/image002.png
-.. |image3| image:: /media/image003.png
-.. |image4| image:: /media/image004.png
+.. |image0| image:: /_static/class1/module1/image000.png
+.. |image1| image:: /_static/class1/module1/image001.png
+.. |image2| image:: /_static/class1/module1/image002.png
+.. |image3| image:: /_static/class1/module1/image003.png
+.. |image4| image:: /_static/class1/module1/image004.png

@@ -11,7 +11,7 @@ Task – Configure Active Directory AAA
 #. Ensure the Choose Authentication Server Type is set to **Active Directory**
 #. Select **Create New** from the Choose Authentication Server dropdown box
 
-|image11|
+|image4|
 
 #.Enter **f5lab.local** for the Domain Name
 #. Enter **AD_POOL** for the Domain Controller Pool Name
@@ -21,11 +21,11 @@ Task – Configure Active Directory AAA
 #. Enter **admin** for the Admin Password
 #. Click Save
 
-|image12|
+
 
 
 Task – Configure Certificate Authentication
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. TODO:: Needs task description
 
@@ -40,5 +40,4 @@ Follow these steps to complete this task:
 
 
 
-.. |image11| image:: /media/image011.png
-.. |image12| image:: /media/image012.png
+.. |image4| image:: /_static/class1/module1/image004.png

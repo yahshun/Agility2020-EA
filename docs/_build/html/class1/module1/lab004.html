@@ -88,7 +88,7 @@
         <span class="nav-sidebartoc">
             <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">1. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">1. Getting Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../class1.html">2. Class - Access 301: Ephemeral Authentication</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="module1.html">2.1. Module – Implement APM C3D Enhancements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/module2.html">2.2. Module – Implement Ephemeral Authentication</a></li>
@@ -126,47 +126,48 @@
 <ol class="arabic simple">
 <li>Navigate to Local Traffic&gt;&gt;Profiles&gt;&gt;SSL&gt;&gt;Client, then <strong>click</strong> the + symbol to create a new SSL Profile</li>
 </ol>
-<p><img alt="image23" src="media/image023.png" /></p>
+<p><img alt="image23" src="../../_images/image023.png" /></p>
 <ol class="arabic simple">
 <li>Enter the name <strong>CLIENT_CERTSSO</strong></li>
 <li><strong>Check</strong> Custom box to the right of Certificate Key Chain</li>
 <li><strong>Click</strong> add</li>
 </ol>
-<p><img alt="image24" src="media/image024.png" /></p>
+<p><img alt="image24" src="../../_images/image024.png" /></p>
 <ol class="arabic simple">
-<li>Select <strong>acme.com-wildcard</strong> from the certificate dropdown box</li>
-<li>Select <strong>acme.com-wildcard</strong> from the key dropdown box</li>
+<li>Select <strong>acme.com-wildcard.crt</strong> from the certificate dropdown box</li>
+<li>Select <strong>acme.com-wildcard.key</strong> from the key dropdown box</li>
 <li><strong>Click</strong> Add</li>
 </ol>
-<p><img alt="image25" src="media/image025.png" /></p>
+<p><img alt="image25" src="../../_images/image025.png" /></p>
 <ol class="arabic simple">
 <li><strong>Check</strong> the custom box to the right of Client Certificate Constrained Delegation</li>
 <li>Select <strong>Enabled</strong> from the Client Certificate Constrained Delegation Dropdown box</li>
 </ol>
-<p><img alt="image26" src="media/image026.png" /></p>
-<p><strong>Click</strong> Finished</p>
+<p><img alt="image26" src="../../_images/image026.png" /></p>
+<p>Click <strong>Finished</strong></p>
 </div>
 <div class="section" id="task-create-a-server-ssl-profile">
 <h2>2.1.4.2. Task – Create a Server SSL Profile<a class="headerlink" href="#task-create-a-server-ssl-profile" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li><strong>Click</strong> Show Advanced Setting located in the top right corner to expose the server-side SSL profile settings</li>
+<li>Navigate to Local Traffic &gt;&gt; Profiles &gt;&gt; SSL &gt;&gt; Server, then <strong>click</strong> the + symbol to create a new SSL Profile</li>
 </ol>
-<p><img alt="image27" src="media/image027.png" /></p>
+<p><img alt="image27" src="../../_images/image027.png" /></p>
 <ol class="arabic simple">
 <li>Enter <strong>SERVER_CERTSSO</strong> for profile name</li>
 <li><strong>Check</strong> the two custom boxes next to Certificate and Key</li>
-<li>Select <strong>default.crt</strong> from the certificate dropbox box</li>
-<li>Select <strong>default.key</strong> from the key dropdown box</li>
+<li>Select <strong>F5CertSSO.f5lab.local.crt</strong> from the certificate dropbox box</li>
+<li>Select <strong>F5CertSSO.f5lab.local.key</strong> from the key dropdown box</li>
 </ol>
-<p><img alt="image28" src="media/image028.png" /></p>
+<p><img alt="image28" src="../../_images/image028.png" /></p>
 <ol class="arabic simple">
-<li><strong>Check</strong> the three custom boxes next to Client Certificate Constrained Delegation, CA Certificate, and CA Key</li>
+<li><strong>Check</strong> the custom box about the Client Certificate Constrained Delegation box</li>
 <li>Select <strong>Enabled</strong> from the Client Certificate Constrained Delegation Dropdown Box</li>
-<li>Select <strong>f5lab.local-wildcard</strong> from the CA Certificate dropdown box</li>
-<li>Select <strong>f5lab.local-wildcard</strong> from the CA Key dropdown box</li>
+<li>Select <strong>F5SubCA.f5lab.local.crt</strong> from the CA Certificate dropdown box</li>
+<li>Select <strong>F5SubCA.f5lab.local.key</strong> from the CA Key dropdown box</li>
+<li>Remove Subject Alternative Name from the list of Enabled Extension by clicking <strong>Disable</strong></li>
 <li><strong>Click</strong> Finished</li>
 </ol>
-<p><img alt="image29" src="media/image029.png" /></p>
+<p><img alt="image29" src="../../_images/image029.png" /></p>
 </div>
 </div>
 

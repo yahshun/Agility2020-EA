@@ -87,7 +87,7 @@
         <span class="nav-sidebartoc">
             <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">1. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">1. Getting Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../class1.html">2. Class - Access 301: Ephemeral Authentication</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="module1.html">2.1. Module – Implement APM C3D Enhancements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/module2.html">2.2. Module – Implement Ephemeral Authentication</a></li>
@@ -125,26 +125,27 @@
 <ol class="arabic simple">
 <li>Navigate to Local Traffic&gt;&gt;Virtual Servers&gt;&gt;Virtual Server List, then <strong>click</strong> the + symbol to create a new virtual Server</li>
 </ol>
-<p><img alt="image32" src="media/image032.png" /></p>
-<ol class="arabic simple">
+<p><img alt="image32" src="../../_images/image032.png" /></p>
+<ol class="arabic simple" start="2">
 <li>Enter <strong>mtls_vs</strong> for the Name</li>
-<li>Enter <strong>10.1.10.100</strong> for the DestinationAddress/Mask</li>
+<li>Enter <strong>10.1.10.105</strong> for the DestinationAddress/Mask</li>
 <li>Enter <strong>443</strong> for the Service Port</li>
 <li>Select <strong>http</strong> for HTTP Profile(Client)</li>
 <li>Select <strong>CLIENT_CERTSSO</strong> from the SSL Profile(Slient) List</li>
 </ol>
-<p><img alt="image33" src="media/image033.png" /></p>
-<ol class="arabic simple">
+<p><img alt="image33" src="../../_images/image033.png" /></p>
+<ol class="arabic simple" start="7">
 <li>Select <strong>SERVER_CERTSSO</strong> from the SSL Profile(Server) List</li>
 <li>Select <strong>Auto Map</strong> from the Source Address Translation dropdown Box</li>
 <li>Select <strong>Cert_SSO</strong> from the Access Profile dropdown Box</li>
 </ol>
-<p><img alt="image34" src="media/image034.png" /></p>
-<ol class="arabic simple">
+<p><img alt="image34" src="../../_images/image034.png" /></p>
+<ol class="arabic simple" start="10">
+<li>Select the irule <strong>CertSSO</strong></li>
 <li>Select <strong>mTLS_POOL</strong> for the Default Pool</li>
-<li>** Click** Finished</li>
+<li>Click <strong>Finished</strong></li>
 </ol>
-<p><img alt="image35" src="media/image035.png" /></p>
+<p><img alt="image35" src="../../_images/image035.png" /></p>
 </div>
 </div>
 

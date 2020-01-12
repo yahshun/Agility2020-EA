@@ -87,7 +87,7 @@
         <span class="nav-sidebartoc">
             <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">1. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">1. Getting Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../class1.html">2. Class - Access 301: Ephemeral Authentication</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="module1.html">2.1. Module – Implement APM C3D Enhancements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../module2/module2.html">2.2. Module – Implement Ephemeral Authentication</a></li>
@@ -125,75 +125,101 @@
 <ol class="arabic simple">
 <li>On the CERT_SSO profile line <strong>click</strong> edit under Per-Session Policy</li>
 </ol>
-<p><img alt="image8" src="media/image008.png" /></p>
-<ol class="arabic simple">
-<li><strong>Click</strong> the + symbol located on the fallback branch located between the Start and Deny boxes</li>
+<p><img alt="image8" src="../../_images/image008.png" /></p>
+<ol class="arabic simple" start="2">
+<li>Click the <strong>+</strong> symbol located on the fallback branch located between the Start and Deny boxes</li>
 </ol>
-<p><img alt="image9" src="media/image009.png" /></p>
-<ol class="arabic simple">
+<p><img alt="image9" src="../../_images/image009.png" /></p>
+<ol class="arabic simple" start="3">
 <li>Select <strong>Logon Page</strong> under the Logon Tab</li>
 <li>Click <strong>Add Item</strong></li>
 </ol>
-<p><img alt="image11" src="media/image011.png" /></p>
-<ol class="arabic simple">
-<li>Add an additional field to the logon page by selecting <a href="#id1"><span class="problematic" id="id2">**</span></a>password ** from the Type dropdown on line 3</li>
+<p><img alt="image11" src="../../_images/image011.png" /></p>
+<ol class="arabic simple" start="5">
+<li>Add an additional field to the logon page by selecting <strong>password</strong> from the Type dropdown on line 3</li>
 <li>Enter <strong>OTP</strong> for Post Variable Name</li>
 <li>Enter <strong>OTP</strong> for Session Variable Name</li>
 <li>Enter <strong>OTP</strong> for Logon Page Input Field #3</li>
+<li>Click <strong>Save</strong></li>
 </ol>
-<p>#. <strong>Click</strong> Save
-<img alt="image12" src="media/image012.png" /></p>
-<ol class="arabic simple">
-<li><strong>Click</strong> the + symbol located on the fallback branch located between the Logon Page and Deny boxes</li>
+<p><img alt="image12" src="../../_images/image012.png" /></p>
+<ol class="arabic simple" start="10">
+<li>Click the <strong>+</strong> symbol located on the fallback branch located between the Logon Page and Deny boxes</li>
 </ol>
-<p><img alt="image13" src="media/image013.png" /></p>
-<ol class="arabic simple">
-<li>Select <strong>RADIUS Auth</strong> under the Authentication Tab</li>
+<p><img alt="image13" src="../../_images/image013.png" /></p>
+<ol class="arabic simple" start="11">
+<li>Under the Authentication tab select <strong>RADIUS Auth</strong></li>
 <li>Click <strong>Add Item</strong></li>
 </ol>
-<p><img alt="image14" src="media/image014.png" /></p>
-<ol class="arabic simple">
+<p><img alt="image14" src="../../_images/image014.png" /></p>
+<ol class="arabic simple" start="13">
 <li>Select <strong>RADIUS_SERVERS</strong> from the AAA Server dropdown box</li>
 <li>Change the password source to <strong>%{session.logon.last.OTP}</strong></li>
 <li><strong>Click</strong> Save</li>
 </ol>
-<p><img alt="image15" src="media/image015.png" /></p>
-<ol class="arabic simple">
-<li><strong>Click</strong> the + symbol located on the Successful branch located between RADIUS Auth and Deny boxes</li>
+<p><img alt="image15" src="../../_images/image015.png" /></p>
+<ol class="arabic simple" start="16">
+<li>Click the <strong>+</strong> symbol located on the Successful branch located between RADIUS Auth and Deny boxes</li>
+</ol>
+<p><img alt="image16" src="../../_images/image016.png" /></p>
+<ol class="arabic simple" start="17">
+<li>under the Authentication Tab select <strong>AD Auth</strong></li>
 <li>Click <strong>Add Item</strong></li>
 </ol>
-<p><img alt="image16" src="media/image016.png" /></p>
-<ol class="arabic simple">
-<li>Select <strong>AD Auth</strong> under the Authentication Tab</li>
-<li>Click <strong>Add Item</strong></li>
-</ol>
-<p><img alt="image17" src="media/image017.png" /></p>
-<ol class="arabic simple">
+<p><img alt="image17" src="../../_images/image017.png" /></p>
+<ol class="arabic simple" start="19">
 <li>Select <strong>f5lab.local</strong> from the Server dropdown box</li>
-<li><strong>Click</strong> Save</li>
+<li>Click <strong>Save</strong></li>
 </ol>
-<p><img alt="image18" src="media/image018.png" /></p>
-<ol class="arabic simple">
+<p><img alt="image18" src="../../_images/image018.png" /></p>
+<ol class="arabic simple" start="21">
 <li><strong>Click</strong> the + symbol located on the Successful branch located between AD Auth and Deny box</li>
 <li>Click <strong>Add Item</strong></li>
 </ol>
-<p><img alt="image10" src="media/image010.png" /></p>
-<ol class="arabic simple">
-<li>Select <strong>Variable Assign</strong> under the Assignment Tab</li>
+<p><img alt="image10" src="../../_images/image010.png" /></p>
+<ol class="arabic simple" start="23">
+<li>Under the Assignment Tab select <strong>Variable Assign</strong></li>
 <li>Click <strong>Add Item</strong></li>
 </ol>
-<p><img alt="image19" src="media/image019.png" /></p>
-<ol class="arabic simple">
-<li><strong>Click</strong> the Deny ending icon located on the fallback branch of the Variable Assign Agent</li>
+<p><img alt="image19" src="../../_images/image019.png" /></p>
+<ol class="arabic simple" start="25">
+<li>Click <strong>Add new entry</strong></li>
 </ol>
-<p><img alt="image20" src="media/image020.png" /></p>
-<ol class="arabic simple">
+<p><img alt="image36" src="../../_images/image036.png" /></p>
+<ol class="arabic simple" start="26">
+<li>Click <strong>change</strong></li>
+</ol>
+<p><img alt="image37" src="../../_images/image037.png" /></p>
+<ol class="arabic simple" start="27">
+<li>Enter <a href="#id1"><span class="problematic" id="id2">**</span></a>session.ssl.cert.whole in the custom Variable field</li>
+</ol>
+<p><img alt="image38" src="../../_images/image038.png" /></p>
+<ol class="arabic simple" start="28">
+<li>Locate the F5CertSSO.f5lab.local.txt file in the c:LabfilesAgility2020-Ephemeral Authentication directory.</li>
+</ol>
+<p><img alt="image39" src="../../_images/image039.png" /></p>
+<ol class="arabic simple" start="29">
+<li>Open the file with notepad++ and copy the contents of the file</li>
+</ol>
+<p><img alt="image40" src="../../_images/image040.png" /></p>
+<ol class="arabic simple" start="30">
+<li>Return to Visual Policy editor and past the certificate into the <strong>custom expression</strong> field</li>
+<li>Click <strong>Finished</strong></li>
+</ol>
+<p><img alt="image41" src="../../_images/image041.png" /></p>
+<p>Click <strong>Save</strong></p>
+<p><img alt="image42" src="../../_images/image042.png" /></p>
+<ol class="arabic simple" start="32">
+<li>Click the <strong>Deny</strong> ending icon located on the fallback branch of the Variable Assign Agent</li>
+</ol>
+<p><img alt="image20" src="../../_images/image020.png" /></p>
+<ol class="arabic simple" start="33">
 <li><strong>Click</strong> Allow</li>
 <li><strong>Click</strong> Save</li>
 </ol>
-<p><img alt="image21" src="media/image021.png" /></p>
-<ol class="arabic simple">
-<li><strong>Apply Access Policy</strong> located in the top left corner to commit the policy changes</li>
+<p><img alt="image21" src="../../_images/image021.png" /></p>
+<ol class="arabic simple" start="35">
+<li>Click <strong>Apply Access Policy</strong> located in the top left corner to commit the policy changes</li>
 </ol>
 </div>
 </div>
