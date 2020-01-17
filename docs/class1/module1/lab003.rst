@@ -40,7 +40,7 @@ Task – Open Visual Policy Editor
 
 13. Select **RADIUS_SERVERS** from the AAA Server dropdown box
 14. Change the password source to **%{session.logon.last.OTP}**
-15. **Click** Save
+15. Clic **Save**
 
 |image15|
 
@@ -78,7 +78,7 @@ Task – Open Visual Policy Editor
 
 |image37|
 
-27. Enter **session.ssl.cert.whole in the custom Variable field
+27. Enter **session.ssl.cert.whole** in the custom variable field
 
 |image38|
 
