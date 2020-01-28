@@ -5,7 +5,7 @@
   <script src="https://assets.adobedtm.com/50164577268f481934e5d57dbfb78f929164cd0d/satelliteLib-ea775cfabef5fca8b04e9392f20c986c0724a7c3-staging.js"></script>
   <!--Production:-->
   <script src="https://assets.adobedtm.com/50164577268f481934e5d57dbfb78f929164cd0d/satelliteLib-ea775cfabef5fca8b04e9392f20c986c0724a7c3.js"></script>
-    <title>2.2.2. Lab – Create the Access profile</title>
+    <title>2.2.2. Lab – Excuting the PUA Script</title>
   
 
   <meta charset="utf-8">
@@ -14,7 +14,7 @@
   <!-- F5 metadata -->
   <meta name="kb_doc_type" content="Manual"/>
   <meta name="kb_doc_type" content="User Guide"/>
-  <meta name="title" content="2.2.2. Lab – Create the Access profile"/>
+  <meta name="title" content="2.2.2. Lab – Excuting the PUA Script"/>
   <meta name="product" content="Access 301: Ephemeral Authentication"/>
   <meta name="version" content=""/>
   <meta name="updated_date"  content="None"/>
@@ -36,7 +36,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>2.2.2. Lab – Create the Access profile &#8212; Access 301: Ephemeral Authentication  documentation</title>
+    <title>2.2.2. Lab – Excuting the PUA Script &#8212; Access 301: Ephemeral Authentication  documentation</title>
     <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/css/f5_agility_theme.css" type="text/css" />
@@ -51,8 +51,8 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.2.3. Lab – Create the Access Policy" href="lab003.html" />
-    <link rel="prev" title="2.2.1. Lab – Create Authentication objects" href="lab001.html" />
+    <link rel="next" title="2.2.3. Lab – Validating the PUA Script Installation" href="lab003.html" />
+    <link rel="prev" title="2.2.1. Lab – Overview of Authentication with Priviledge User Access" href="lab001.html" />
   </head><body>
   <div id="clouddocs-header"></div>
 
@@ -75,10 +75,8 @@
         <h5>Current Page</h5>
         <span class="nav-sidebartoc">
             <ul>
-<li><a class="reference internal" href="#">2.2.2. Lab – Create the Access profile</a><ul>
-<li><a class="reference internal" href="#task-configure-name-of-iap-policy-and-enable-posture-checks">2.2.2.1. Task – Configure name of IAP Policy and enable Posture Checks</a></li>
-<li><a class="reference internal" href="#task-define-a-firewall-posture-assessment">2.2.2.2. Task – Define a firewall Posture Assessment</a></li>
-<li><a class="reference internal" href="#task-verify-the-posture-assessment">2.2.2.3. Task – Verify the posture assessment</a></li>
+<li><a class="reference internal" href="#">2.2.2. Lab – Excuting the PUA Script</a><ul>
+<li><a class="reference internal" href="#task-running-installation-script">2.2.2.1. Task – Running Installation Script</a></li>
 </ul>
 </li>
 </ul>
@@ -92,7 +90,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../intro.html">1. Getting Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../class1.html">2. Class - Access 301: Ephemeral Authentication</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../module1/module1.html">2.1. Module – Implement APM C3D Enhancements</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="module2.html">2.2. Module – Implement Ephemeral Authentication</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="module2.html">2.2. Module – Implement Priviledge User Authentication</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples.html">3. Examples of Common Formatting</a></li>
@@ -112,41 +110,85 @@
     <article class="docs-container site-article-inner">
             <nav class="site-breadcrumb-nav site-nav">
           <ul class="site-breadcrumb-list">
-            <li class="breadcrumb-item"><button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn site-hidden"><i class="fa fa-align-justify"></i></button>&#x20 <a href="/">Community Training Classes &amp; Labs</a> &gt; <a href="../../index.html">Access 301: Ephemeral Authentication </a> &gt; 2.2.2. Lab – Create the Access profile</li>
+            <li class="breadcrumb-item"><button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn site-hidden"><i class="fa fa-align-justify"></i></button>&#x20 <a href="/">Community Training Classes &amp; Labs</a> &gt; <a href="../../index.html">Access 301: Ephemeral Authentication </a> &gt; 2.2.2. Lab – Excuting the PUA Script</li>
           </ul>
       </nav>
       
       
 
     
-  <div class="section" id="lab-create-the-access-profile">
-<h1>2.2.2. Lab – Create the Access profile<a class="headerlink" href="#lab-create-the-access-profile" title="Permalink to this headline">¶</a></h1>
-<p>In this section, you will configure the IAP to perform posture assessment from client devices.</p>
-<div class="section" id="task-configure-name-of-iap-policy-and-enable-posture-checks">
-<h2>2.2.2.1. Task – Configure name of IAP Policy and enable Posture Checks<a class="headerlink" href="#task-configure-name-of-iap-policy-and-enable-posture-checks" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple">
-<li>Define the configuration name <strong>IAP_DEMO</strong></li>
-<li><strong>Check</strong> Enable F5 Client Posture Check</li>
-<li>select <strong>ca.f5lab.local</strong> from the CA Trust Certificate dropdown list</li>
-<li>Select <strong>add</strong> to create a posture assessment group</li>
-</ol>
-<p><img alt="image4" src="../../_images/image004.png" /></p>
+  <div class="section" id="lab-excuting-the-pua-script">
+<h1>2.2.2. Lab – Excuting the PUA Script<a class="headerlink" href="#lab-excuting-the-pua-script" title="Permalink to this headline">¶</a></h1>
+<p><strong>Overview</strong></p>
+<p>The ./build_pua.sh script will do a pre-flight check to ensure all the pre-requisites are met and will invoke a UCS backup by default before making any changes. If this script is run on a BIG-IP with a trial license, you must use the -s or –sanity option to prevent checking for licensing restrictions, this should only be done in a non-production environment as this may cause issues with production systems.</p>
+<p>After each invocation, a log file will be left in /var/log called f5-pua-install-xxxx.log which will outline all the actions taken along with the result or any errors encountered. This log file may be requested by support or an F5 engineer to assist in any troubleshooting.</p>
+<p><strong>Usage</strong></p>
+<p>Invoking ./build_pua.sh with “-h” or “–help” will alert you to the potential options you may use to modify the behavior of the script. As of this document and version 1.1.3 the current options are:</p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Options</strong></th>
+<th class="head"><strong>Descriptions</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>-h, --help</td>
+<td>This Notice</td>
+</tr>
+<tr class="row-odd"><td>-s --sanity</td>
+<td>Bypass santiy checks (license, BIG-IP status)</td>
+</tr>
+<tr class="row-even"><td>-u --update</td>
+<td>Update existing installation</td>
+</tr>
+<tr class="row-odd"><td>-e --extract</td>
+<td>Extract files to temp location and exit</td>
+</tr>
+<tr class="row-even"><td>-n --nobackup</td>
+<td>Does not perform UCS backup</td>
+</tr>
+<tr class="row-odd"><td>-c --checkonly</td>
+<td>Check installed versions against this package</td>
+</tr>
+<tr class="row-even"><td>-d --disabletest</td>
+<td>Disable test user</td>
+</tr>
+<tr class="row-odd"><td>-f --forceupgrade</td>
+<td>Force upgrade of packages from this archive</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="task-running-installation-script">
+<h2>2.2.2.1. Task – Running Installation Script<a class="headerlink" href="#task-running-installation-script" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Login to into the BIG-IP via SSH</p>
+</li>
+<li><p class="first">Change Directory to <strong>/var/tmp/pua</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /var/tmp/pua
+</pre></div>
 </div>
-<div class="section" id="task-define-a-firewall-posture-assessment">
-<h2>2.2.2.2. Task – Define a firewall Posture Assessment<a class="headerlink" href="#task-define-a-firewall-posture-assessment" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple">
-<li>Define the Posture Group Name <strong>FW_CHECK</strong></li>
-<li><strong>Check</strong> the enable a Firewall check box</li>
-<li><strong>Check</strong> the enable a Domain Managed Devices box</li>
-<li>enter the Domain Name <strong>f5lab.local</strong></li>
-<li>Click <strong>Done</strong></li>
-</ol>
+<p><img alt="image01" src="../../_images/image0011.png" /></p>
+</li>
+<li><p class="first">Verify the <strong>pua_config.sh</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat pua_config.sh
+</pre></div>
 </div>
-<div class="section" id="task-verify-the-posture-assessment">
-<h2>2.2.2.3. Task – Verify the posture assessment<a class="headerlink" href="#task-verify-the-posture-assessment" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple">
-<li>posture settings should be populated <strong>FW_CHECK</strong> should be populated</li>
-<li><strong>Click</strong> Save &amp; Next</li>
+<p><img alt="image02" src="../../_images/image0021.png" /></p>
+</li>
+<li><p class="first">Run the PUA installation script <strong>./build_pua.sh</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./build_pua.sh
+</pre></div>
+</div>
+<p><img alt="image03" src="../../_images/image0031.png" /></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The build script reports all changes to log in <strong>/var/log/f5-pua-install-</strong></p>
+</div>
+<p><img alt="image04" src="../../_images/image0041.png" /></p>
+</li>
 </ol>
 </div>
 </div>
@@ -157,10 +199,10 @@
      <div class="row next-prev-btn-row">
        <div class="col-lg-12">
        
-        <a href="lab001.html" title="2.2.1. Lab – Create Authentication objects" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+        <a href="lab001.html" title="2.2.1. Lab – Overview of Authentication with Priviledge User Access" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
        
        
-          <a href="lab003.html" title="2.2.3. Lab – Create the Access Policy" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+          <a href="lab003.html" title="2.2.3. Lab – Validating the PUA Script Installation" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
        
      </div>
      </div>

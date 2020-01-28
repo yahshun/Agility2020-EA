@@ -1,41 +1,35 @@
-Lab – Create the Virtual Server
+Lab – Update the the Certifcates  
 ------------------------------------------------
 
-In this section you will configure a RADIUS server to enable simulated MFA capabilities.
+Task – Modify the **pua_webtop** Client SSL Profile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#. Click Local Traffic >> Profiles >> SSL >> Client 
 
-Task – Configure a RADIUS AAA Server
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   |image40|
 
+#. Click **pua_webtop-clientssl** profile
 
-#. **Check** Enable MultiFactor Authentication
+   |image41|
 
-|image13|
+#. Click the custom button beside the Certificate Key Chain box, and delete the default certficate and Key
 
-#. Select **Custom Radius Based**
+   |image42|
 
-|image14|
+#. Added the **f5lab.local-wildcard**
 
-#.Select **Create New** from the Choose RADIUS Server dropdown
+   |image44|
 
-|image15|
+#. Update the **Trusted certificate Authorities** and **Advertised Certificate Authorities** to **ca.f5lab.local**
 
-#. Enter the Server Pool Name **RADIUS_POOL**
-#. Enter the Server Address **10.1.20.8**
-#. Enter the Secret **P@$$w0rd**
-#. **Click** Save
-
-|image16|
-
-#. Verify Custom RADIUS based Authentication appears
-#. **Click** Save & Next
-
-|image17|
+   |image45|
 
 
 
-.. |image13| image:: /media/image013.png
-.. |image14| image:: /media/image014.png
-.. |image15| image:: /media/image015.png
-.. |image16| image:: /media/image016.png
-.. |image17| image:: /media/image017.png
+
+.. |image40| image:: /_static/class1/module2/image040.png
+.. |image41| image:: /_static/class1/module2/image041.png
+.. |image42| image:: /_static/class1/module2/image042.png
+.. |image44| image:: /_static/class1/module2/image044.png
+.. |image45| image:: /_static/class1/module2/image045.png
+.. |image46| image:: /_static/class1/module2/image046.png
