@@ -16,7 +16,7 @@ Task – Modify the **pua_webtop** Client SSL Profile
 
    |image42|
 
-#. Added the **f5lab.local-wildcard**
+#. Added the **acme.com-wildcard**
 
    |image44|
 
