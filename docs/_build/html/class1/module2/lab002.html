@@ -161,6 +161,28 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This lab will automate the installation of the ./build_pua.sh script by creating a file called pua_config.sh and saving to the same directory as ./build_pua.sh.
+The <strong>pua_config.sh</strong> file is located in the <strong>/var/tmp/pua</strong> directory</p>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> Sample unattended install script
+<span class="gp">#</span> place this in the same directory as
+<span class="gp">#</span> build_pua.sh to automatcailly install
+<span class="gp">#</span>
+<span class="gp">#</span> uncomment the lines below to use/customize
+<span class="go"> noninteractive=true</span>
+<span class="go"> radiusvip=10.1.20.104</span>
+<span class="go"> ldapvip=10.1.20.104</span>
+<span class="go"> ldapsvip=10.1.20.104</span>
+<span class="go"> webtopvip=10.1.10.104</span>
+<span class="go"> radiusconfig=y</span>
+<span class="go"> sampleca=y</span>
+<span class="go"> disabletest=true</span>
+<span class="go"> nobackup=true</span>
+</pre></div>
+</div>
+<p>Setting “noninteractive=true” option will perform a full unattended install if all the sample prompts below are provided and uncommented, otherwise the answers provided in pua_config.sh will be used as the defaults in a semi-interactive install method.</p>
 <div class="section" id="task-running-installation-script">
 <h2>2.2.2.1. Task – Running Installation Script<a class="headerlink" href="#task-running-installation-script" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
@@ -172,22 +194,282 @@
 </div>
 <p><img alt="image01" src="../../_images/image0011.png" /></p>
 </li>
+<li><p class="first">Unzip the PUA Build Script</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>unzip build_pua-151-1.1.5-rc17.zip
+</pre></div>
+</div>
+<p><img alt="image02" src="../../_images/image0021.png" /></p>
+</li>
 <li><p class="first">Verify the <strong>pua_config.sh</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat pua_config.sh
 </pre></div>
 </div>
-<p><img alt="image02" src="../../_images/image0021.png" /></p>
+<p><img alt="image03" src="../../_images/image0031.png" /></p>
 </li>
 <li><p class="first">Run the PUA installation script <strong>./build_pua.sh</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./build_pua.sh
 </pre></div>
 </div>
-<p><img alt="image03" src="../../_images/image0031.png" /></p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The build script reports all changes to log in <strong>/var/log/f5-pua-install-</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[admin@bigip1:Active:Standalone] pua #</span> ./build_pua-151.sh
+
+<span class="go">/var/tmp/pua/build_pua-151.sh - v1.1.5-rc17 on BIG-IP v15.1.0</span>
+<span class="go">Reading config from /var/tmp/pua/pua_config.sh...</span>
+
+<span class="go">noninteractive is GO... Buckle up...</span>
+
+<span class="go">Preparing environment... [OK]</span>
+
+<span class="go">Changing to /tmp/pua.rILEoICRFw... [OK]</span>
+
+<span class="go">Extracting archive... [OK]</span>
+
+<span class="go">Checking License Entitlements for Privileged User Access... [OK]</span>
+
+<span class="go">Adding ILX archive directory... [OK]</span>
+
+<span class="go">Checking modules are provisioned.</span>
+
+<span class="go">Checking apm... [OK]</span>
+
+<span class="go">Checking ilx... [OK]</span>
+
+<span class="go">SUCCESS: All modules provisioned.</span>
+
+<span class="go">Checking for BIG-IP-ILX-WebSSH2-current.tgz... [OK]</span>
+
+<span class="go">Hash check for BIG-IP-ILX-WebSSH2-current.tgz... [OK]</span>
+
+<span class="go">Checking for BIG-IP-ILX-ephemeral_auth-151-current.tgz... [OK]</span>
+
+<span class="go">Hash check for BIG-IP-ILX-ephemeral_auth-151-current.tgz... [OK]</span>
+
+<span class="go">RADIUS = 10.1.20.104</span>
+
+<span class="go">LDAP = 10.1.20.104</span>
+
+<span class="go">LDAPS = 10.1.20.104</span>
+
+<span class="go">Webtop = 10.1.10.104</span>
+<span class="go">[OK]</span>
+<span class="go">[OK]</span>
+<span class="go">[OK]</span>
+<span class="go">[OK]</span>
+<span class="go">[OK]</span>
+<span class="go">[OK]</span>
+
+<span class="go">Checking for ca.pua.lab.cer... [OK]</span>
+
+<span class="go">Hash check for ca.pua.lab.cer... [OK]</span>
+
+<span class="go">Installing CA file ca.pua.lab.cer... [OK]</span>
+
+<span class="go">Creating pua_webtop-clientssl profile with CA ca.pua.lab.cer... [OK]</span>
+
+<span class="go">Creating ephemeral_config data group... [OK]</span>
+
+<span class="go">Creating ephemeral_LDAP_Bypass data group... [OK]</span>
+
+<span class="go">Creating ephemeral_RADIUS_Bypass data group... [OK]</span>
+
+<span class="go">Creating ephemeral_radprox_host_groups data group... [OK]</span>
+
+<span class="go">Creating ephemeral_radprox_radius_attributes data group... [OK]</span>
+
+<span class="go">Creating ephemeral_radprox_radius_client data group... [OK]</span>
+
+<span class="go">Creating WebSSH2 Workspace... [OK]</span>
+
+<span class="go">Extracting BIG-IP-ILX-WebSSH2-current.tgz to /var/ilx/workspaces/Common... [OK]</span>
+
+<span class="go">Copying WebSSH2 config.json.sample to config.json... [OK]</span>
+
+<span class="go">Creating WebSSH2 Plugin... [OK]</span>
+
+<span class="go">Importing APM sample profile ... [OK]</span>
+
+<span class="go">Modifying pua Web Top Link... [OK]</span>
+
+<span class="go">Applying pua APM Policy... [OK]</span>
+
+<span class="go">Creating Ephemeral Authentication Workspace... [OK]</span>
+
+<span class="go">Extracting BIG-IP-ILX-ephemeral_auth-151-current.tgz to /var/ilx/workspaces/Common... [OK]</span>
+
+<span class="go">Modifying Ephemeral Authentication Workspace... [OK]</span>
+
+<span class="go">Copying Ephemeral Auth config.json.sample to config.json... [OK]</span>
+
+<span class="go">Creating Ephemeral Authentication Plugin... [OK]</span>
+
+<span class="go">Creating RADIUS Proxy Service Virtual Server... [OK]</span>
+
+<span class="go">Creating LDAP Proxy Service Virtual Server... [OK]</span>
+
+<span class="go">Creating LDAP Proxy Service Virtual Server... [OK]</span>
+
+<span class="go">Creating LDAPS (ssl) Proxy Service Virtual Server... [OK]</span>
+
+<span class="go">Creating Webtop Virtual Server... [OK]</span>
+
+<span class="go">Modifying BIG-IP for RADIUS authentication against itself... [OK]</span>
+
+<span class="go">Saving config... [OK]</span>
+
+<span class="go">You can test your new APM webtop now by browsing to:</span>
+
+<span class="go">  https://10.1.10.104</span>
+
+<span class="go">  username: &lt;any&gt;</span>
+<span class="go">  password: &lt;any&gt;</span>
+
+<span class="go">This will let anyone in with any policy. The next step after testing would be</span>
+<span class="go">to add access control through AD, MFA, or some other method.</span>
+
+<span class="go">If the RADIUS testing option was enabled, any username will log in using</span>
+<span class="go">Ephemeral Authentication.</span>
+
+<span class="go">Task complete.</span>
+
+<span class="go">Now go build an APM policy for PUA!</span>
+
+<span class="go">Cleaning up...</span>
+
+
+
+
+
+<span class="gp">[admin@bigip1:Active:Standalone] pua #</span> ./build_pua-151.sh
+
+<span class="go">/var/tmp/pua/build_pua-151.sh - v1.1.5-rc17 on BIG-IP v15.1.0</span>
+<span class="go">Reading config from /var/tmp/pua/pua_config.sh...</span>
+
+<span class="go">noninteractive is GO... Buckle up...</span>
+
+<span class="go">Preparing environment... [OK]</span>
+
+<span class="go">Changing to /tmp/pua.rILEoICRFw... [OK]</span>
+
+<span class="go">Extracting archive... [OK]</span>
+
+<span class="go">Checking License Entitlements for Privileged User Access... [OK]</span>
+
+<span class="go">Adding ILX archive directory... [OK]</span>
+
+<span class="go">Checking modules are provisioned.</span>
+
+<span class="go">Checking apm... [OK]</span>
+
+<span class="go">Checking ilx... [OK]</span>
+
+<span class="go">SUCCESS: All modules provisioned.</span>
+
+<span class="go">Checking for BIG-IP-ILX-WebSSH2-current.tgz... [OK]</span>
+
+<span class="go">Hash check for BIG-IP-ILX-WebSSH2-current.tgz... [OK]</span>
+
+<span class="go">Checking for BIG-IP-ILX-ephemeral_auth-151-current.tgz... [OK]</span>
+
+<span class="go">Hash check for BIG-IP-ILX-ephemeral_auth-151-current.tgz... [OK]</span>
+
+<span class="go">RADIUS = 10.1.20.104</span>
+
+<span class="go">LDAP = 10.1.20.104</span>
+
+<span class="go">LDAPS = 10.1.20.104</span>
+
+<span class="go">Webtop = 10.1.10.104</span>
+<span class="go">[OK]</span>
+<span class="go">[OK]</span>
+<span class="go">[OK]</span>
+<span class="go">[OK]</span>
+<span class="go">[OK]</span>
+<span class="go">[OK]</span>
+
+<span class="go">Checking for ca.pua.lab.cer... [OK]</span>
+
+<span class="go">Hash check for ca.pua.lab.cer... [OK]</span>
+
+<span class="go">Installing CA file ca.pua.lab.cer... [OK]</span>
+
+<span class="go">Creating pua_webtop-clientssl profile with CA ca.pua.lab.cer... [OK]</span>
+
+<span class="go">Creating ephemeral_config data group... [OK]</span>
+
+<span class="go">Creating ephemeral_LDAP_Bypass data group... [OK]</span>
+
+<span class="go">Creating ephemeral_RADIUS_Bypass data group... [OK]</span>
+
+<span class="go">Creating ephemeral_radprox_host_groups data group... [OK]</span>
+
+<span class="go">Creating ephemeral_radprox_radius_attributes data group... [OK]</span>
+
+<span class="go">Creating ephemeral_radprox_radius_client data group... [OK]</span>
+
+<span class="go">Creating WebSSH2 Workspace... [OK]</span>
+
+<span class="go">Extracting BIG-IP-ILX-WebSSH2-current.tgz to /var/ilx/workspaces/Common... [OK]</span>
+
+<span class="go">Copying WebSSH2 config.json.sample to config.json... [OK]</span>
+
+<span class="go">Creating WebSSH2 Plugin... [OK]</span>
+
+<span class="go">Importing APM sample profile ... [OK]</span>
+
+<span class="go">Modifying pua Web Top Link... [OK]</span>
+
+<span class="go">Applying pua APM Policy... [OK]</span>
+
+<span class="go">Creating Ephemeral Authentication Workspace... [OK]</span>
+
+<span class="go">Extracting BIG-IP-ILX-ephemeral_auth-151-current.tgz to /var/ilx/workspaces/Common... [OK]</span>
+
+<span class="go">Modifying Ephemeral Authentication Workspace... [OK]</span>
+
+<span class="go">Copying Ephemeral Auth config.json.sample to config.json... [OK]</span>
+
+<span class="go">Creating Ephemeral Authentication Plugin... [OK]</span>
+
+<span class="go">Creating RADIUS Proxy Service Virtual Server... [OK]</span>
+
+<span class="go">Creating LDAP Proxy Service Virtual Server... [OK]</span>
+
+<span class="go">Creating LDAP Proxy Service Virtual Server... [OK]</span>
+
+<span class="go">Creating LDAPS (ssl) Proxy Service Virtual Server... [OK]</span>
+
+<span class="go">Creating Webtop Virtual Server... [OK]</span>
+
+<span class="go">Modifying BIG-IP for RADIUS authentication against itself... [OK]</span>
+
+<span class="go">Saving config... [OK]</span>
+
+<span class="go">You can test your new APM webtop now by browsing to:</span>
+
+<span class="go">  https://10.1.10.104</span>
+
+<span class="go">  username: &lt;any&gt;</span>
+<span class="go">  password: &lt;any&gt;</span>
+
+<span class="go">This will let anyone in with any policy. The next step after testing would be</span>
+<span class="go">to add access control through AD, MFA, or some other method.</span>
+
+<span class="go">If the RADIUS testing option was enabled, any username will log in using</span>
+<span class="go">Ephemeral Authentication.</span>
+
+<span class="go">Task complete.</span>
+
+<span class="go">Now go build an APM policy for PUA!</span>
+
+<span class="go">Cleaning up...</span>
+
+
+
+
+
+<span class="go">Install log file at /var/log/f5-pua-install-BFAH.log...</span>
+<span class="go">Install log file at /var/log/f5-pua-install-BFAH.log...</span>
+</pre></div>
 </div>
-<p><img alt="image04" src="../../_images/image0041.png" /></p>
 </li>
 </ol>
 </div>

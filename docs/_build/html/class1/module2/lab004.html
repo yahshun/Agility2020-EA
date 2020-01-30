@@ -51,7 +51,7 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.2.5. Lab – Update the the Certifcates" href="lab005.html" />
+    <link rel="next" title="2.2.5. Lab – Creating an APM Policy" href="lab004 copy.html" />
     <link rel="prev" title="2.2.3. Lab – Validating the PUA Script Installation" href="lab003.html" />
   </head><body>
   <div id="clouddocs-header"></div>
@@ -77,9 +77,6 @@
             <ul>
 <li><a class="reference internal" href="#">2.2.4. Lab – Creating an APM Policy</a><ul>
 <li><a class="reference internal" href="#task-review-the-apm-policy-created-by-the-pua-build-script">2.2.4.1. Task – Review the APM Policy Created by the PUA Build Script</a></li>
-<li><a class="reference internal" href="#task-add-ondemand-certifcate-authentication">2.2.4.2. Task – Add Ondemand Certifcate Authentication</a></li>
-<li><a class="reference internal" href="#task-create-an-ldap-macro">2.2.4.3. Task – Create an LDAP macro</a></li>
-<li><a class="reference internal" href="#task-update-the-default-start-branch">2.2.4.4. Task – Update the default start Branch</a></li>
 </ul>
 </li>
 </ul>
@@ -124,91 +121,20 @@
 <h1>2.2.4. Lab – Creating an APM Policy<a class="headerlink" href="#lab-creating-an-apm-policy" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="task-review-the-apm-policy-created-by-the-pua-build-script">
 <h2>2.2.4.1. Task – Review the APM Policy Created by the PUA Build Script<a class="headerlink" href="#task-review-the-apm-policy-created-by-the-pua-build-script" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><img alt="image09" src="../../_images/image0091.png" /></div></blockquote>
-</div>
-<div class="section" id="task-add-ondemand-certifcate-authentication">
-<h2>2.2.4.2. Task – Add Ondemand Certifcate Authentication<a class="headerlink" href="#task-add-ondemand-certifcate-authentication" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><ol class="arabic simple">
-<li>Create a macro called <strong>CAC AUTH</strong></li>
-</ol>
-<blockquote>
-<div><img alt="image10" src="../../_images/image0101.png" /></div></blockquote>
-</div></blockquote>
 <ol class="arabic">
-<li><p class="first">Add <strong>On-demand Cert Auth</strong> to the new macro. Leave the Auth Mode to Request.</p>
-<p><img alt="image11" src="../../_images/image0111.png" /></p>
-<p><img alt="image12" src="../../_images/image0121.png" /></p>
+<li><p class="first">Open a web browser to the management IP address of the BIG-IP <a class="reference external" href="HTTPS://10.1.1.4">HTTPS://10.1.1.4</a></p>
 </li>
-<li><p class="first">Add the <strong>GET UPN from CAC</strong> to the macro</p>
-<p><img alt="image13" src="../../_images/image0131.png" /></p>
+<li><p class="first">Click <strong>Access</strong> &gt;&gt; <strong>Profiles/Policies</strong> &gt;&gt; <strong>Access Profiles (Per-Session Polices)</strong></p>
+<p><img alt="image20" src="../../_images/image0201.png" /></p>
 </li>
-<li><p class="first">Update the terminal to show Success and Failure</p>
-<p><img alt="image14" src="../../_images/image0141.png" />
-<img alt="image15" src="../../_images/image0151.png" />
-<img alt="image16" src="../../_images/image0161.png" /></p>
+<li><p class="first">Click the Edit button on the pua row</p>
+<p><img alt="image21" src="../../_images/image0211.png" /></p>
 </li>
-</ol>
-</div>
-<div class="section" id="task-create-an-ldap-macro">
-<h2>2.2.4.3. Task – Create an LDAP macro<a class="headerlink" href="#task-create-an-ldap-macro" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic">
-<li><p class="first">Create a macro called <strong>LDAP Query</strong></p>
-<p><img alt="image17" src="../../_images/image0171.png" /></p>
+<li><p class="first">Expanded the Macros by clicking the square box with the plus sign inside</p>
+<p><img alt="image22" src="../../_images/image0221.png" /></p>
 </li>
-<li><p class="first">Add the LDAP Query operator to the macro</p>
-<p><img alt="image18" src="../../_images/image0181.png" /></p>
-</li>
-<li><p class="first">Select the predefined LDAP Server <strong>f5lab</strong>, and input the SearchDN and SearchFilter. Select Fetch groups <strong>Direct</strong></p>
-<p><img alt="image19" src="../../_images/image0191.png" /></p>
-<div class="highlight-vim notranslate"><div class="highlight"><pre><span></span>SearchDN     <span class="p">=</span> DC<span class="p">=</span>f5lab<span class="p">,</span>DC<span class="p">=</span>local
-SearchFilter  <span class="p">=</span> UserPrincipalName<span class="p">=</span>%{session.custom.ephemeral.upn}
-</pre></div>
-</div>
-</li>
-<li><p class="first">Delete User Group Membership branch</p>
-<p><img alt="image20" src="../../_images/image0201.png" />
-<img alt="image21" src="../../_images/image0211.png" /></p>
-</li>
-<li><p class="first">Add a new Branch called Passed which check if the LDAP query Passed</p>
-<p><img alt="image22" src="../../_images/image0221.png" />
-<img alt="image23" src="../../_images/image0231.png" />
-<img alt="image24" src="../../_images/image0241.png" />
-<img alt="image25" src="../../_images/image0251.png" /></p>
-</li>
-<li><p class="first">Update the terminals for the LDAP query by clicking <strong>edit terminals</strong></p>
-<p><img alt="image31" src="../../_images/image0311.png" />
-<img alt="image32" src="../../_images/image0331.png" /></p>
-</li>
-<li><p class="first">Add the LDAP Query Marco to the CAC AUTH macro by clicking the plus sign be side the GET UPN from CAC macro</p>
-<p><img alt="image26" src="../../_images/image0261.png" /></p>
-</li>
-</ol>
-</div>
-<div class="section" id="task-update-the-default-start-branch">
-<h2>2.2.4.4. Task – Update the default start Branch<a class="headerlink" href="#task-update-the-default-start-branch" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic">
-<li><p class="first">Remove the logon Page by clicking the X above the Logon Page</p>
-<p><img alt="image27" src="../../_images/image0271.png" />
-<img alt="image28" src="../../_images/image0281.png" /></p>
-</li>
-<li><p class="first">Add the CAC AUTH macro between the Warning Banner and Variable Assign</p>
-<p><img alt="image29" src="../../_images/image0291.png" /></p>
-</li>
-<li><p class="first">Change the LDAP Query terminal from Success to Failure by clicking the terminal</p>
-<p><img alt="image33" src="../../_images/image0331.png" />
-<img alt="image34" src="../../_images/image0341.png" />
-<img alt="image34" src="../../_images/image0341.png" />
-<img alt="image35" src="../../_images/image0351.png" /></p>
-</li>
-<li><p class="first">Update the Variables Assign</p>
-<p><img alt="image36" src="../../_images/image0361.png" />
-<img alt="image37" src="../../_images/image0371.png" />
-<img alt="image38" src="../../_images/image0381.png" />
-<img alt="image39" src="../../_images/image0391.png" /></p>
-</li>
-<li><p class="first">Click <strong>Apply Access Policy</strong></p>
+<li><p class="first">Here is the policy created by the PUA Build Script</p>
+<p><img alt="image23" src="../../_images/image0231.png" /></p>
 </li>
 </ol>
 </div>
@@ -223,7 +149,7 @@ SearchFilter  <span class="p">=</span> UserPrincipalName<span class="p">=</span>
         <a href="lab003.html" title="2.2.3. Lab – Validating the PUA Script Installation" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
        
        
-          <a href="lab005.html" title="2.2.5. Lab – Update the the Certifcates" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+          <a href="lab004 copy.html" title="2.2.5. Lab – Creating an APM Policy" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
        
      </div>
      </div>

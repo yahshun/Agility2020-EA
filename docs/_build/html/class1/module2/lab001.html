@@ -78,6 +78,7 @@
 <li><a class="reference internal" href="#">2.2.1. Lab – Overview of Authentication with Priviledge User Access</a><ul>
 <li><a class="reference internal" href="#prerequisties-and-deployment-notes">2.2.1.1. <strong>Prerequisties and Deployment Notes</strong></a></li>
 <li><a class="reference internal" href="#resource-table">2.2.1.2. Resource Table</a></li>
+<li><a class="reference internal" href="#installation-overview">2.2.1.3. <strong>Installation Overview</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -123,14 +124,21 @@
 <p>The F5 Privileged User Access solution now provides an approved way to add CAC/PKI authentication or other strong authentication methods to network infrastructure and systems that do not natively support this functionality.  It does this without requiring the addition of client software or agents anywhere in the environment and allows you to fully leverage your legacy or non-compliant systems in a safe and secure manner.  It integrates directly into DoD PKI or MFA systems and may be configured to work cooperatively with existing TACACS, Active Directory, AAA servers, or a variety of third-party authentication databases.  F5 PUA is DoD CIO approved as an Identify Federation Service (IFS) for facilitating both privileged and unprivileged user authentication to unclassified and secret fabric DoD Information Systems.</p>
 <div class="section" id="prerequisties-and-deployment-notes">
 <h2>2.2.1.1. <strong>Prerequisties and Deployment Notes</strong><a class="headerlink" href="#prerequisties-and-deployment-notes" title="Permalink to this headline">¶</a></h2>
-<p><strong>Plaform Requirements</strong>
-- F5 BIG-IP
-- APM, and iRules LX licensed and provisioned
-- F5 PUA plaftorm and device Licenses</p>
-<p><strong>Prerequisties</strong>
-- The “build_pua.zip” installation script provided by your F5 Account Team or your F5 Partner
-- 1-4 IP addresses for virtual servers ( see Resource Table)
-- Optional pua</p>
+<p><strong>Plaform Requirements</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>F5 BIG-IP</li>
+<li>APM, and iRules LX licensed and provisioned</li>
+<li>F5 PUA plaftorm and device Licenses</li>
+</ul>
+</div></blockquote>
+<p><strong>Prerequisties</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>The “build_pua.zip” installation script provided by your F5 Account Team or your F5 Partner</li>
+<li>1-4 IP addresses for virtual servers ( see Resource Table)</li>
+</ul>
+</div></blockquote>
 </div>
 <div class="section" id="resource-table">
 <h2>2.2.1.2. Resource Table<a class="headerlink" href="#resource-table" title="Permalink to this headline">¶</a></h2>
@@ -153,32 +161,35 @@
 </tr>
 <tr class="row-odd"><td>APM_Portal_vs_IP</td>
 <td>Virtual server IP Address of APM portal for authentication</td>
-<td>10.1.10.104</td>
+<td>10.1.20.104</td>
 </tr>
 <tr class="row-even"><td>RADIUS_proxy_vs_IP</td>
 <td>Virtual server IP address of RADIUS proxy service</td>
-<td>10.1.10.104</td>
+<td>10.1.20.104</td>
 </tr>
 <tr class="row-odd"><td>LDAP_proxy_vs_IP</td>
 <td>Virtual server IP address of LDAP proxy service</td>
-<td>10.1.10.104</td>
+<td>10.1.20.104</td>
 </tr>
 <tr class="row-even"><td>LDAPS_proxy_vs_IP</td>
 <td>Virtual server IP address of LDAPS proxy service</td>
-<td>10.1.10.104</td>
+<td>10.1.20.104</td>
 </tr>
 <tr class="row-odd"><td>LDAP_server_IP</td>
 <td>IP Address of site LDAP or AD server (required for LDAP use)</td>
-<td>10.1.10.104</td>
+<td>10.1.20.104</td>
 </tr>
 <tr class="row-even"><td>RADIUS_server_IP</td>
 <td>IP Address of site RADIUS server (if RADIUS bypass is used)</td>
-<td>10.1.10.104</td>
+<td>10.1.20.104</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Installation Overview</strong></p>
-<ul class="simple">
+</div>
+<div class="section" id="installation-overview">
+<h2>2.2.1.3. <strong>Installation Overview</strong><a class="headerlink" href="#installation-overview" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
 <li>Execute PUA Script</li>
 <li>Test Installation</li>
 <li>Update Radius passwords</li>
@@ -186,6 +197,7 @@
 <li>Add PKI Access</li>
 <li>Verification Testing</li>
 </ul>
+</div></blockquote>
 </div>
 </div>
 

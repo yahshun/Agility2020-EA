@@ -8,23 +8,23 @@ Task – Accessing the BIG-IP via APM Webtop
 
 #. A placeholder for a Warning and Banner should appear, click **"Click here to continue"**
 
-   |image05|
+   |image10|
 
 #. Enter a random username and any password. Click **Logon**
    
-   |image06|
+   |image11|
 
 #. You should be directed to the webtop, click the **BIG-IP** icon.
 
-   |image07|
+   |image12|
 
 #. You should be presented with a WebSSH@ screen, logging into the BIG-IP with the username provided in step 3.
 
-   |image08|
+   |image13|
 
 
 
-.. |image05| image:: /_static/class1/module2/image005.png
-.. |image06| image:: /_static/class1/module2/image006.png
-.. |image07| image:: /_static/class1/module2/image007.png
-.. |image08| image:: /_static/class1/module2/image008.png
+.. |image10| image:: /_static/class1/module2/image010.png
+.. |image11| image:: /_static/class1/module2/image011.png
+.. |image12| image:: /_static/class1/module2/image012.png
+.. |image13| image:: /_static/class1/module2/image013.png

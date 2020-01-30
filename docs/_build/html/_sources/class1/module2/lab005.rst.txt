@@ -1,35 +1,132 @@
-Lab – Update the the Certifcates  
+Lab – Creating an APM Policy
 ------------------------------------------------
 
-Task – Modify the **pua_webtop** Client SSL Profile
+Task – Build a LDAP macro
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. note::
+   This lab makes use of APM macros to make policies easy to view and managage
 
-#. Click Local Traffic >> Profiles >> SSL >> Client 
+The LDAP Macro will verify that the requesting user has a valid account and the appropiate group premisssion 
 
-   |image40|
+#. Click the **Add New Macro** button
 
-#. Click **pua_webtop-clientssl** profile
+   |image30|
 
-   |image41|
+#. Give the macro a name and click save
 
-#. Click the custom button beside the Certificate Key Chain box, and delete the default certficate and Key
+   |image31|
 
-   |image42|
+#. Open the newly created macro by clicking the plus sign by the name:**Macro: LDAP_Query**
 
-#. Added the **f5lab.local-wildcard**
+   |image32| 
 
-   |image44|
+#. Adding the LDAP Query action by clicking the plus sign
 
-#. Update the **Trusted certificate Authorities** and **Advertised Certificate Authorities** to **ca.f5lab.local**
+   |image33|
 
-   |image45|
+#. Select **Authentication** accross the top, select **LDAP Query** in the man page, and click **Add Item**
+
+   |image34|
+
+#. Update the Properties Tab by modifying the Server, SearchDN, SearchFilter, and Fetch Group setting 
+
+  .. code-block:: vim 
+
+     SearchDN      = DC=f5lab,DC=local
+     SearchFilter  = UserPrincipalName=%{session.custom.ephemeral.upn}
+  
+   |image35|
+
+#. Update the Branch Rules by clicking **Branch Rules** accross the top of the menu
 
 
+#. Click the **X** button beside User Group Membership, this will delete the Branch
+
+   |image36|
+
+#. Click **Add Branch Rule**
+
+   |image37|
+
+#. Add a name to the branch and click the change button
+    
+   |image38|
+
+#. Click **Add Expression**
+       
+   |image39|
+       
+#. Change the setting to:
+
+   |image130|
+
+#. Click **Add Expression**
+
+   |image131|    
+
+#. Click Finish, and the click Save
+
+#. Next add Message a box, to alert for LDAP Failure, by clicking the plus between LDAP_Query and OUT terminal
+
+   |image132|
+
+#. Select **General Purpose** tab accross the top, and select **Message Box** in the main section
+
+   |image133|
+
+#. Click Add Item
+
+#. Provide a Name for the message box and the Expression below to report the user who failed the LDAP Query
+
+   .. code-block:: vim 
+      
+      Name:    LDAP Failure
+      Message: LDAP Failure for user %{UserPrincipalName}
+
+   |image134|
+
+#. Edit the terminal to report Success and Failure. Click Edit terminal
+   
+   |image136|
+
+#. Change the Name from out to Success, and click Add terminal
+   
+   |image137|
+
+#. Change the name from Terminal 2 to Failure, and click save
+   
+   |image138|
+
+#. Click the terminal beside the LDAP Failure, and change the setting from Success to Failure
+
+   |image139|
 
 
-.. |image40| image:: /_static/class1/module2/image040.png
-.. |image41| image:: /_static/class1/module2/image041.png
-.. |image42| image:: /_static/class1/module2/image042.png
-.. |image44| image:: /_static/class1/module2/image044.png
-.. |image45| image:: /_static/class1/module2/image045.png
-.. |image46| image:: /_static/class1/module2/image046.png
+#. Click **Save**
+
+.. note:: The completed LDAP Macro
+   
+   |image135|
+
+
+.. |image30| image:: /_static/class1/module2/image030.png
+.. |image31| image:: /_static/class1/module2/image031.png
+.. |image32| image:: /_static/class1/module2/image032.png
+.. |image33| image:: /_static/class1/module2/image033.png
+.. |image34| image:: /_static/class1/module2/image034.png
+.. |image35| image:: /_static/class1/module2/image035.png
+.. |image36| image:: /_static/class1/module2/image036.png
+.. |image37| image:: /_static/class1/module2/image037.png
+.. |image38| image:: /_static/class1/module2/image038.png
+.. |image39| image:: /_static/class1/module2/image039.png
+.. |image130| image:: /_static/class1/module2/image130.png
+.. |image131| image:: /_static/class1/module2/image131.png
+.. |image131| image:: /_static/class1/module2/image131.png
+.. |image132| image:: /_static/class1/module2/image132.png
+.. |image133| image:: /_static/class1/module2/image133.png
+.. |image134| image:: /_static/class1/module2/image134.png
+.. |image135| image:: /_static/class1/module2/image135.png
+.. |image136| image:: /_static/class1/module2/image136.png
+.. |image137| image:: /_static/class1/module2/image137.png
+.. |image138| image:: /_static/class1/module2/image138.png
+.. |image139| image:: /_static/class1/module2/image139.png
