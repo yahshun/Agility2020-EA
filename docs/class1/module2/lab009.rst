@@ -1,0 +1,16 @@
+Lab – Adding Devices to the webtop
+------------------------------------------------
+
+
+
+
+
+
+
+.. |image60| image:: /_static/class1/module2/image060.png
+.. |image61| image:: /_static/class1/module2/image061.png
+.. |image62| image:: /_static/class1/module2/image062.png
+.. |image63| image:: /_static/class1/module2/image063.png
+.. |image64| image:: /_static/class1/module2/image064.png
+.. |image65| image:: /_static/class1/module2/image065.png
+.. |image66| image:: /_static/class1/module2/image066.png
