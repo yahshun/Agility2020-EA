@@ -94,7 +94,7 @@ Task – Running Installation Script
 
    .. code-block:: bash
      
-      ./build_pua.sh
+      ./build_pua-151.sh
   
  
    .. code-block:: console
@@ -222,141 +222,12 @@ Task – Running Installation Script
       Now go build an APM policy for PUA!
       
       Cleaning up...
-      
-      
-      
-      
-      
-      [admin@bigip1:Active:Standalone] pua # ./build_pua-151.sh 
-      
+
+
+
+
       /var/tmp/pua/build_pua-151.sh - v1.1.5-rc17 on BIG-IP v15.1.0
-      Reading config from /var/tmp/pua/pua_config.sh...
-      
-      noninteractive is GO... Buckle up...
-      
-      Preparing environment... [OK]
-      
-      Changing to /tmp/pua.rILEoICRFw... [OK]
-      
-      Extracting archive... [OK]
-      
-      Checking License Entitlements for Privileged User Access... [OK]
-      
-      Adding ILX archive directory... [OK]
-      
-      Checking modules are provisioned.
-      
-      Checking apm... [OK]
-      
-      Checking ilx... [OK]
-      
-      SUCCESS: All modules provisioned.
-      
-      Checking for BIG-IP-ILX-WebSSH2-current.tgz... [OK]
-      
-      Hash check for BIG-IP-ILX-WebSSH2-current.tgz... [OK]
-      
-      Checking for BIG-IP-ILX-ephemeral_auth-151-current.tgz... [OK]
-      
-      Hash check for BIG-IP-ILX-ephemeral_auth-151-current.tgz... [OK]
-      
-      RADIUS = 10.1.20.104
-      
-      LDAP = 10.1.20.104
-      
-      LDAPS = 10.1.20.104
-      
-      Webtop = 10.1.10.104
-      [OK]
-      [OK]
-      [OK]
-      [OK]
-      [OK]
-      [OK]
-      
-      Checking for ca.pua.lab.cer... [OK]
-      
-      Hash check for ca.pua.lab.cer... [OK]
-      
-      Installing CA file ca.pua.lab.cer... [OK]
-      
-      Creating pua_webtop-clientssl profile with CA ca.pua.lab.cer... [OK]
-      
-      Creating ephemeral_config data group... [OK]
-      
-      Creating ephemeral_LDAP_Bypass data group... [OK]
-      
-      Creating ephemeral_RADIUS_Bypass data group... [OK]
-      
-      Creating ephemeral_radprox_host_groups data group... [OK]
-      
-      Creating ephemeral_radprox_radius_attributes data group... [OK]
-      
-      Creating ephemeral_radprox_radius_client data group... [OK]
-      
-      Creating WebSSH2 Workspace... [OK]
-      
-      Extracting BIG-IP-ILX-WebSSH2-current.tgz to /var/ilx/workspaces/Common... [OK]
-      
-      Copying WebSSH2 config.json.sample to config.json... [OK]
-      
-      Creating WebSSH2 Plugin... [OK]
-      
-      Importing APM sample profile ... [OK]
-      
-      Modifying pua Web Top Link... [OK]
-      
-      Applying pua APM Policy... [OK]
-      
-      Creating Ephemeral Authentication Workspace... [OK]
-      
-      Extracting BIG-IP-ILX-ephemeral_auth-151-current.tgz to /var/ilx/workspaces/Common... [OK]
-      
-      Modifying Ephemeral Authentication Workspace... [OK]
-      
-      Copying Ephemeral Auth config.json.sample to config.json... [OK]
-      
-      Creating Ephemeral Authentication Plugin... [OK]
-      
-      Creating RADIUS Proxy Service Virtual Server... [OK]
-      
-      Creating LDAP Proxy Service Virtual Server... [OK]
-      
-      Creating LDAP Proxy Service Virtual Server... [OK]
-      
-      Creating LDAPS (ssl) Proxy Service Virtual Server... [OK]
-      
-      Creating Webtop Virtual Server... [OK]
-      
-      Modifying BIG-IP for RADIUS authentication against itself... [OK]
-      
-      Saving config... [OK]
-      
-      You can test your new APM webtop now by browsing to:
-      
-        https://10.1.10.104
-      
-        username: <any>
-        password: <any>
-      
-      This will let anyone in with any policy. The next step after testing would be 
-      to add access control through AD, MFA, or some other method.
-      
-      If the RADIUS testing option was enabled, any username will log in using 
-      Ephemeral Authentication.
-      
-      Task complete.
-      
-      Now go build an APM policy for PUA!
-      
-      Cleaning up...
-      
-      
-      
-      
-      
-      Install log file at /var/log/f5-pua-install-BFAH.log...
-      Install log file at /var/log/f5-pua-install-BFAH.log...
+      [admin@bigip1:Active:Standalone]
 
 
 

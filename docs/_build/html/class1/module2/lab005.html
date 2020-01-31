@@ -51,7 +51,7 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.2.6. Lab – Creating an APM Policy" href="lab006.html" />
+    <link rel="next" title="2.2.6. Lab – Creating CAC Auth Macro" href="lab006.html" />
     <link rel="prev" title="2.2.4. Lab – Creating an APM Policy" href="lab004.html" />
   </head><body>
   <div id="clouddocs-header"></div>
@@ -123,7 +123,7 @@
 <h2>2.2.5.1. Task – Build a LDAP macro<a class="headerlink" href="#task-build-a-ldap-macro" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">This lab makes use of APM macros to make policies easy to view and managage</p>
+<p class="last">This lab makes use of APM macros to make policies easy to view and manage</p>
 </div>
 <p>The LDAP Macro will verify that the requesting user has a valid account and the appropiate group premisssion</p>
 <ol class="arabic">
@@ -172,11 +172,11 @@
 <p><img alt="image130" src="../../_images/image130.png" /></p>
 </li>
 <li><p class="first">Click <strong>Add Expression</strong></p>
-<p><img alt="image131" src="../../_images/image131.png" /></p>
+<p><img alt="image131" src="../../_images/image131.png" />     manage</p>
 </li>
-<li><p class="first">Click Finish, and the click Save</p>
+<li><p class="first">Click Finish, and then click Save</p>
 </li>
-<li><p class="first">Next add Message a box, to alert for LDAP Failure, by clicking the plus between LDAP_Query and OUT terminal</p>
+<li><p class="first">Next add Message a box, to alert when the LDAP query fails, by clicking the plus on the fallback branch between LDAP_Query and OUT terminal</p>
 <p><img alt="image132" src="../../_images/image132.png" /></p>
 </li>
 <li><p class="first">Select <strong>General Purpose</strong> tab accross the top, and select <strong>Message Box</strong> in the main section</p>
@@ -191,13 +191,15 @@ Message: LDAP Failure <span class="k">for</span> user %{UserPrincipalName}
 </div>
 <p><img alt="image134" src="../../_images/image134.png" /></p>
 </li>
+<li><p class="first">Click Save</p>
+</li>
 <li><p class="first">Edit the terminal to report Success and Failure. Click Edit terminal</p>
 <p><img alt="image136" src="../../_images/image136.png" /></p>
 </li>
 <li><p class="first">Change the Name from out to Success, and click Add terminal</p>
 <p><img alt="image137" src="../../_images/image137.png" /></p>
 </li>
-<li><p class="first">Change the name from Terminal 2 to Failure, and click save</p>
+<li><p class="first">Change the name from Terminal 1 to Failure, and click save</p>
 <p><img alt="image138" src="../../_images/image138.png" /></p>
 </li>
 <li><p class="first">Click the terminal beside the LDAP Failure, and change the setting from Success to Failure</p>
@@ -223,7 +225,7 @@ Message: LDAP Failure <span class="k">for</span> user %{UserPrincipalName}
         <a href="lab004.html" title="2.2.4. Lab – Creating an APM Policy" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
        
        
-          <a href="lab006.html" title="2.2.6. Lab – Creating an APM Policy" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+          <a href="lab006.html" title="2.2.6. Lab – Creating CAC Auth Macro" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
        
      </div>
      </div>

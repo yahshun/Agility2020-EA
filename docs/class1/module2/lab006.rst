@@ -25,7 +25,7 @@ Task – Build CAC AUTH Macro
 
    |image43|
 
-#. Click the plus sign beside on the Successful branch
+#. Click the plus sign beside the Successful branch
 
    |image44|
 
@@ -51,7 +51,7 @@ Task – Build CAC AUTH Macro
 
 #. Provide a name for the message box, enter message, and click save
 
-   | image140|
+   |image140|
 
 #. Click Edit Terminals
 

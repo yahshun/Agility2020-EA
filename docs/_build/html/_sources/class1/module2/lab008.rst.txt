@@ -1,7 +1,7 @@
 Lab – Certificate Update
 ------------------------------------------------
 
-#. Click Local Traffic >> Profiles >> 
+#. Click Local Traffic >> Profiles >> SSL >> Client 
    
    |image60|
 

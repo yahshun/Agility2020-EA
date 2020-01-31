@@ -4,7 +4,7 @@ Lab – Creating an APM Policy
 Task – Review the APM Policy Created by the PUA Build Script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Open a web browser to the management IP address of the BIG-IP HTTPS://10.1.1.4
+#. Open a web browser to the management IP address of the BIG-IP https://10.1.1.4
 
 #. Click **Access** >> **Profiles/Policies** >> **Access Profiles (Per-Session Polices)**
 

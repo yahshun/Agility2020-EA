@@ -4,7 +4,7 @@ Lab – Creating an APM Policy
 Task – Build a LDAP macro
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. note::
-   This lab makes use of APM macros to make policies easy to view and managage
+   This lab makes use of APM macros to make policies easy to view and manage 
 
 The LDAP Macro will verify that the requesting user has a valid account and the appropiate group premisssion 
 
@@ -62,11 +62,11 @@ The LDAP Macro will verify that the requesting user has a valid account and the 
 
 #. Click **Add Expression**
 
-   |image131|    
+   |image131|     manage
 
-#. Click Finish, and the click Save
+#. Click Finish, and then click Save
 
-#. Next add Message a box, to alert for LDAP Failure, by clicking the plus between LDAP_Query and OUT terminal
+#. Next add Message a box, to alert when the LDAP query fails, by clicking the plus on the fallback branch between LDAP_Query and OUT terminal
 
    |image132|
 
@@ -85,6 +85,8 @@ The LDAP Macro will verify that the requesting user has a valid account and the 
 
    |image134|
 
+#. Click Save
+
 #. Edit the terminal to report Success and Failure. Click Edit terminal
    
    |image136|
@@ -93,7 +95,7 @@ The LDAP Macro will verify that the requesting user has a valid account and the 
    
    |image137|
 
-#. Change the name from Terminal 2 to Failure, and click save
+#. Change the name from Terminal 1 to Failure, and click save
    
    |image138|
 

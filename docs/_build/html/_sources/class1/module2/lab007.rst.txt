@@ -1,6 +1,6 @@
-Lab – Update the Initial Access Policy 
+Lab – Initial Access Policy 
 
-Task – Build CAC AUTH Macro
+Task – Update the Intial Access Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -48,9 +48,9 @@ Task – Build CAC AUTH Macro
 
 #. Make the following changes
     - Update the field below Custom Variable with **session.logon.last.username**
-    - Change the Custom Express pull down to AAA Atribute
-    - Change the Agent Type to LDAP
-    - Change the Atribute type to USE LDAP attribute
+    - Change the Custom Expression pull down to **AAA Atribute**
+    - Change the Agent Type to **LDAP**
+    - Change the Atribute type to **Use LDAP attribute**
     - Set the LDAP attribute name to **sAMAccountName**
     - Click Finished
 
