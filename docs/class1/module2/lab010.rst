@@ -1,5 +1,8 @@
-Lab – Modifying Radius 
+Lab – Modifying Radius Configurations 
 ------------------------------------------------
+
+Task – Modifying the Radius Server secret password
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Click Local Traffic >> iRules >> Data Group List
 
@@ -19,7 +22,22 @@ Lab – Modifying Radius
 
    |image83|
 
-#. Click ADD, and Click Udate
+#. Click ADD, and Click 
+
+
+Task – Modifying the BIG-IP radius secret
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. SSH into the BIG-IP and enter traffic manangement shell by typing **tmsh**
+
+#. Enter the following commands
+
+   .. code-block::
+      modify auth radius-server system_auth_name1 secret
+      save sys config
+
+
+
 
 
 .. |image80| image:: /_static/class1/module2/image080.png

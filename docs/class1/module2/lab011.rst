@@ -1,0 +1,32 @@
+Lab –  Verification Testing
+------------------------------------------------
+
+Task – Test the updated Webtop
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Access the webtop via http://pua.acme.com
+
+#. A placeholder for a Warning and Banner should appear, click **"Click here to continue"**
+
+#. Select the certificate for user1 
+
+#. Observer the update webtop with Host01
+
+#. Click the BIG-IP icon
+
+#. Observer the username at the bottom left corner
+
+#. Close the browser window
+
+#. Click the Host01 icon
+
+#. Observer the the username at the bo 
+
+
+
+
+
+.. |image80| image:: /_static/class1/module2/image080.png
+.. |image81| image:: /_static/class1/module2/image081.png
+.. |image82| image:: /_static/class1/module2/image082.png
+.. |image83| image:: /_static/class1/module2/image083.png
