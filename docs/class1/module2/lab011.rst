@@ -7,26 +7,50 @@ Task – Test the updated Webtop
 #. Access the webtop via http://pua.acme.com
 
 #. A placeholder for a Warning and Banner should appear, click **"Click here to continue"**
+   
+   |image90|
 
-#. Select the certificate for user1 
+#. Select the certificate for user1 and click OK
 
-#. Observer the update webtop with Host01
+   |image91|
 
-#. Click the BIG-IP icon
+#. Observer the updated webtop with Host01
 
-#. Observer the username at the bottom left corner
+   |image92|
 
-#. Close the browser window
+#. Click the BIG-IP icon, and observer the username in the bottom left corner
+
+   |image93|
+
+#. Close the browser window and return to webtop
+ 
 
 #. Click the Host01 icon
 
-#. Observer the the username at the bo 
+   |image92|
+
+#. Observer the the username at the bottom left corner
+   
+   |image94|
+   
+
+#. Escalate Priviledges
+   
+   - type **sudo -i**
+   - click the **Menu** button
+   - click click **Credentials** button
+
+   |image95|
+
+.. note::
+   The Credentials button sends the password to terminal 
 
 
 
 
-
-.. |image80| image:: /_static/class1/module2/image080.png
-.. |image81| image:: /_static/class1/module2/image081.png
-.. |image82| image:: /_static/class1/module2/image082.png
-.. |image83| image:: /_static/class1/module2/image083.png
+.. |image90| image:: /_static/class1/module2/image090.png
+.. |image91| image:: /_static/class1/module2/image091.png
+.. |image92| image:: /_static/class1/module2/image092.png
+.. |image93| image:: /_static/class1/module2/image093.png
+.. |image94| image:: /_static/class1/module2/image094.png
+.. |image95| image:: /_static/class1/module2/image095.png

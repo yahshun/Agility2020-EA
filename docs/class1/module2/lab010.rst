@@ -32,9 +32,12 @@ Task – Modifying the BIG-IP radius secret
 
 #. Enter the following commands
 
-   .. code-block::
-      modify auth radius-server system_auth_name1 secret
+   .. code-block:: console
+
+      modify auth radius-server system_auth_name1 secret secret
       save sys config
+
+   |image84|
 
 
 
@@ -44,3 +47,4 @@ Task – Modifying the BIG-IP radius secret
 .. |image81| image:: /_static/class1/module2/image081.png
 .. |image82| image:: /_static/class1/module2/image082.png
 .. |image83| image:: /_static/class1/module2/image083.png
+.. |image84| image:: /_static/class1/module2/image084.png

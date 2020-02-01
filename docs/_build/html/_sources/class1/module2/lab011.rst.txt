@@ -1,35 +1,56 @@
-Lab – Update the the Certifcates  
+Lab –  Verification Testing
 ------------------------------------------------
 
-Task – Modify the **pua_webtop** Client SSL Profile
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Task – Test the updated Webtop
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Click Local Traffic >> Profiles >> SSL >> Client 
+#. Access the webtop via http://pua.acme.com
 
-   |image40|
+#. A placeholder for a Warning and Banner should appear, click **"Click here to continue"**
+   
+   |image90|
 
-#. Click **pua_webtop-clientssl** profile
+#. Select the certificate for user1 and click OK
 
-   |image41|
+   |image91|
 
-#. Click the custom button beside the Certificate Key Chain box, and delete the default certficate and Key
+#. Observer the updated webtop with Host01
 
-   |image42|
+   |image92|
 
-#. Added the **acme.com-wildcard**
+#. Click the BIG-IP icon, and observer the username in the bottom left corner
 
-   |image44|
+   |image93|
 
-#. Update the **Trusted certificate Authorities** and **Advertised Certificate Authorities** to **ca.f5lab.local**
+#. Close the browser window and return to webtop
+ 
 
-   |image45|
+#. Click the Host01 icon
+
+   |image92|
+
+#. Observer the the username at the bottom left corner
+   
+   |image94|
+   
+
+#. Escalate Priviledges
+   
+   - type **sudo -i**
+   - click the **Menu** button
+   - click click **Credentials** button
+
+   |image95|
+
+.. note::
+   The Credentials button sends the password to terminal 
 
 
 
 
-.. |image40| image:: /_static/class1/module2/image040.png
-.. |image41| image:: /_static/class1/module2/image041.png
-.. |image42| image:: /_static/class1/module2/image042.png
-.. |image44| image:: /_static/class1/module2/image044.png
-.. |image45| image:: /_static/class1/module2/image045.png
-.. |image46| image:: /_static/class1/module2/image046.png
+.. |image90| image:: /_static/class1/module2/image090.png
+.. |image91| image:: /_static/class1/module2/image091.png
+.. |image92| image:: /_static/class1/module2/image092.png
+.. |image93| image:: /_static/class1/module2/image093.png
+.. |image94| image:: /_static/class1/module2/image094.png
+.. |image95| image:: /_static/class1/module2/image095.png

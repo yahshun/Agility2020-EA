@@ -61,9 +61,13 @@ Task – Build CAC AUTH Macro
 
    |image142|
 
-#. Change the default name from Terminal 1 to Failure, and click Save 
+#. Change the default name to Failure 
 
    |image143|
+
+#. Click the down arrow beside the Failure box to change the order. The Success terminal should be on top. Click **Save**
+
+   |image147|
 
 #. Click the terminals on the Not Found, Failure, Fallback branches and change them from Success to Failure. Remember to click Save!
 
@@ -100,3 +104,4 @@ Task – Build CAC AUTH Macro
 .. |image144| image:: /_static/class1/module2/image144.png
 .. |image145| image:: /_static/class1/module2/image145.png
 .. |image146| image:: /_static/class1/module2/image146.png
+.. |image147| image:: /_static/class1/module2/image147.png

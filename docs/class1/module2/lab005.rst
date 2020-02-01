@@ -1,4 +1,4 @@
-Lab – Creating an APM Policy
+Lab – Creating an APM Policy - LDAP 
 ------------------------------------------------
 
 Task – Build a LDAP macro
@@ -122,7 +122,6 @@ The LDAP Macro will verify that the requesting user has a valid account and the 
 .. |image38| image:: /_static/class1/module2/image038.png
 .. |image39| image:: /_static/class1/module2/image039.png
 .. |image130| image:: /_static/class1/module2/image130.png
-.. |image131| image:: /_static/class1/module2/image131.png
 .. |image131| image:: /_static/class1/module2/image131.png
 .. |image132| image:: /_static/class1/module2/image132.png
 .. |image133| image:: /_static/class1/module2/image133.png
