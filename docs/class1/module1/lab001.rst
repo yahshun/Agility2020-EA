@@ -4,7 +4,7 @@ Lab – Create Authentication objects
 The first step in deploying CertSSO is creating the objects required for the user to authenticate to APM.  In this lab the user will authenticate via Active Directory and simulated MFA via RADIUS.  How the user authenticates to APM is independent of how the BIG-IP authenticates the user to the server for Single-Sign-On.  This allows an organization to choose an authentication scheme that matches their organizations needs such as SAML, OAuth, or other method.
 
 Task – Create an Active Directory AAA Object
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. From the webbrowser, click on the **Access** tab located on the lefthand side.
 
@@ -30,7 +30,7 @@ Click **Finished**
 
 
 Task – Create a RADIUS AAA Object
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. From the webbrowser, click on the **Access** tab located on the lefthand side.
 
