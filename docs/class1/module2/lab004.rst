@@ -1,4 +1,4 @@
-Lab – Creating an APM Policy
+Lab – Creating an APM Policy - PUA Build Script
 ------------------------------------------------
 
 Task – Review the APM Policy Created by the PUA Build Script

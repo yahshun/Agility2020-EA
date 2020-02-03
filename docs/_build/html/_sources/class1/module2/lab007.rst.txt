@@ -1,6 +1,6 @@
-Lab – Initial Access Policy 
-
-Task – Update the Intial Access Policy
+Lab – Creating an APM Policy - Update Initial Access Policy 
+------------------------------------------------------------------
+Task – Update the Initial Access Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

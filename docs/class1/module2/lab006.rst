@@ -1,4 +1,4 @@
-Lab – Creating CAC Auth Macro
+Lab – Creating an APM Policy - CAC Authentication 
 ------------------------------------------------
 
 Task – Build CAC AUTH Macro
@@ -9,7 +9,7 @@ Task – Build CAC AUTH Macro
 
    |image30|
 
-#. Give the macro a name and click save
+#. Give the macro a name and click **save**
 
    |image40|
 

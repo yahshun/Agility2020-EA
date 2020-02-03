@@ -51,8 +51,8 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.2.6. Lab – Creating CAC Auth Macro" href="lab006.html" />
-    <link rel="prev" title="2.2.4. Lab – Creating an APM Policy" href="lab004.html" />
+    <link rel="next" title="2.2.6. Lab – Creating an APM Policy - CAC Authentication" href="lab006.html" />
+    <link rel="prev" title="2.2.4. Lab – Creating an APM Policy - PUA Build Script" href="lab004.html" />
   </head><body>
   <div id="clouddocs-header"></div>
 
@@ -172,9 +172,9 @@
 <p><img alt="image130" src="../../_images/image130.png" /></p>
 </li>
 <li><p class="first">Click <strong>Add Expression</strong></p>
-<p><img alt="image131" src="../../_images/image131.png" />     manage</p>
+<p><img alt="image131" src="../../_images/image131.png" /></p>
 </li>
-<li><p class="first">Click Finish, and then click Save</p>
+<li><p class="first">Click <strong>Finish</strong>, and then click <strong>Save</strong></p>
 </li>
 <li><p class="first">Next add Message a box, to alert when the LDAP query fails, by clicking the plus on the fallback branch between LDAP_Query and OUT terminal</p>
 <p><img alt="image132" src="../../_images/image132.png" /></p>
@@ -185,8 +185,8 @@
 <li><p class="first">Click Add Item</p>
 </li>
 <li><p class="first">Provide a Name for the message box and the Expression below to report the user who failed the LDAP Query</p>
-<div class="highlight-vim notranslate"><div class="highlight"><pre><span></span>Name:    LDAP Failure
-Message: LDAP Failure <span class="k">for</span> user %{UserPrincipalName}
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Name:    LDAP Failure</span>
+<span class="go">Message: LDAP Failure for user %{UserPrincipalName}</span>
 </pre></div>
 </div>
 <p><img alt="image134" src="../../_images/image134.png" /></p>
@@ -222,10 +222,10 @@ Message: LDAP Failure <span class="k">for</span> user %{UserPrincipalName}
      <div class="row next-prev-btn-row">
        <div class="col-lg-12">
        
-        <a href="lab004.html" title="2.2.4. Lab – Creating an APM Policy" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+        <a href="lab004.html" title="2.2.4. Lab – Creating an APM Policy - PUA Build Script" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
        
        
-          <a href="lab006.html" title="2.2.6. Lab – Creating CAC Auth Macro" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+          <a href="lab006.html" title="2.2.6. Lab – Creating an APM Policy - CAC Authentication" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
        
      </div>
      </div>

@@ -62,9 +62,9 @@ The LDAP Macro will verify that the requesting user has a valid account and the 
 
 #. Click **Add Expression**
 
-   |image131|     manage
+   |image131|    
 
-#. Click Finish, and then click Save
+#. Click **Finish**, and then click **Save**
 
 #. Next add Message a box, to alert when the LDAP query fails, by clicking the plus on the fallback branch between LDAP_Query and OUT terminal
 
@@ -78,7 +78,7 @@ The LDAP Macro will verify that the requesting user has a valid account and the 
 
 #. Provide a Name for the message box and the Expression below to report the user who failed the LDAP Query
 
-   .. code-block:: vim 
+   .. code-block:: console 
       
       Name:    LDAP Failure
       Message: LDAP Failure for user %{UserPrincipalName}
