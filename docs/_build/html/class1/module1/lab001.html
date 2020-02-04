@@ -94,8 +94,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../module2/module2.html">2.2. Module – Implement Priviledge User Authentication</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../examples.html">3. Examples of Common Formatting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../markdown.html">4. Markdown files are also supported</a></li>
 </ul>
 
         </span><!-- Use this file to add extra links to the bottom of the ToC sidebar -->
@@ -124,50 +122,50 @@
 <div class="section" id="task-create-an-active-directory-aaa-object">
 <h2>2.1.1.1. Task – Create an Active Directory AAA Object<a class="headerlink" href="#task-create-an-active-directory-aaa-object" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>From the webbrowser, click on the <strong>Access</strong> tab located on the lefthand side.</li>
+<li>From the webbrowser, click on the <strong>Access</strong> tab located on the left side.</li>
 </ol>
 <p><img alt="image0" src="../../_images/image000.png" /></p>
 <ol class="arabic simple" start="2">
-<li>Navigate to Authentication &gt;&gt; Active Directory, then <strong>click</strong> the + symbol to create a new AAA object</li>
+<li>Navigate to Authentication &gt;&gt; Active Directory, then click the <strong>+ plus symbol</strong> to create a new AAA object</li>
 </ol>
 <p><img alt="image1" src="../../_images/image001.png" /></p>
 <ol class="arabic simple" start="3">
 <li>Enter the following information for the AD Authentication Object</li>
 </ol>
 <ul class="simple">
-<li>Name: <strong>f5lab.local</strong></li>
+<li>Name: <strong>ad_servers</strong></li>
 <li>Domain Name: <strong>f5lab.local</strong></li>
-<li>Domain Controller Pool Name: <strong>AD_POOL</strong></li>
+<li>Domain Controller Pool Name: <strong>ad_pool</strong></li>
 <li>Domain Controller IP address: <strong>10.1.20.7</strong></li>
 <li>Domain Controller Hostname: <strong>dc.f5lab.local</strong></li>
 <li>admin name: <strong>admin</strong></li>
 <li>admin Password: <strong>admin</strong></li>
+<li>Click <strong>Finished</strong></li>
 </ul>
-<p>Click <strong>Finished</strong></p>
 <p><img alt="image2" src="../../_images/image002.png" /></p>
 </div>
 <div class="section" id="task-create-a-radius-aaa-object">
 <h2>2.1.1.2. Task – Create a RADIUS AAA Object<a class="headerlink" href="#task-create-a-radius-aaa-object" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple">
+<ol class="arabic simple" start="4">
 <li>From the webbrowser, click on the <strong>Access</strong> tab located on the lefthand side.</li>
 </ol>
 <p><img alt="image0" src="../../_images/image000.png" /></p>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple" start="5">
 <li><ol class="first arabic" start="4">
-<li>Navigate to Authentication&gt;RADIUS, then <strong>click</strong> the + symbol to create a new AAA object</li>
+<li>Navigate to Authentication&gt;RADIUS, then click the <strong>+ plus symbol</strong> to create a new AAA object</li>
 </ol>
 </li>
 </ol>
 <p><img alt="image3" src="../../_images/image003.png" /></p>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="6">
 <li>Enter the following information for the AD Authentication Object</li>
 </ol>
 <ul class="simple">
-<li>Name: <strong>RADIUS_SERVERS</strong></li>
-<li>Server Pool Name: <strong>RADIUS_POOL</strong></li>
+<li>Name: <strong>radius_servers</strong></li>
+<li>Server Pool Name: <strong>radius_pool</strong></li>
 <li>Server Addresses: <strong>10.1.20.8</strong></li>
-<li>secret password: <strong>secret</strong></li>
-<li><strong>Click</strong> Finished</li>
+<li>Secret password: <strong>secret</strong></li>
+<li>Click <strong>Finished</strong></li>
 </ul>
 <p><img alt="image4" src="../../_images/image004.png" /></p>
 </div>

@@ -51,7 +51,7 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.2. Module – Implement Priviledge User Authentication" href="../module2/module2.html" />
+    <link rel="next" title="2.1.9. Lab – Test Dynamic Certificate Injection" href="lab009.html" />
     <link rel="prev" title="2.1.7. Lab – Test the Configuration" href="lab007.html" />
   </head><body>
   <div id="clouddocs-header"></div>
@@ -76,7 +76,10 @@
         <span class="nav-sidebartoc">
             <ul>
 <li><a class="reference internal" href="#">2.1.8. Lab – Implement Dynamic Certificate Injection</a><ul>
-<li><a class="reference internal" href="#task-configure-a-radius-aaa-server">2.1.8.1. Task – Configure a RADIUS AAA Server</a></li>
+<li><a class="reference internal" href="#task-create-a-http-connector-transport">2.1.8.1. Task – Create a HTTP Connector Transport</a></li>
+<li><a class="reference internal" href="#task-create-a-http-connector-request">2.1.8.2. Task – Create a HTTP Connector Request</a></li>
+<li><a class="reference internal" href="#task-create-a-per-request-policy">2.1.8.3. Task – Create a Per-Request Policy</a></li>
+<li><a class="reference internal" href="#task-attach-the-prp-to-the-mtls-virtual-server">2.1.8.4. Task – Attach the PRP to the mTLS virtual Server</a></li>
 </ul>
 </li>
 </ul>
@@ -93,8 +96,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../module2/module2.html">2.2. Module – Implement Priviledge User Authentication</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../examples.html">3. Examples of Common Formatting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../markdown.html">4. Markdown files are also supported</a></li>
 </ul>
 
         </span><!-- Use this file to add extra links to the bottom of the ToC sidebar -->
@@ -119,25 +120,182 @@
     
   <div class="section" id="lab-implement-dynamic-certificate-injection">
 <h1>2.1.8. Lab – Implement Dynamic Certificate Injection<a class="headerlink" href="#lab-implement-dynamic-certificate-injection" title="Permalink to this headline">¶</a></h1>
-<p>In this section you will configure a RADIUS server to enable simulated MFA capabilities.</p>
-<div class="section" id="task-configure-a-radius-aaa-server">
-<h2>2.1.8.1. Task – Configure a RADIUS AAA Server<a class="headerlink" href="#task-configure-a-radius-aaa-server" title="Permalink to this headline">¶</a></h2>
+<p>In this section we will use HTTP Connector to retrieve a user’s certificate from Active Directory to be used in the BIG-IP Certificate minting process</p>
+<div class="section" id="task-create-a-http-connector-transport">
+<h2>2.1.8.1. Task – Create a HTTP Connector Transport<a class="headerlink" href="#task-create-a-http-connector-transport" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li><strong>Check</strong> Enable MultiFactor Authentication</li>
+<li>Navigate to Access &gt;&gt; Authentication &gt;&gt; HTTP Connector &gt;&gt; HTTP Connector Transport  Click the  <strong>+ plus Symbol</strong></li>
 </ol>
-<p><img alt="image4" src="../../_images/image004.png" /></p>
-<ol class="arabic simple">
-<li>Select <strong>Custom Radius Based</strong></li>
+<p><img alt="image54" src="../../_images/image0541.png" /></p>
+<ol class="arabic simple" start="2">
+<li>Enter Name <strong>demo-http-connector</strong></li>
+<li>Select <strong>prebuilt-dns-resolver</strong> from the DNS Resolver dropdown</li>
+<li>Select <strong>prebuilt-adpiadmin-serverssl</strong> from the Server SSL Profile</li>
+<li>Click <strong>Save</strong></li>
 </ol>
-<p>#.Select <strong>Create New</strong> from the Choose RADIUS Server dropdown</p>
-<ol class="arabic simple">
-<li>Enter the Server Pool Name <strong>RADIUS_POOL</strong></li>
-<li>Enter the Server Address <strong>10.1.20.8</strong></li>
-<li>Enter the Secret <strong>P&#64;$$w0rd</strong></li>
-<li><strong>Click</strong> Save</li>
-<li>Verify Custom RADIUS based Authentication appears</li>
-<li><strong>Click</strong> Save &amp; Next</li>
+<p><img alt="image55" src="../../_images/image0551.png" /></p>
+</div>
+<div class="section" id="task-create-a-http-connector-request">
+<h2>2.1.8.2. Task – Create a HTTP Connector Request<a class="headerlink" href="#task-create-a-http-connector-request" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple" start="6">
+<li>Navigate to Access &gt;&gt; Authentication &gt;&gt; HTTP Connector &gt;&gt; HTTP Connector Request.  Click the  <strong>+ plus symbol</strong></li>
 </ol>
+<p><img alt="image56" src="../../_images/image0561.png" /></p>
+<ol class="arabic simple" start="7">
+<li>Enter name <strong>get-cert</strong></li>
+<li>Select <strong>demo-http-connector</strong> from the dropdown</li>
+<li>Enter URL <strong>https://adapi.f5lab.local:8443/aduser/cert?useridentity=%{perflow.username}</strong></li>
+<li>Enter <strong>GET</strong> for the Method</li>
+<li>Select <strong>Parse</strong> for the Response Action</li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<p><img alt="image57" src="../../_images/image0571.png" /></p>
+</div>
+<div class="section" id="task-create-a-per-request-policy">
+<h2>2.1.8.3. Task – Create a Per-Request Policy<a class="headerlink" href="#task-create-a-per-request-policy" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple" start="13">
+<li>Navigate to Access &gt;&gt; Profiles/Policies &gt;&gt; Per-Request Policies  Click the  <strong>+ Plus Symbol</strong></li>
+</ol>
+<p><img alt="image58" src="../../_images/image0581.png" /></p>
+<ol class="arabic simple" start="14">
+<li>Enter the name <strong>certsso_prp</strong></li>
+<li>Select the Language <strong>English</strong></li>
+<li>Click <strong>Finished</strong></li>
+</ol>
+<p><img alt="image59" src="../../_images/image0591.png" /></p>
+<ol class="arabic simple" start="17">
+<li>Click <strong>edit</strong> under Per-Request Policy</li>
+</ol>
+<p><img alt="image60" src="../../_images/image0601.png" /></p>
+<ol class="arabic simple" start="18">
+<li>Click <strong>Add New Subroutine</strong></li>
+</ol>
+<p><img alt="image61" src="../../_images/image0611.png" /></p>
+<ol class="arabic simple" start="19">
+<li>Enter the name <strong>Request Cert</strong></li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<p><img alt="image62" src="../../_images/image0621.png" /></p>
+<ol class="arabic simple" start="21">
+<li>Expand the subroutine by click the <strong>+ plus symbol</strong></li>
+</ol>
+<p><img alt="image63" src="../../_images/image0631.png" /></p>
+<ol class="arabic simple" start="22">
+<li>Click the <strong>+ plus symbol</strong> on the fallback branch.</li>
+</ol>
+<p><img alt="image64" src="../../_images/image0641.png" /></p>
+<ol class="arabic simple" start="23">
+<li>Click the <strong>General Purpose</strong> tab</li>
+<li>Select <strong>HTTP Connector</strong></li>
+<li>Click <strong>Add Item</strong></li>
+</ol>
+<p><img alt="image65" src="../../_images/image0651.png" /></p>
+<ol class="arabic simple" start="26">
+<li>Select <strong>get-cert</strong> drop the dropdown</li>
+</ol>
+<p><img alt="image66" src="../../_images/image0661.png" /></p>
+<ol class="arabic simple" start="27">
+<li>Click <strong>Edit Terminals</strong></li>
+</ol>
+<p><img alt="image67" src="../../_images/image067.png" /></p>
+<ol class="arabic simple" start="28">
+<li>Click <strong>Add Terminal</strong></li>
+</ol>
+<p><img alt="image68" src="../../_images/image068.png" /></p>
+<ol class="arabic simple" start="29">
+<li>Change the name for the default branch to <strong>Fail</strong></li>
+<li>Change the default branch text to <strong>Red</strong></li>
+<li>Enter the name <strong>Success</strong> for the new branch</li>
+<li>Change the color of the new branch to <strong>Success</strong></li>
+</ol>
+<p><img alt="image69" src="../../_images/image069.png" /></p>
+<ol class="arabic simple" start="33">
+<li>Click the <strong>Fail</strong> terminal at the end of the Successful branch</li>
+</ol>
+<p><img alt="image70" src="../../_images/image0701.png" /></p>
+<ol class="arabic simple" start="34">
+<li>Select the <strong>Success</strong> Terminal</li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<p><img alt="image71" src="../../_images/image0711.png" /></p>
+<ol class="arabic simple" start="36">
+<li>Click the <strong>+ plus symbol</strong> on the successful branch</li>
+</ol>
+<p><img alt="image72" src="../../_images/image0721.png" /></p>
+<ol class="arabic simple" start="37">
+<li>Click the <strong>Assignment</strong> tab</li>
+<li>Select <strong>Variable Assign</strong></li>
+<li>Click <strong>Add Item</strong></li>
+</ol>
+<p><img alt="image73" src="../../_images/image0731.png" /></p>
+<ol class="arabic simple" start="40">
+<li>Click <strong>Add new entry</strong></li>
+<li>Click <strong>change</strong></li>
+</ol>
+<p><img alt="image74" src="../../_images/image0741.png" /></p>
+<ol class="arabic simple" start="42">
+<li>Enter <strong>session.ssl.cert.whole</strong> for the Custom Variable</li>
+<li>Select <strong>Session Variable</strong> from the dropdown</li>
+<li>Enter <strong>subsession.http_connector.body.certificate</strong> for the Session Variable</li>
+<li>Click <strong>Finished</strong></li>
+</ol>
+<p><img alt="image75" src="../../_images/image0751.png" /></p>
+<ol class="arabic simple" start="46">
+<li>Click <strong>Save</strong></li>
+</ol>
+<p><img alt="image76" src="../../_images/image0761.png" /></p>
+<ol class="arabic simple" start="47">
+<li>Click the <strong>+ plus symbol</strong> located between Start and Allow in the policy</li>
+</ol>
+<p><img alt="image77" src="../../_images/image0771.png" /></p>
+<ol class="arabic simple" start="48">
+<li>Click the <strong>Subroutines</strong> tab</li>
+<li>Select the <strong>Request Cert</strong> subroutine</li>
+<li>Click <strong>Add Item</strong></li>
+</ol>
+<p><img alt="image78" src="../../_images/image0781.png" /></p>
+<ol class="arabic simple" start="51">
+<li>Click the <strong>+ plus symbol</strong> on the success branch of Request Cert</li>
+</ol>
+<p><img alt="image79" src="../../_images/image0791.png" /></p>
+<ol class="arabic simple" start="52">
+<li>Click the <strong>General Purpose</strong> tab</li>
+<li>Select <strong>irule Event</strong></li>
+<li>Click <strong>Add Item</strong></li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>This irule event triggers the code from the previously attached irule. This             irule must be used when inserting a certificate using C3D in a per-request              policy.</p>
+<div class="last line-block">
+<div class="line">when ACCESS_PER_REQUEST_AGENT_EVENT {</div>
+<div class="line">set cert [ACCESS::session data get {session.ssl.cert.whole}]</div>
+<div class="line">log local0. “My cert: $cert”</div>
+<div class="line">SSL::c3d cert [X509::pem2der $cert]</div>
+<div class="line">}</div>
+</div>
+</div>
+<p><img alt="image80" src="../../_images/image0801.png" /></p>
+<ol class="arabic simple" start="55">
+<li>Enter <strong>lab</strong> for the ID</li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<p><img alt="image81" src="../../_images/image0811.png" /></p>
+</div>
+<div class="section" id="task-attach-the-prp-to-the-mtls-virtual-server">
+<h2>2.1.8.4. Task – Attach the PRP to the mTLS virtual Server<a class="headerlink" href="#task-attach-the-prp-to-the-mtls-virtual-server" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple" start="57">
+<li>Navigate to Local Traffic &gt;&gt; Virtual Servers.  Click <strong>Virtual Server List</strong></li>
+</ol>
+<p><img alt="image82" src="../../_images/image0821.png" /></p>
+<ol class="arabic simple" start="58">
+<li>Click <strong>mtls_vs</strong></li>
+</ol>
+<p><img alt="image83" src="../../_images/image0831.png" /></p>
+<ol class="arabic simple" start="59">
+<li>Navigate to the Access Policy Section and select <strong>certsso_prp</strong> from the Per-Request Policy dropdown</li>
+<li>Click <strong>Update</strong></li>
+</ol>
+<p><img alt="image84" src="../../_images/image0841.png" /></p>
 </div>
 </div>
 
@@ -150,7 +308,7 @@
         <a href="lab007.html" title="2.1.7. Lab – Test the Configuration" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
        
        
-          <a href="../module2/module2.html" title="2.2. Module – Implement Priviledge User Authentication" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+          <a href="lab009.html" title="2.1.9. Lab – Test Dynamic Certificate Injection" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
        
      </div>
      </div>

@@ -8,7 +8,7 @@ Task – Configure Virtual Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-1. Navigate to Local Traffic>>Virtual Servers>>Virtual Server List, then **click** the + symbol to create a new virtual Server
+1. Navigate to Local Traffic>>Virtual Servers>>Virtual Server List, then click the **+ plus symbol** to create a new virtual Server
 
 |image32|
 
@@ -16,20 +16,30 @@ Task – Configure Virtual Server
 3. Enter **10.1.10.105** for the DestinationAddress/Mask
 4. Enter **443** for the Service Port
 5. Select **http** for HTTP Profile(Client)
-6. Select **CLIENT_CERTSSO** from the SSL Profile(Slient) List
+6. Select **client_certsso** from the SSL Profile(Slient) List
 
 |image33|
 
 
-7. Select **SERVER_CERTSSO** from the SSL Profile(Server) List
+7. Select **server_certsso** from the SSL Profile(Server) List
 8. Select **Auto Map** from the Source Address Translation dropdown Box
-9. Select **Cert_SSO** from the Access Profile dropdown Box
+9. Select **cert_sso** from the Access Profile dropdown Box
 
 |image34|
 
-10. Select the irule **CertSSO**
-11. Select **mTLS_POOL** for the Default Pool
+10. Select the irule **Cert_SSO**
+11. Select **mtls_pool** for the Default Pool
 12. Click **Finished**
+
+
+.. note :: 
+	 This irule must be used to when inserting custom extensions using C3D.
+
+		| when SERVERSSL_CLIENTHELLO_SEND {
+		| set username [ACCESS::session data get "session.logon.last.username"]
+		| set domain [ACCESS::session data get "session.ad.last.actualdomain"]
+  		| SSL::c3d extension 1.1.1.1 "Minted Extension=$username@$domain"
+		| }
 
 |image35|
 

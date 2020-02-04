@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../module2/module2.html">2.2. Module – Implement Priviledge User Authentication</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../examples.html">3. Examples of Common Formatting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../markdown.html">4. Markdown files are also supported</a></li>
 </ul>
 
         </span><!-- Use this file to add extra links to the bottom of the ToC sidebar -->
@@ -126,43 +124,43 @@
 <li>From the jumpbox’s webbrowser,  access <a class="reference external" href="https://mtls.acme.com">https://mtls.acme.com</a></li>
 </ol>
 <p><img alt="image43" src="../../_images/image043.png" /></p>
-<ol class="arabic simple">
+<ol class="arabic simple" start="2">
 <li>Login with the username: <strong>user1</strong> and password: <strong>user1</strong></li>
 </ol>
 <p><img alt="image44" src="../../_images/image044.png" /></p>
-<ol class="arabic simple">
+<ol class="arabic simple" start="3">
 <li>You will be logged into the site displaying the Cert userID for <strong>user1&#64;f5lab.local</strong></li>
 <li>Click the <strong>Expand Certificate Data Array</strong> to see the contents of the certificate.</li>
 </ol>
 <p><img alt="image45" src="../../_images/image045.png" /></p>
-<ol class="arabic simple">
+<ol class="arabic simple" start="5">
 <li>Scroll down the Certificate contents and you will see in Subject Array the commonName of the certificate is <strong>F5CertSSO</strong>. This certificate was build using the contents of the certificate copied into the APM policy</li>
 </ol>
 <p><img alt="image46" src="../../_images/image046.png" /></p>
-<ol class="arabic simple">
-<li>Continue to scroll down to the extension array section and you will see a custom extension of <strong>1.1.1.1</strong> has been inserted into the minted certificate.  The values are base64 encoded and into the userID <strong>user1&#64;f5lab.local</strong></li>
+<ol class="arabic simple" start="6">
+<li>Continue to scroll down to the extension array section and you will see a custom extension of <strong>1.1.1.1</strong> has been inserted into the minted certificate.  The values is <strong>user1&#64;f5lab.local</strong> base64 encoded.</li>
 </ol>
 <p><img alt="image47" src="../../_images/image047.png" /></p>
-<ol class="arabic simple">
+<ol class="arabic simple" start="7">
 <li>Open a new incognito windows so you can test accessing mtls.acme.com with a different user.</li>
 </ol>
 <p><img alt="image48" src="../../_images/image048.png" /></p>
 <p><img alt="image49" src="../../_images/image049.png" /></p>
-<ol class="arabic simple">
+<ol class="arabic simple" start="8">
 <li>Login with the username: <strong>user2</strong> and password: <strong>user2</strong></li>
 </ol>
 <p><img alt="image50" src="../../_images/image050.png" /></p>
-<ol class="arabic simple">
+<ol class="arabic simple" start="9">
 <li>You will be logged into the site displaying the Cert userID for <strong>user2&#64;f5lab.local</strong></li>
 <li>Click the <strong>Expand Certificate Data Array</strong> to see the contents of the certificate</li>
 </ol>
 <p><img alt="image51" src="../../_images/image051.png" /></p>
-<ol class="arabic simple">
+<ol class="arabic simple" start="11">
 <li>Scroll down the Certificate contents and you will see in Subject Array the commonName of the certificate is <strong>F5CertSSO</strong>. This certificate was build using the contents of the certificate copied into the APM policy</li>
 </ol>
 <p><img alt="image46" src="../../_images/image046.png" /></p>
-<ol class="arabic simple">
-<li>Continue to scroll down to the extension array section and you will see a custom extension of <strong>1.1.1.1</strong> has been inserted into the minted certificate.  The values are base64 encoded and into the userID <strong>user2&#64;f5lab.local</strong></li>
+<ol class="arabic simple" start="12">
+<li>Continue to scroll down to the extension array section and you will see a custom extension of <strong>1.1.1.1</strong> has been inserted into the minted certificate.  The values is <strong>user2&#64;f5lab.local</strong> base64 encoded.</li>
 </ol>
 <p><img alt="image53" src="../../_images/image053.png" /></p>
 </div>

@@ -6,50 +6,50 @@ In this section, you will define the virtual server IP address its SSL profile s
 Task – Create a Client SSL Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Navigate to Local Traffic>>Profiles>>SSL>>Client, then **click** the + symbol to create a new SSL Profile
+1. Navigate to Local Traffic>>Profiles>>SSL>>Client, then click the **+ plus symbol** to create a new SSL Profile
 
 |image23|
 
-#. Enter the name **CLIENT_CERTSSO**
-#. **Check** Custom box to the right of Certificate Key Chain
-#. **Click** add
+2. Enter the name **client_certsso**
+3. **Check** Custom box to the right of Certificate Key Chain
+4. **Click** add
 
 |image24|
 
-#. Select **acme.com-wildcard.crt** from the certificate dropdown box
-#. Select **acme.com-wildcard.key** from the key dropdown box
-#. **Click** Add
+5. Select **acme.com-wildcard.crt** from the certificate dropdown box
+6. Select **acme.com-wildcard.key** from the key dropdown box
+7. **Click** Add
 
 |image25|
 
-#. **Check** the custom box to the right of Client Certificate Constrained Delegation
-#. Select **Enabled** from the Client Certificate Constrained Delegation Dropdown box
+8. **Check** the custom box to the right of Client Certificate Constrained Delegation
+9. Select **Enabled** from the Client Certificate Constrained Delegation Dropdown box
+10. Click **Finished**
 
 |image26|
 
 
-Click **Finished**
+10. Click **Finished**
 
 Task – Create a Server SSL Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Navigate to Local Traffic >> Profiles >> SSL >> Server, then **click** the + symbol to create a new SSL Profile
+11. Navigate to Local Traffic >> Profiles >> SSL >> Server, then click the **+ plus symbol** to create a new SSL Profile
 
 |image27|
 
-#. Enter **SERVER_CERTSSO** for profile name
-#. **Check** the two custom boxes next to Certificate and Key
-#. Select **F5CertSSO.f5lab.local.crt** from the certificate dropbox box
-#. Select **F5CertSSO.f5lab.local.key** from the key dropdown box
+12. Enter **server_certsso** for profile name
+13. **Check** the two custom boxes next to Certificate and Key
+14. Select **F5CertSSO.f5lab.local.crt** from the certificate dropbox box
+15. Select **F5CertSSO.f5lab.local.key** from the key dropdown box
 
 |image28|
 
-#. **Check** the custom box about the Client Certificate Constrained Delegation box 
-#. Select **Enabled** from the Client Certificate Constrained Delegation Dropdown Box
-#. Select **F5SubCA.f5lab.local.crt** from the CA Certificate dropdown box
-#. Select **F5SubCA.f5lab.local.key** from the CA Key dropdown box
-#. Remove Subject Alternative Name from the list of Enabled Extension by clicking **Disable**
-#. **Click** Finished
+16. Check the **custom** box about the Client Certificate Constrained Delegation box 
+17. Select **Enabled** from the Client Certificate Constrained Delegation Dropdown Box
+18. Select **F5SubCA.f5lab.local.crt** from the CA Certificate dropdown box
+19. Select **F5SubCA.f5lab.local.key** from the CA Key dropdown box
+20. **Click** Finished
 
 |image29|
 

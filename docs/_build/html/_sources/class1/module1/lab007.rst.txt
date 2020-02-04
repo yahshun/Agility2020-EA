@@ -8,28 +8,28 @@ Task – Access mtls.acme.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-#. From the jumpbox's webbrowser,  access https://mtls.acme.com
+1. From the jumpbox's webbrowser,  access https://mtls.acme.com
 
 |image43|
 
-#. Login with the username: **user1** and password: **user1**
+2. Login with the username: **user1** and password: **user1**
 
 |image44|
 
-#. You will be logged into the site displaying the Cert userID for **user1@f5lab.local**
-#. Click the **Expand Certificate Data Array** to see the contents of the certificate.
+3. You will be logged into the site displaying the Cert userID for **user1@f5lab.local**
+4. Click the **Expand Certificate Data Array** to see the contents of the certificate.
 
 |image45|
 
-#. Scroll down the Certificate contents and you will see in Subject Array the commonName of the certificate is **F5CertSSO**. This certificate was build using the contents of the certificate copied into the APM policy
+5. Scroll down the Certificate contents and you will see in Subject Array the commonName of the certificate is **F5CertSSO**. This certificate was build using the contents of the certificate copied into the APM policy
 
 |image46|
 
-#. Continue to scroll down to the extension array section and you will see a custom extension of **1.1.1.1** has been inserted into the minted certificate.  The values are base64 encoded and into the userID **user1@f5lab.local**
+6. Continue to scroll down to the extension array section and you will see a custom extension of **1.1.1.1** has been inserted into the minted certificate.  The values is **user1@f5lab.local** base64 encoded.
 
 |image47|
 
-#. Open a new incognito windows so you can test accessing mtls.acme.com with a different user.
+7. Open a new incognito windows so you can test accessing mtls.acme.com with a different user.
 
 |image48|
 
@@ -37,20 +37,20 @@ Task – Access mtls.acme.com
 
 
 
-#. Login with the username: **user2** and password: **user2**
+8. Login with the username: **user2** and password: **user2**
 
 |image50|
 
-#. You will be logged into the site displaying the Cert userID for **user2@f5lab.local**
-#. Click the **Expand Certificate Data Array** to see the contents of the certificate
+9. You will be logged into the site displaying the Cert userID for **user2@f5lab.local**
+10. Click the **Expand Certificate Data Array** to see the contents of the certificate
 
 |image51|
 
-#. Scroll down the Certificate contents and you will see in Subject Array the commonName of the certificate is **F5CertSSO**. This certificate was build using the contents of the certificate copied into the APM policy
+11. Scroll down the Certificate contents and you will see in Subject Array the commonName of the certificate is **F5CertSSO**. This certificate was build using the contents of the certificate copied into the APM policy
 
 |image46|
 
-#. Continue to scroll down to the extension array section and you will see a custom extension of **1.1.1.1** has been inserted into the minted certificate.  The values are base64 encoded and into the userID **user2@f5lab.local**
+12. Continue to scroll down to the extension array section and you will see a custom extension of **1.1.1.1** has been inserted into the minted certificate.  The values is **user2@f5lab.local** base64 encoded.
 
 |image53|
 

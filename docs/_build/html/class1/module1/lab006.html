@@ -93,8 +93,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../module2/module2.html">2.2. Module – Implement Priviledge User Authentication</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../examples.html">3. Examples of Common Formatting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../markdown.html">4. Markdown files are also supported</a></li>
 </ul>
 
         </span><!-- Use this file to add extra links to the bottom of the ToC sidebar -->
@@ -123,7 +121,7 @@
 <div class="section" id="task-configure-virtual-server">
 <h2>2.1.6.1. Task – Configure Virtual Server<a class="headerlink" href="#task-configure-virtual-server" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Navigate to Local Traffic&gt;&gt;Virtual Servers&gt;&gt;Virtual Server List, then <strong>click</strong> the + symbol to create a new virtual Server</li>
+<li>Navigate to Local Traffic&gt;&gt;Virtual Servers&gt;&gt;Virtual Server List, then click the <strong>+ plus symbol</strong> to create a new virtual Server</li>
 </ol>
 <p><img alt="image32" src="../../_images/image032.png" /></p>
 <ol class="arabic simple" start="2">
@@ -131,20 +129,33 @@
 <li>Enter <strong>10.1.10.105</strong> for the DestinationAddress/Mask</li>
 <li>Enter <strong>443</strong> for the Service Port</li>
 <li>Select <strong>http</strong> for HTTP Profile(Client)</li>
-<li>Select <strong>CLIENT_CERTSSO</strong> from the SSL Profile(Slient) List</li>
+<li>Select <strong>client_certsso</strong> from the SSL Profile(Slient) List</li>
 </ol>
 <p><img alt="image33" src="../../_images/image033.png" /></p>
 <ol class="arabic simple" start="7">
-<li>Select <strong>SERVER_CERTSSO</strong> from the SSL Profile(Server) List</li>
+<li>Select <strong>server_certsso</strong> from the SSL Profile(Server) List</li>
 <li>Select <strong>Auto Map</strong> from the Source Address Translation dropdown Box</li>
-<li>Select <strong>Cert_SSO</strong> from the Access Profile dropdown Box</li>
+<li>Select <strong>cert_sso</strong> from the Access Profile dropdown Box</li>
 </ol>
 <p><img alt="image34" src="../../_images/image034.png" /></p>
 <ol class="arabic simple" start="10">
-<li>Select the irule <strong>CertSSO</strong></li>
-<li>Select <strong>mTLS_POOL</strong> for the Default Pool</li>
+<li>Select the irule <strong>Cert_SSO</strong></li>
+<li>Select <strong>mtls_pool</strong> for the Default Pool</li>
 <li>Click <strong>Finished</strong></li>
 </ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>This irule must be used to when inserting custom extensions using C3D.</p>
+<blockquote class="last">
+<div><div class="line-block">
+<div class="line">when SERVERSSL_CLIENTHELLO_SEND {</div>
+<div class="line">set username [ACCESS::session data get “session.logon.last.username”]</div>
+<div class="line">set domain [ACCESS::session data get “session.ad.last.actualdomain”]</div>
+<div class="line">SSL::c3d extension 1.1.1.1 “Minted Extension=$username&#64;$domain”</div>
+<div class="line">}</div>
+</div>
+</div></blockquote>
+</div>
 <p><img alt="image35" src="../../_images/image035.png" /></p>
 </div>
 </div>

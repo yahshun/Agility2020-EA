@@ -3,26 +3,26 @@ Lab – Create an Access profile
 
 In this section, you will create and define the setting of the access profile
 
-Task – Create the CERT_SSO Access Profile
+Task – Create the cert_sso Access Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-1. From the webbrowser, click on the **Access** tab located on the lefthand side.
+1. From the webbrowser, click on the **Access** tab located on the left side.
 
 |image0|
 
-2. Navigate to Profile/ Policies >> Access Profile(Per-Session Policies), then **click** the + symbol to create a new Access Profile
+2. Navigate to Profile/ Policies >> Access Profile(Per-Session Policies), then click the **+ plus symbol** to create a new Access Profile
 
 |image5|
 
-#. Enter the Name **CERT_SSO** 
-#. Select the profile Type **All** from the dropdown
+3. Enter the Name **cert_sso** 
+4. Select the profile Type **All** from the dropdown
 
 |image6|
 
-#. Scroll to the bottom of the profile settings to set the default language to **English**
+5. Scroll to the bottom of the profile settings to set the default language to **English**
 
-#. Click **Finished**
+6. Click **Finished**
 
 |image7|
 
