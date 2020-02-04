@@ -50,7 +50,7 @@ Task – Access mtls.acme.com
 
 |image46|
 
-#. Continue to scroll down to the extension array section and you will see a custom extension of **1.1.1.1** has been inserted into the minted certificate.  The values are base64 encoded and into the userID **user1@f5lab.local**
+#. Continue to scroll down to the extension array section and you will see a custom extension of **1.1.1.1** has been inserted into the minted certificate.  The values are base64 encoded and into the userID **user2@f5lab.local**
 
 |image53|
 
