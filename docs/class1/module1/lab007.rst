@@ -1,37 +1,68 @@
 Lab – Test the Configuration
 ------------------------------------------------
 
-In this section you will configure a RADIUS server to enable simulated MFA capabilities.
+In this section you test access to a NGINX site requiring mTLS.
 
 
-Task – Configure a RADIUS AAA Server
+Task – Access mtls.acme.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-#. **Check** Enable MultiFactor Authentication
+#. From the jumpbox's webbrowser,  access https://mtls.acme.com
 
-|image4|
+|image43|
 
-#. Select **Custom Radius Based**
+#. Login with the username: **user1** and password: **user1**
+
+|image44|
+
+#. You will be logged into the site displaying the Cert userID for **user1@f5lab.local**
+#. Click the **Expand Certificate Data Array** to see the contents of the certificate.
+
+|image45|
+
+#. Scroll down the Certificate contents and you will see in Subject Array the commonName of the certificate is **F5CertSSO**. This certificate was build using the contents of the certificate copied into the APM policy
+
+|image46|
+
+#. Continue to scroll down to the extension array section and you will see a custom extension of **1.1.1.1** has been inserted into the minted certificate.  The values are base64 encoded and into the userID **user1@f5lab.local**
+
+|image47|
+
+#. Open a new incognito windows so you can test accessing mtls.acme.com with a different user.
+
+|image48|
+
+|image49|
 
 
 
-#.Select **Create New** from the Choose RADIUS Server dropdown
+#. Login with the username: **user2** and password: **user2**
+
+|image50|
+
+#. You will be logged into the site displaying the Cert userID for **user2@f5lab.local**
+#. Click the **Expand Certificate Data Array** to see the contents of the certificate
+
+|image51|
+
+#. Scroll down the Certificate contents and you will see in Subject Array the commonName of the certificate is **F5CertSSO**. This certificate was build using the contents of the certificate copied into the APM policy
+
+|image46|
+
+#. Continue to scroll down to the extension array section and you will see a custom extension of **1.1.1.1** has been inserted into the minted certificate.  The values are base64 encoded and into the userID **user1@f5lab.local**
+
+|image53|
 
 
 
-#. Enter the Server Pool Name **RADIUS_POOL**
-#. Enter the Server Address **10.1.20.8**
-#. Enter the Secret **P@$$w0rd**
-#. **Click** Save
-
-
-
-#. Verify Custom RADIUS based Authentication appears
-#. **Click** Save & Next
-
-
-
-
-
-.. |image4| image:: /_static/class1/module1/image004.png
+.. |image43| image:: /_static/class1/module1/image043.png
+.. |image44| image:: /_static/class1/module1/image044.png
+.. |image45| image:: /_static/class1/module1/image045.png
+.. |image46| image:: /_static/class1/module1/image046.png
+.. |image47| image:: /_static/class1/module1/image047.png
+.. |image48| image:: /_static/class1/module1/image048.png
+.. |image49| image:: /_static/class1/module1/image049.png
+.. |image50| image:: /_static/class1/module1/image050.png
+.. |image51| image:: /_static/class1/module1/image051.png
+.. |image53| image:: /_static/class1/module1/image053.png

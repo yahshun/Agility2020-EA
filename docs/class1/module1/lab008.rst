@@ -1,0 +1,37 @@
+Lab – Implement Dynamic Certificate Injection
+------------------------------------------------
+
+In this section you will configure a RADIUS server to enable simulated MFA capabilities.
+
+
+Task – Configure a RADIUS AAA Server
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+#. **Check** Enable MultiFactor Authentication
+
+|image4|
+
+#. Select **Custom Radius Based**
+
+
+
+#.Select **Create New** from the Choose RADIUS Server dropdown
+
+
+
+#. Enter the Server Pool Name **RADIUS_POOL**
+#. Enter the Server Address **10.1.20.8**
+#. Enter the Secret **P@$$w0rd**
+#. **Click** Save
+
+
+
+#. Verify Custom RADIUS based Authentication appears
+#. **Click** Save & Next
+
+
+
+
+
+.. |image4| image:: /_static/class1/module1/image004.png
