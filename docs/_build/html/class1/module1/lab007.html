@@ -51,7 +51,7 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.2. Module – Implement Priviledge User Authentication" href="../module2/module2.html" />
+    <link rel="next" title="2.1.8. Lab – Implement Dynamic Certificate Injection" href="lab008.html" />
     <link rel="prev" title="2.1.6. Lab – Create the Virtual Server" href="lab006.html" />
   </head><body>
   <div id="clouddocs-header"></div>
@@ -76,7 +76,7 @@
         <span class="nav-sidebartoc">
             <ul>
 <li><a class="reference internal" href="#">2.1.7. Lab – Test the Configuration</a><ul>
-<li><a class="reference internal" href="#task-configure-a-radius-aaa-server">2.1.7.1. Task – Configure a RADIUS AAA Server</a></li>
+<li><a class="reference internal" href="#task-access-mtls-acme-com">2.1.7.1. Task – Access mtls.acme.com</a></li>
 </ul>
 </li>
 </ul>
@@ -119,25 +119,52 @@
     
   <div class="section" id="lab-test-the-configuration">
 <h1>2.1.7. Lab – Test the Configuration<a class="headerlink" href="#lab-test-the-configuration" title="Permalink to this headline">¶</a></h1>
-<p>In this section you will configure a RADIUS server to enable simulated MFA capabilities.</p>
-<div class="section" id="task-configure-a-radius-aaa-server">
-<h2>2.1.7.1. Task – Configure a RADIUS AAA Server<a class="headerlink" href="#task-configure-a-radius-aaa-server" title="Permalink to this headline">¶</a></h2>
+<p>In this section you test access to a NGINX site requiring mTLS.</p>
+<div class="section" id="task-access-mtls-acme-com">
+<h2>2.1.7.1. Task – Access mtls.acme.com<a class="headerlink" href="#task-access-mtls-acme-com" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li><strong>Check</strong> Enable MultiFactor Authentication</li>
+<li>From the jumpbox’s webbrowser,  access <a class="reference external" href="https://mtls.acme.com">https://mtls.acme.com</a></li>
 </ol>
-<p><img alt="image4" src="../../_images/image004.png" /></p>
+<p><img alt="image43" src="../../_images/image043.png" /></p>
 <ol class="arabic simple">
-<li>Select <strong>Custom Radius Based</strong></li>
+<li>Login with the username: <strong>user1</strong> and password: <strong>user1</strong></li>
 </ol>
-<p>#.Select <strong>Create New</strong> from the Choose RADIUS Server dropdown</p>
+<p><img alt="image44" src="../../_images/image044.png" /></p>
 <ol class="arabic simple">
-<li>Enter the Server Pool Name <strong>RADIUS_POOL</strong></li>
-<li>Enter the Server Address <strong>10.1.20.8</strong></li>
-<li>Enter the Secret <strong>P&#64;$$w0rd</strong></li>
-<li><strong>Click</strong> Save</li>
-<li>Verify Custom RADIUS based Authentication appears</li>
-<li><strong>Click</strong> Save &amp; Next</li>
+<li>You will be logged into the site displaying the Cert userID for <strong>user1&#64;f5lab.local</strong></li>
+<li>Click the <strong>Expand Certificate Data Array</strong> to see the contents of the certificate.</li>
 </ol>
+<p><img alt="image45" src="../../_images/image045.png" /></p>
+<ol class="arabic simple">
+<li>Scroll down the Certificate contents and you will see in Subject Array the commonName of the certificate is <strong>F5CertSSO</strong>. This certificate was build using the contents of the certificate copied into the APM policy</li>
+</ol>
+<p><img alt="image46" src="../../_images/image046.png" /></p>
+<ol class="arabic simple">
+<li>Continue to scroll down to the extension array section and you will see a custom extension of <strong>1.1.1.1</strong> has been inserted into the minted certificate.  The values are base64 encoded and into the userID <strong>user1&#64;f5lab.local</strong></li>
+</ol>
+<p><img alt="image47" src="../../_images/image047.png" /></p>
+<ol class="arabic simple">
+<li>Open a new incognito windows so you can test accessing mtls.acme.com with a different user.</li>
+</ol>
+<p><img alt="image48" src="../../_images/image048.png" /></p>
+<p><img alt="image49" src="../../_images/image049.png" /></p>
+<ol class="arabic simple">
+<li>Login with the username: <strong>user2</strong> and password: <strong>user2</strong></li>
+</ol>
+<p><img alt="image50" src="../../_images/image050.png" /></p>
+<ol class="arabic simple">
+<li>You will be logged into the site displaying the Cert userID for <strong>user2&#64;f5lab.local</strong></li>
+<li>Click the <strong>Expand Certificate Data Array</strong> to see the contents of the certificate</li>
+</ol>
+<p><img alt="image51" src="../../_images/image051.png" /></p>
+<ol class="arabic simple">
+<li>Scroll down the Certificate contents and you will see in Subject Array the commonName of the certificate is <strong>F5CertSSO</strong>. This certificate was build using the contents of the certificate copied into the APM policy</li>
+</ol>
+<p><img alt="image46" src="../../_images/image046.png" /></p>
+<ol class="arabic simple">
+<li>Continue to scroll down to the extension array section and you will see a custom extension of <strong>1.1.1.1</strong> has been inserted into the minted certificate.  The values are base64 encoded and into the userID <strong>user1&#64;f5lab.local</strong></li>
+</ol>
+<p><img alt="image53" src="../../_images/image053.png" /></p>
 </div>
 </div>
 
@@ -150,7 +177,7 @@
         <a href="lab006.html" title="2.1.6. Lab – Create the Virtual Server" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
        
        
-          <a href="../module2/module2.html" title="2.2. Module – Implement Priviledge User Authentication" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+          <a href="lab008.html" title="2.1.8. Lab – Implement Dynamic Certificate Injection" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
        
      </div>
      </div>

@@ -1,39 +1,37 @@
-Lab – Application Groups
+Lab – Implement Dynamic Certificate Injection
 ------------------------------------------------
 
-.. TODO:: Needs lab description
+In this section you will configure a RADIUS server to enable simulated MFA capabilities.
 
-In the previous lab we learned how to download the |bip| |ve| image.  Now, we
-can install the image onto a hypervisor.
 
-Task – Upload the image to your Hypervisor
+Task – Configure a RADIUS AAA Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. TODO:: Needs task description
 
-In this task you will upload the image to your hypervisor.
+#. **Check** Enable MultiFactor Authentication
 
-Follow these steps to complete this task:
+|image4|
 
-.. rst-class:: task-stepsx
+#. Select **Custom Radius Based**
 
-#. Open your hypervisor management console
-#. Figure out how to upload the image
 
-   .. ERROR:: These are bad instructions...
 
-#. Great!  You're done
+#.Select **Create New** from the Choose RADIUS Server dropdown
 
-Task – Start a |bip| |ve| Instance
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. TODO:: Needs task description
 
-In this task we will start and instance of |bip| using the image uploaded in
-the previous task.
+#. Enter the Server Pool Name **RADIUS_POOL**
+#. Enter the Server Address **10.1.20.8**
+#. Enter the Secret **P@$$w0rd**
+#. **Click** Save
 
-Follow these steps to complete this task:
 
-#. Open your hypervisor management console
-#. Click the |bip| image
-#. Click the 'Start' button (or it's equivalent)
+
+#. Verify Custom RADIUS based Authentication appears
+#. **Click** Save & Next
+
+
+
+
+
+.. |image4| image:: /_static/class1/module1/image004.png
