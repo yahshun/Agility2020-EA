@@ -1,10 +1,18 @@
 Module – Implement Priviledge User Authentication
 ====================================================
 
-As organizations move towards MFA to secure their enterprise applications they often struggle ways to implement SSO.  They must make sacrifices at security because if they implement MFA at the proxy layer it allows for Single-Sign On but often requires a less secure authentication method to the resource do to the introduction of service accounts requiring password.  If an organization choses to implement MFA directly at the application, SSO it lost. 
+The F5 Privileged User Access solution now provides an approved way to add CAC/PKI authentication or other strong authentication methods to network infrastructure and systems that do not natively support this functionality.  It does this without requiring the addition of client software or agents anywhere in the environment and allows you to fully leverage your legacy or non-compliant systems in a safe and secure manner.  It integrates directly into DoD PKI or MFA systems and may be configured to work cooperatively with existing TACACS, Active Directory, AAA servers, or a variety of third-party authentication databases.  F5 PUA is DoD CIO approved as an Identify Federation Service (IFS) for facilitating both privileged and unprivileged user authentication to unclassified and secret fabric DoD Information Systems.
 
-F5's C3D allows the best of both worlds by allowing MFA at the proxy level of the organizations choosing without reducing security between the proxy and resource when it comes to SSO.
+IFS are third-party intermediary services facilitating user-authentication to resources or relying parties. IFS may be used when a system or application does not support direct authentication with PKI or MFA credentials, or the system owner desires a single management framework for a group of heterogeneous systems. 
 
+**F5 Certifications**
+
+    - DoD UC APL
+    - FIPS 140-2 Validated - Leve 1, 2, or 3 depending on platform selection.  F5 offers software (VE), F5 Full-Box FIPS platforms, integrated (HSM PCI Card), and external (Network HSM) FIPS solutions 
+    - Common Criteria Certification
+    - NSA Commercial Solutions for Classified (CSfC) Components List 
+    - DISA/JITC PKE (public key enabled)
+    - United States Government IPv6 Conformance Certification (USGv6)
 
 .. toctree::
    :maxdepth: 1

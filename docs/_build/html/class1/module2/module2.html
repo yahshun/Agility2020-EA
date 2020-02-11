@@ -51,7 +51,7 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.2.1. Lab – Overview of Authentication with Priviledge User Access" href="lab001.html" />
+    <link rel="next" title="2.2.1. Lab – Priviledge User Access (PUA) Requirements" href="lab001.html" />
     <link rel="prev" title="2.1.9. Lab – Test Dynamic Certificate Injection" href="../module1/lab009.html" />
   </head><body>
   <div id="clouddocs-header"></div>
@@ -114,11 +114,22 @@
     
   <div class="section" id="module-implement-priviledge-user-authentication">
 <h1>2.2. Module – Implement Priviledge User Authentication<a class="headerlink" href="#module-implement-priviledge-user-authentication" title="Permalink to this headline">¶</a></h1>
-<p>As organizations move towards MFA to secure their enterprise applications they often struggle ways to implement SSO.  They must make sacrifices at security because if they implement MFA at the proxy layer it allows for Single-Sign On but often requires a less secure authentication method to the resource do to the introduction of service accounts requiring password.  If an organization choses to implement MFA directly at the application, SSO it lost.</p>
-<p>F5’s C3D allows the best of both worlds by allowing MFA at the proxy level of the organizations choosing without reducing security between the proxy and resource when it comes to SSO.</p>
+<p>The F5 Privileged User Access solution now provides an approved way to add CAC/PKI authentication or other strong authentication methods to network infrastructure and systems that do not natively support this functionality.  It does this without requiring the addition of client software or agents anywhere in the environment and allows you to fully leverage your legacy or non-compliant systems in a safe and secure manner.  It integrates directly into DoD PKI or MFA systems and may be configured to work cooperatively with existing TACACS, Active Directory, AAA servers, or a variety of third-party authentication databases.  F5 PUA is DoD CIO approved as an Identify Federation Service (IFS) for facilitating both privileged and unprivileged user authentication to unclassified and secret fabric DoD Information Systems.</p>
+<p>IFS are third-party intermediary services facilitating user-authentication to resources or relying parties. IFS may be used when a system or application does not support direct authentication with PKI or MFA credentials, or the system owner desires a single management framework for a group of heterogeneous systems.</p>
+<p><strong>F5 Certifications</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>DoD UC APL</li>
+<li>FIPS 140-2 Validated - Leve 1, 2, or 3 depending on platform selection.  F5 offers software (VE), F5 Full-Box FIPS platforms, integrated (HSM PCI Card), and external (Network HSM) FIPS solutions</li>
+<li>Common Criteria Certification</li>
+<li>NSA Commercial Solutions for Classified (CSfC) Components List</li>
+<li>DISA/JITC PKE (public key enabled)</li>
+<li>United States Government IPv6 Conformance Certification (USGv6)</li>
+</ul>
+</div></blockquote>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="lab001.html">2.2.1. Lab – Overview of Authentication with Priviledge User Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab001.html">2.2.1. Lab – Priviledge User Access (PUA) Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lab002.html">2.2.2. Lab – Excuting the PUA Script</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lab003.html">2.2.3. Lab – Validating the PUA Script Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lab004.html">2.2.4. Lab – Creating an APM Policy - PUA Build Script</a></li>
@@ -142,7 +153,7 @@
         <a href="../module1/lab009.html" title="2.1.9. Lab – Test Dynamic Certificate Injection" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
        
        
-          <a href="lab001.html" title="2.2.1. Lab – Overview of Authentication with Priviledge User Access" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+          <a href="lab001.html" title="2.2.1. Lab – Priviledge User Access (PUA) Requirements" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
        
      </div>
      </div>
