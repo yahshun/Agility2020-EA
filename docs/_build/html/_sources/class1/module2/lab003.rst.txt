@@ -1,6 +1,8 @@
 Lab – Validating the PUA Script Installation
 ------------------------------------------------
 
+In this section, you will test the initial installation of the PUA. 
+
 Task – Accessing the BIG-IP via APM Webtop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -1,6 +1,8 @@
 Lab – Creating an APM Policy - LDAP 
 ------------------------------------------------
 
+PUA requires a Directory Service to authenticate users. In this section you will build a LDAP macro to perform the authenction function.
+
 Task – Build a LDAP macro
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. note::
@@ -30,12 +32,12 @@ The LDAP Macro will verify that the requesting user has a valid account and the 
 
 #. Update the Properties Tab by modifying the Server, SearchDN, SearchFilter, and Fetch Group setting 
 
-  .. code-block:: vim 
+   .. code-block:: vim 
 
-     SearchDN      = DC=f5lab,DC=local
-     SearchFilter  = UserPrincipalName=%{session.custom.ephemeral.upn}
+      SearchDN      = DC=f5lab,DC=local
+      SearchFilter  = UserPrincipalName=%{session.custom.ephemeral.upn}
   
-   |image35|
+ |image35|
 
 #. Update the Branch Rules by clicking **Branch Rules** accross the top of the menu
 

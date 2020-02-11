@@ -1,5 +1,7 @@
 Lab – Creating an APM Policy - Update Initial Access Policy 
 ------------------------------------------------------------------
+In this section you will add the CAC Auth Macro to the initial access policy and update the variable assignments.
+
 Task – Update the Initial Access Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

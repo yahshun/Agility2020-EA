@@ -117,6 +117,7 @@
     
   <div class="section" id="lab-creating-an-apm-policy-ldap">
 <h1>2.2.5. Lab – Creating an APM Policy - LDAP<a class="headerlink" href="#lab-creating-an-apm-policy-ldap" title="Permalink to this headline">¶</a></h1>
+<p>PUA requires a Directory Service to authenticate users. In this section you will build a LDAP macro to perform the authenction function.</p>
 <div class="section" id="task-build-a-ldap-macro">
 <h2>2.2.5.1. Task – Build a LDAP macro<a class="headerlink" href="#task-build-a-ldap-macro" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
@@ -141,16 +142,14 @@
 <p><img alt="image34" src="../../_images/image0341.png" /></p>
 </li>
 <li><p class="first">Update the Properties Tab by modifying the Server, SearchDN, SearchFilter, and Fetch Group setting</p>
+<div class="highlight-vim notranslate"><div class="highlight"><pre><span></span>SearchDN      <span class="p">=</span> DC<span class="p">=</span>f5lab<span class="p">,</span>DC<span class="p">=</span>local
+SearchFilter  <span class="p">=</span> UserPrincipalName<span class="p">=</span>%{session.custom.ephemeral.upn}
+</pre></div>
+</div>
 </li>
 </ol>
 <blockquote>
-<div><div class="highlight-vim notranslate"><div class="highlight"><pre><span></span>  SearchDN      <span class="p">=</span> DC<span class="p">=</span>f5lab<span class="p">,</span>DC<span class="p">=</span>local
-  SearchFilter  <span class="p">=</span> UserPrincipalName<span class="p">=</span>%{session.custom.ephemeral.upn}
-
-<span class="p">|</span>image35<span class="p">|</span>
-</pre></div>
-</div>
-</div></blockquote>
+<div><img alt="image35" src="../../_images/image0351.png" /></div></blockquote>
 <ol class="arabic">
 <li><p class="first">Update the Branch Rules by clicking <strong>Branch Rules</strong> accross the top of the menu</p>
 </li>
