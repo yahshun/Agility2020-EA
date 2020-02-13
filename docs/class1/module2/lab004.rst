@@ -1,9 +1,9 @@
-Lab – Creating an APM Policy - PUA Build Script
+Lab - Creating an APM Policy - PUA Build Script
 ------------------------------------------------
 
 In this section, you will review the inital APM policy created by the PUA Build Script
 
-Task – Review the APM Policy Created by the PUA Build Script
+Task - Review the APM Policy Created by the PUA Build Script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Open a web browser to the management IP address of the BIG-IP https://10.1.1.4

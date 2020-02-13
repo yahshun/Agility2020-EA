@@ -1,10 +1,10 @@
-Lab – Test the Configuration
+Lab - Test the Configuration
 ------------------------------------------------
 
 In this section you test access to a NGINX site requiring mTLS.
 
 
-Task – Access mtls.acme.com
+Task - Access mtls.acme.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

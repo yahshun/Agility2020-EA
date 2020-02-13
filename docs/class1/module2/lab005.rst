@@ -1,9 +1,9 @@
-Lab – Creating an APM Policy - LDAP 
+Lab - Creating an APM Policy - LDAP 
 ------------------------------------------------
 
 PUA requires a Directory Service to authenticate users. In this section you will build a LDAP macro to perform the authenction function.
 
-Task – Build a LDAP macro
+Task - Build a LDAP macro
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. note::
    This lab makes use of APM macros to make policies easy to view and manage 

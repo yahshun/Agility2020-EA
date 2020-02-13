@@ -1,9 +1,9 @@
-Lab – Create an Access profile
+Lab - Create an Access profile
 ------------------------------------------------
 
 In this section, you will create and define the setting of the access profile
 
-Task – Create the cert_sso Access Profile
+Task - Create the cert_sso Access Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

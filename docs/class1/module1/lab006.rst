@@ -1,10 +1,10 @@
-Lab – Create the Virtual Server
+Lab - Create the Virtual Server
 ------------------------------------------------
 
 In this section you will configure a RADIUS server to enable simulated MFA capabilities.
 
 
-Task – Configure Virtual Server
+Task - Configure Virtual Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

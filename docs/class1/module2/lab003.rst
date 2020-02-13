@@ -1,9 +1,9 @@
-Lab – Validating the PUA Script Installation
+Lab - Validating the PUA Script Installation
 ------------------------------------------------
 
 In this section, you will test the initial installation of the PUA. 
 
-Task – Accessing the BIG-IP via APM Webtop
+Task - Accessing the BIG-IP via APM Webtop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Open a web browser and navigate to https://10.1.10.104
