@@ -1,4 +1,4 @@
-Lab - Excuting the PUA Script
+Lab - Executing the PUA Script
 ------------------------------------------------
 **Overview**
 
