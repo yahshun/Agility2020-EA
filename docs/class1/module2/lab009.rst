@@ -1,7 +1,7 @@
-Lab – Adding Devices to the webtop
+Lab - Adding Devices to the webtop
 ------------------------------------------------
 
-Task – Adding Device to the PUA Webtop
+Task - Adding Device to the PUA Webtop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. click Access >> Webtop >> Webtop Links

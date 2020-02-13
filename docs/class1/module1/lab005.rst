@@ -1,9 +1,9 @@
-Lab – Create a Pool
+Lab - Create a Pool
 ------------------------------------------------
 
 In this section you create a pool that contains the IP address of the CentOS server hosting the website requiring mTLS.
 
-Task – Create the Pool
+Task - Create the Pool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Navigate to Local Traffic>>Pools>>Pool List, then click the **+ plus symbol** to create a new Pool

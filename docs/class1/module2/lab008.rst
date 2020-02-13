@@ -1,8 +1,8 @@
-Lab – Certificate Update
+Lab - Certificate Update
 ------------------------------------------------
 In this section you will modify the SSL profile to present a internally signed certifcate for the PUA webtop and select a trusted authoritues to validate user certificates.
 
-Task – Update the SSL Profile
+Task - Update the SSL Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Click Local Traffic >> Profiles >> SSL >> Client 

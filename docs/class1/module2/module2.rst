@@ -1,4 +1,4 @@
-Module – Implement Priviledge User Authentication
+Module - Implement Priviledge User Authentication
 ====================================================
 
 The F5 Privileged User Access solution now provides an approved way to add CAC/PKI authentication or other strong authentication methods to network infrastructure and systems that do not natively support this functionality.  It does this without requiring the addition of client software or agents anywhere in the environment and allows you to fully leverage your legacy or non-compliant systems in a safe and secure manner.  It integrates directly into DoD PKI or MFA systems and may be configured to work cooperatively with existing TACACS, Active Directory, AAA servers, or a variety of third-party authentication databases.  F5 PUA is DoD CIO approved as an Identify Federation Service (IFS) for facilitating both privileged and unprivileged user authentication to unclassified and secret fabric DoD Information Systems.

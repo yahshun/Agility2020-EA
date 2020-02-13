@@ -1,4 +1,4 @@
-Lab – Excuting the PUA Script
+Lab - Executing the PUA Script
 ------------------------------------------------
 **Overview**
 
@@ -60,7 +60,7 @@ Invoking ./build_pua.sh with "-h" or "--help" will alert you to the potential op
 
 Setting "noninteractive=true" option will perform a full unattended install if all the sample prompts above are provided and uncommented, otherwise the answers provided in pua_config.sh will be used as the defaults in a semi-interactive install method.
 
-Task – Running Installation Script
+Task - Running Installation Script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

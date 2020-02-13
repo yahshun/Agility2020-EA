@@ -1,7 +1,7 @@
-Lab –  Verification Testing
+Lab -  Verification Testing
 ------------------------------------------------
 
-Task – Test the updated Webtop
+Task - Test the updated Webtop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Access the webtop via http://pua.acme.com

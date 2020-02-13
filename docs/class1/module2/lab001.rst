@@ -1,4 +1,4 @@
-Lab – Priviledge User Access (PUA) Requirements
+Lab - Priviledge User Access (PUA) Requirements
 ------------------------------------------------------------
 
 **Prerequisties and Deployment Notes**
