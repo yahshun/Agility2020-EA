@@ -21,9 +21,9 @@ Task - Open Visual Policy Editor
 |image11|
 
 6. Add an additional field to the logon page by selecting **password** from the **Type** dropdown (line 3)
-7. Enter **OTP** for Post Variable Name
-8. Enter **OTP** for Session Variable Name
-9. Enter **OTP** for Logon Page Input Field #3
+7. Enter **OTP** for **Post Variable Name**
+8. Enter **OTP** for **Session Variable Name**
+9. Enter **OTP** for **Logon Page Input Field #3**
 10. Click **Save**
 
 |image12|
