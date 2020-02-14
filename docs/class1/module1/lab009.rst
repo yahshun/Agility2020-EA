@@ -15,23 +15,49 @@ Task - Access mtls.acme.com
 
 |image44|
 
-#. You will be logged into the site displaying the Cert userID for **user1@f5lab.local**
+#. You will be logged into the site as **user1@f5lab.local**
 
-#. Click the **Expand Certificate Data Array** to see the contents of the certificate.
 
-|image45|
+.. note ::  
 
-#. Scroll down the certificate contents and you will see in **Subject Array** that the **commonName** of the certificate is **user1**. This certificate was built using the contents of the certificate retrieved using HTTP Connector.
+        The contents of the certificate used for logging into the website were from certificate retrieved via HTTP connector in Active Directory. The irule continues to 	insert the custom extension 1.1.1.1 with the value containing the user's logon name.   Notice the Subject Name is user1, the Subject Alternative Name is u		ser1@f5lab.local and the custom extension is user1@f5lab.local
+        
+ 	| Cert Subject: **user1**
+	| Subject Alt: **user1@f5lab.local**
+	| Custom Ext: **user1@f5lab.local**
+	
 
 |image85|
 
-#. Continue to scroll down to the **extension array** section and you will see the **subjectAltName** extension of **user1@f5lab.local** has been inserted into the minted certificate.
+7. Open a new incognito browser window so you can test access to mtls.acme.com with different user credentials.
+
+|image48|
+
+|image49|
+
+8. Login with the username: **user2** and password: **User2**
+
+|image50|
+
+9. You will be logged into the site as **user2@f5lab.local**
+
+.. note ::  
+
+	 Notice that user2's Cert Subject is now user2 and the subject alt is user2@f5lab.local.  The irule continues to insert the custom extension.   	
+        | Cert Subject: **user2**
+	| Subject Alt: **user2@f5lab.local**
+	| Custom Ext: **user2@f5lab.local**
 
 |image86|
+
 
 
 .. |image43| image:: /_static/module1/image043.png
 .. |image44| image:: /_static/module1/image044.png
 .. |image45| image:: /_static/module1/image045.png
+.. |image48| image:: /_static/module1/image048.png
+.. |image49| image:: /_static/module1/image049.png
+.. |image50| image:: /_static/module1/image050.png
 .. |image85| image:: /_static/module1/image085.png
 .. |image86| image:: /_static/module1/image086.png
+
