@@ -1,18 +1,16 @@
 Lab - Create the Access Policy
 ------------------------------------------------
 
-In this section, edit the policy using Visual Policy Editor to enable users to login via AD+MFA, then transition to CertSSO
+In this section, edit the policy using the Visual Policy Editor to enable users to login via AD+MFA, then transition to CertSSO.
 
 Task - Open Visual Policy Editor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
 1. On the cert_sso profile line click **edit** under Per-Session Policy
 
 |image8|
 
-2. Click the **+** (plus symbol) located on the fallback branch located between the Start and Deny boxes
+2. Click the **+** (plus symbol) located on the fallback branch located between the **Start** and **Deny** boxes
 
 |image9|
 
@@ -22,7 +20,7 @@ Task - Open Visual Policy Editor
 
 |image11|
 
-6. Add an additional field to the logon page by selecting **password** from the Type dropdown on line 3
+6. Add an additional field to the logon page by selecting **password** from the **Type** dropdown (line 3)
 7. Enter **OTP** for Post Variable Name
 8. Enter **OTP** for Session Variable Name
 9. Enter **OTP** for Logon Page Input Field #3
@@ -30,28 +28,28 @@ Task - Open Visual Policy Editor
 
 |image12|
 
-11. Click the **+** (plus symbol) located on the fallback branch located between the Logon Page and Deny boxes
+11. Click the **+** (plus symbol) located on the fallback branch located between the **Logon Page** and **Deny** boxes
 
 |image13|
 
-12. Click the Authentication tab
+12. Click the **Authentication** tab
 13. Select **RADIUS Auth**  
 14. Click **Add Item**
 
 |image14|
 
-15. Select **radius_servers** from the AAA Server dropdown box
+15. Select **radius_servers** from the **AAA Server** dropdown box
 16. Change the password source to **%{session.logon.last.OTP}**
 17. Clic **Save**
 
 |image15|
 
-18. Click the **+** (plus symbol) located on the Successful branch located between RADIUS Auth and Deny boxes
+18. Click the **+** (plus symbol) located on the **Successful** branch located between **RADIUS Auth** and **Deny** boxes
 
 
 |image16|
 
-19. under the Authentication Tab select **AD Auth** 
+19. In the **Authentication** tab, select **AD Auth** 
 20. Click **Add Item**
 
 |image17|
@@ -62,12 +60,12 @@ Task - Open Visual Policy Editor
 
 |image18|
 
-23. Click the **+** (plus symbol) located on the Successful branch located between AD Auth and Deny box
+23. Click the **+** (plus symbol) located on the Successful branch located between **AD Auth** and **Deny** box
 24. Click **Add Item**
 
 |image10|
 
-25. Under the Assignment Tab select **Variable Assign** 
+25. In the **Assignment** tab, select **Variable Assign** 
 26. Click **Add Item**
 
 |image19|
@@ -84,15 +82,15 @@ Task - Open Visual Policy Editor
 
 |image38|
 
-29. Locate the F5CertSSO.f5lab.local.txt file in the c:\\Labfiles\\Agility2020-Ephemeral Authentication directory. 
+29. Locate the **F5CertSSO.f5lab.local.txt** file in the **C:\\Labfiles\\Agility2020-Ephemeral Authentication** directory. 
 
 |image39|
 
-30. Open the file with notepad++ and copy the contents of the file
+30. Open the file with **notepad++** and copy the contents of the file
 
 |image40|
 
-31. Return to Visual Policy editor and past the certificate into the **custom expression** field
+31. Return to the **Visual Policy Editor** and paste the certificate into the **custom expression** field
 32. Click **Finished**
 
 |image41|
@@ -103,7 +101,7 @@ Click **Save**
 
 
 
-33. Click the **Deny** ending icon located on the fallback branch of the Variable Assign Agent
+33. Click the **Deny** ending icon located on the fallback branch of the **Variable Assign** agent
 
 |image20|
 
