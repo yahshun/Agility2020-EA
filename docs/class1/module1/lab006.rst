@@ -35,7 +35,9 @@ Task - Configure Virtual Server
 .. note:: 
 	The following iRule must be used when inserting custom extensions using C3D.
 
-.. code-block:: tcl
+.. code::
+   :linenos:
+
    when SERVERSSL_CLIENTHELLO_SEND {
 	   set username [ACCESS::session data get "session.logon.last.username"]
 	   set domain [ACCESS::session data get "session.ad.last.actualdomain"]
