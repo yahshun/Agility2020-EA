@@ -12,34 +12,35 @@ Task - Configure Virtual Server
 
 |image32|
 
-2. Enter **mtls_vs** for the Name
-3. Enter **10.1.10.105** for the DestinationAddress/Mask
-4. Enter **443** for the Service Port
-5. Select **http** for HTTP Profile(Client)
-6. Select **client_certsso** from the SSL Profile(Slient) List
+2. Enter **mtls_vs** for the **Name**
+3. Enter **10.1.10.105** for the **DestinationAddress/Mask**
+4. Enter **443** for the **Service Por**t
+5. Select **http** for **HTTP Profile (Client)**
+6. Select **client_certsso** from the **SSL Profile (Client)** List
 
 |image33|
 
 
-7. Select **server_certsso** from the SSL Profile(Server) List
-8. Select **Auto Map** from the Source Address Translation dropdown Box
-9. Select **cert_sso** from the Access Profile dropdown Box
+7. Select **server_certsso** from the **SSL Profile (Server)** List
+8. Select **Auto Map** from the **Source Address Translation** dropdown Box
+9. Select **cert_sso** from the **Access Profile** dropdown Box
 
 |image34|
 
 10. Select the irule **Cert_SSO**
-11. Select **mtls_pool** for the Default Pool
+11. Select **mtls_pool** for the **Default Pool**
 12. Click **Finished**
 
 
-.. note :: 
-	 This irule must be used to when inserting custom extensions using C3D.
+.. note:: 
+	The following iRule must be used when inserting custom extensions using C3D.
 
-		| when SERVERSSL_CLIENTHELLO_SEND {
-		| set username [ACCESS::session data get "session.logon.last.username"]
-		| set domain [ACCESS::session data get "session.ad.last.actualdomain"]
-  		| SSL::c3d extension 1.1.1.1 "Minted Extension=$username@$domain"
-		| }
+.. code::
+   when SERVERSSL_CLIENTHELLO_SEND {
+	   set username [ACCESS::session data get "session.logon.last.username"]
+	   set domain [ACCESS::session data get "session.ad.last.actualdomain"]
+  		SSL::c3d extension 1.1.1.1 "Minted Extension=$username@$domain"
+	}
 
 |image35|
 
