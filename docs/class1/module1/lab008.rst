@@ -1,44 +1,42 @@
 Lab - Implement Dynamic Certificate Injection
 ------------------------------------------------
 
-In this section we will use HTTP Connector to retrieve a user's certificate from Active Directory to be used in the BIG-IP Certificate minting process
+In this section, we will use the HTTP Connector to retrieve a user's certificate from Active Directory and use it in the BIG-IP Certificate minting process.
 
 
-Task - Create a HTTP Connector Transport
+Task - Create an HTTP Connector Transport
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 1. Navigate to **Access >> Authentication >> HTTP Connector >> HTTP Connector Transport** and click the  **+** (plus symbol)
 
 |image54|
 
 2. Enter Name **demo-http-connector**
-3. Select **prebuilt-dns-resolver** from the DNS Resolver dropdown
-4. Select **prebuilt-adpiadmin-serverssl** from the Server SSL Profile
+3. Select **prebuilt-dns-resolver** from the **DNS Resolver** dropdown
+4. Select **prebuilt-adpiadmin-serverssl** from the **Server SSL Profile**
 5. Click **Save**
 
 |image55|
 
 Task - Create a HTTP Connector Request
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 6. Navigate to **Access >> Authentication >> HTTP Connector >> HTTP Connector Request** and click the  **+** (plus symbol)
 
 |image56|
 
 7. Enter name **get-cert**
-8. Select **demo-http-connector** from the dropdown 
+8. Select **demo-http-connector** from the dropdown
 9. Enter URL **https://adapi.f5lab.local:8443/aduser/cert?useridentity=%{perflow.username}**
-10. Enter **GET** for the Method
-11. Select **Parse** for the Response Action
-12. Click **Save** 
+10. Enter **GET** for the **Method**
+11. Select **Parse** for the **Response Action**
+12. Click **Save**
 
 |image57|
 
 
 Task - Create a Per-Request Policy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 13. Navigate to Access >> Profiles/Policies >> Per-Request Policies  Click the  **+** (plus symbol)
 
@@ -150,27 +148,30 @@ Task - Create a Per-Request Policy
 54. Click **Add Item**
 
 
-.. note ::  
-	This irule event triggers the code from the previously attached irule. This 	    	irule must be used when inserting a certificate using C3D in a per-request        	policy.
+.. note::
 
-	| when ACCESS_PER_REQUEST_AGENT_EVENT {
- 	| set cert [ACCESS::session data get {session.ssl.cert.whole}]
- 	| log local0. "My cert: $cert"
- 	| SSL::c3d cert [X509::pem2der $cert]
-	| } 
+   This iRule event triggers the code from the previously attached iRule. This iRule must be used when inserting a certificate using C3D in a per-request policy.
+
+.. code::
+
+   when ACCESS_PER_REQUEST_AGENT_EVENT {
+      set cert [ACCESS::session data get {session.ssl.cert.whole}]
+      log local0. "My cert: $cert"
+      SSL::c3d cert [X509::pem2der $cert]
+   }
 
 
 |image80|
 
-55. Enter **lab** for the ID
+55. Enter **lab** for the **ID**
 56. Click **Save**
 
 |image81|
 
-Task - Attach the PRP to the mTLS virtual Server
+Task - Attach the PRP to the mTLS Virtual Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-57. Navigate to Local Traffic >> Virtual Servers.  Click **Virtual Server List**
+57. Navigate to **Local Traffic >> Virtual Servers**.  Click **Virtual Server List**
 
 |image82|
 
@@ -178,13 +179,11 @@ Task - Attach the PRP to the mTLS virtual Server
 
 |image83|
 
-59. Navigate to the Access Policy Section and select **certsso_prp** from the Per-Request Policy dropdown
+59. Navigate to the **Access Policy** section and select **certsso_prp** from the **Per-Request Policy** dropdown
 60. Click **Update**
 
 
 |image84|
-
-
 
 
 .. |image54| image:: /_static/module1/image054.png
