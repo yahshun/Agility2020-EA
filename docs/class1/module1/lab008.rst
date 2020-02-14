@@ -38,7 +38,7 @@ Task - Create a HTTP Connector Request
 Task - Create a Per-Request Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-13. Navigate to Access >> Profiles/Policies >> Per-Request Policies  Click the  **+** (plus symbol)
+13. Navigate to **Access >> Profiles/Policies >> Per-Request Policies** and click the  **+** (plus symbol)
 
 |image58|
 
@@ -48,7 +48,7 @@ Task - Create a Per-Request Policy
 
 |image59|
 
-17. Click **edit** under Per-Request Policy
+17. Click **edit** under **Per-Request Policy**
 
 |image60|
 
@@ -94,16 +94,16 @@ Task - Create a Per-Request Policy
 
 |image69|
 
-33. Click the **Fail** terminal at the end of the Successful branch
+33. Click the **Fail** terminal at the end of the **Successful** branch
 
 |image70|
 
-34. Select the **Success** Terminal
+34. Select the **Success** terminal
 35. Click **Save**
 
 |image71|
 
-36. Click the **+** (plus symbol) on the successful branch
+36. Click the **+** (plus symbol) on the **successful** branch
 
 |image72|
 
@@ -118,9 +118,9 @@ Task - Create a Per-Request Policy
 
 |image74|
 
-42. Enter **session.ssl.cert.whole** for the Custom Variable
+42. Enter **session.ssl.cert.whole** for the **Custom Variable**
 43. Select **Session Variable** from the dropdown
-44. Enter **subsession.http_connector.body.certificate** for the Session Variable
+44. Enter **subsession.http_connector.body.certificate** for the **Session Variable**
 45. Click **Finished**
 
 |image75|
@@ -129,7 +129,7 @@ Task - Create a Per-Request Policy
 
 |image76|
 
-47. Click the **+** (plus symbol) located between Start and Allow in the policy
+47. Click the **+** (plus symbol) located between **Start** and **Allow** in the policy
 
 |image77|
 
@@ -139,7 +139,7 @@ Task - Create a Per-Request Policy
 
 |image78|
 
-51. Click the **+** (plus symbol) on the success branch of Request Cert
+51. Click the **+** (plus symbol) on the success branch of **Request Cert**
 
 |image79|
 
