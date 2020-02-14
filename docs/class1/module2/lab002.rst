@@ -231,6 +231,6 @@ Task - Running Installation Script
 
 
 
-.. |image01| image:: /_static/class1/module2/image001.png
-.. |image02| image:: /_static/class1/module2/image002.png
-.. |image03| image:: /_static/class1/module2/image003.png
+.. |image01| image:: /_static/module2/image001.png
+.. |image02| image:: /_static/module2/image002.png
+.. |image03| image:: /_static/module2/image003.png

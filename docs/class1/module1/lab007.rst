@@ -1,12 +1,11 @@
 Lab - Test the Configuration
 ------------------------------------------------
 
-In this section you test access to a NGINX site requiring mTLS.
+In this section, you will test access to an NGINX web site requiring mTLS.
 
 
 Task - Access mtls.acme.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 1. From the jumpbox's webbrowser,  access https://mtls.acme.com
 
@@ -17,19 +16,20 @@ Task - Access mtls.acme.com
 |image44|
 
 3. You will be logged into the site displaying the Cert userID for **user1@f5lab.local**
+
 4. Click the **Expand Certificate Data Array** to see the contents of the certificate.
 
 |image45|
 
-5. Scroll down the Certificate contents and you will see in Subject Array the commonName of the certificate is **F5CertSSO**. This certificate was build using the contents of the certificate copied into the APM policy
+5. Scroll down the Certificate contents and you will see in **Subject Array** that the commonName of the certificate is **F5CertSSO**. This certificate was built using the contents of the certificate copied into the APM policy.
 
 |image46|
 
-6. Continue to scroll down to the extension array section and you will see a custom extension of **1.1.1.1** has been inserted into the minted certificate.  The values is **user1@f5lab.local** base64 encoded.
+6. Continue to scroll down to the **extensions array** section and you will see that a custom extension of **1.1.1.1** has been inserted into the minted certificate.  The value is **user1@f5lab.local** base64 encoded.
 
 |image47|
 
-7. Open a new incognito windows so you can test accessing mtls.acme.com with a different user.
+7. Open a new incognito browser window so you can test access to mtls.acme.com with different user credentials.
 
 |image48|
 
@@ -46,23 +46,23 @@ Task - Access mtls.acme.com
 
 |image51|
 
-11. Scroll down the Certificate contents and you will see in Subject Array the commonName of the certificate is **F5CertSSO**. This certificate was build using the contents of the certificate copied into the APM policy
+11. Scroll down the Certificate contents and you will see in **Subject Array** that the commonName of the certificate is **F5CertSSO**. This certificate was built using the contents of the certificate copied into the APM policy.
 
 |image46|
 
-12. Continue to scroll down to the extension array section and you will see a custom extension of **1.1.1.1** has been inserted into the minted certificate.  The values is **user2@f5lab.local** base64 encoded.
+12. Continue to scroll down to the **extension array** section and you will see that a custom extension of **1.1.1.1** has been inserted into the minted certificate.  The value is **user2@f5lab.local** base64 encoded.
 
 |image53|
 
 
 
-.. |image43| image:: /_static/class1/module1/image043.png
-.. |image44| image:: /_static/class1/module1/image044.png
-.. |image45| image:: /_static/class1/module1/image045.png
-.. |image46| image:: /_static/class1/module1/image046.png
-.. |image47| image:: /_static/class1/module1/image047.png
-.. |image48| image:: /_static/class1/module1/image048.png
-.. |image49| image:: /_static/class1/module1/image049.png
-.. |image50| image:: /_static/class1/module1/image050.png
-.. |image51| image:: /_static/class1/module1/image051.png
-.. |image53| image:: /_static/class1/module1/image053.png
+.. |image43| image:: /_static/module1/image043.png
+.. |image44| image:: /_static/module1/image044.png
+.. |image45| image:: /_static/module1/image045.png
+.. |image46| image:: /_static/module1/image046.png
+.. |image47| image:: /_static/module1/image047.png
+.. |image48| image:: /_static/module1/image048.png
+.. |image49| image:: /_static/module1/image049.png
+.. |image50| image:: /_static/module1/image050.png
+.. |image51| image:: /_static/module1/image051.png
+.. |image53| image:: /_static/module1/image053.png
