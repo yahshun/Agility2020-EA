@@ -6,12 +6,12 @@ In this section you create a pool that contains the IP address of the CentOS ser
 Task - Create the Pool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Navigate to **Local Traffic >> Pools >> Pool List**, then click the **+** (plus symbol) to create a new Pool
+1. Navigate to **Local Traffic >> Pools >> Pool List**, then click the **+** (plus symbol) to create a new **Pool**
 
 |image30|
 
 
-2. Enter **mtls_pool** for the Pool Name
+2. Enter **mtls_pool** for the **Pool Name**
 3. Select **https** from the list of available monitors
 4. Enter **10.1.20.9** for the member address
 5. Enter **443** for the member port
