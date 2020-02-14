@@ -33,8 +33,8 @@ Task - Access mtls.acme.com
 
 
 
-.. |image43| image:: /_static/class1/module1/image043.png
-.. |image44| image:: /_static/class1/module1/image044.png
-.. |image45| image:: /_static/class1/module1/image045.png
-.. |image85| image:: /_static/class1/module1/image085.png
-.. |image86| image:: /_static/class1/module1/image086.png
+.. |image43| image:: /_static/module1/image043.png
+.. |image44| image:: /_static/module1/image044.png
+.. |image45| image:: /_static/module1/image045.png
+.. |image85| image:: /_static/module1/image085.png
+.. |image86| image:: /_static/module1/image086.png

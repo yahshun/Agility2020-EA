@@ -113,23 +113,23 @@ The LDAP Macro will verify that the requesting user has a valid account and the 
    |image135|
 
 
-.. |image30| image:: /_static/class1/module2/image030.png
-.. |image31| image:: /_static/class1/module2/image031.png
-.. |image32| image:: /_static/class1/module2/image032.png
-.. |image33| image:: /_static/class1/module2/image033.png
-.. |image34| image:: /_static/class1/module2/image034.png
-.. |image35| image:: /_static/class1/module2/image035.png
-.. |image36| image:: /_static/class1/module2/image036.png
-.. |image37| image:: /_static/class1/module2/image037.png
-.. |image38| image:: /_static/class1/module2/image038.png
-.. |image39| image:: /_static/class1/module2/image039.png
-.. |image130| image:: /_static/class1/module2/image130.png
-.. |image131| image:: /_static/class1/module2/image131.png
-.. |image132| image:: /_static/class1/module2/image132.png
-.. |image133| image:: /_static/class1/module2/image133.png
-.. |image134| image:: /_static/class1/module2/image134.png
-.. |image135| image:: /_static/class1/module2/image135.png
-.. |image136| image:: /_static/class1/module2/image136.png
-.. |image137| image:: /_static/class1/module2/image137.png
-.. |image138| image:: /_static/class1/module2/image138.png
-.. |image139| image:: /_static/class1/module2/image139.png
+.. |image30| image:: /_static/module2/image030.png
+.. |image31| image:: /_static/module2/image031.png
+.. |image32| image:: /_static/module2/image032.png
+.. |image33| image:: /_static/module2/image033.png
+.. |image34| image:: /_static/module2/image034.png
+.. |image35| image:: /_static/module2/image035.png
+.. |image36| image:: /_static/module2/image036.png
+.. |image37| image:: /_static/module2/image037.png
+.. |image38| image:: /_static/module2/image038.png
+.. |image39| image:: /_static/module2/image039.png
+.. |image130| image:: /_static/module2/image130.png
+.. |image131| image:: /_static/module2/image131.png
+.. |image132| image:: /_static/module2/image132.png
+.. |image133| image:: /_static/module2/image133.png
+.. |image134| image:: /_static/module2/image134.png
+.. |image135| image:: /_static/module2/image135.png
+.. |image136| image:: /_static/module2/image136.png
+.. |image137| image:: /_static/module2/image137.png
+.. |image138| image:: /_static/module2/image138.png
+.. |image139| image:: /_static/module2/image139.png

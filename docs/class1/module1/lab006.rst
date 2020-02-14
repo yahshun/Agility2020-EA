@@ -44,8 +44,8 @@ Task - Configure Virtual Server
 |image35|
 
 
-.. |image32| image:: /_static/class1/module1/image032.png
-.. |image33| image:: /_static/class1/module1/image033.png
-.. |image34| image:: /_static/class1/module1/image034.png
-.. |image35| image:: /_static/class1/module1/image035.png
+.. |image32| image:: /_static/module1/image032.png
+.. |image33| image:: /_static/module1/image033.png
+.. |image34| image:: /_static/module1/image034.png
+.. |image35| image:: /_static/module1/image035.png
 

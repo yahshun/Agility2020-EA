@@ -26,10 +26,10 @@ Task - Create the cert_sso Access Profile
 
 |image7|
 
-.. |image0| image:: /_static/class1/module1/image000.png
-.. |image5| image:: /_static/class1/module1/image005.png
-.. |image6| image:: /_static/class1/module1/image006.png
-.. |image7| image:: /_static/class1/module1/image007.png
+.. |image0| image:: /_static/module1/image000.png
+.. |image5| image:: /_static/module1/image005.png
+.. |image6| image:: /_static/module1/image006.png
+.. |image7| image:: /_static/module1/image007.png
 
 
 

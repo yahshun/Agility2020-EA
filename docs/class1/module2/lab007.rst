@@ -81,16 +81,16 @@ Task - Update the Initial Access Policy
 
 
 
-.. |image50| image:: /_static/class1/module2/image050.png
-.. |image51| image:: /_static/class1/module2/image051.png
-.. |image52| image:: /_static/class1/module2/image052.png
-.. |image53| image:: /_static/class1/module2/image053.png
-.. |image54| image:: /_static/class1/module2/image054.png
-.. |image55| image:: /_static/class1/module2/image055.png
-.. |image56| image:: /_static/class1/module2/image056.png
-.. |image57| image:: /_static/class1/module2/image057.png
-.. |image58| image:: /_static/class1/module2/image058.png
-.. |image59| image:: /_static/class1/module2/image059.png
-.. |image150| image:: /_static/class1/module2/image150.png
-.. |image151| image:: /_static/class1/module2/image151.png
-.. |image152| image:: /_static/class1/module2/image152.png
+.. |image50| image:: /_static/module2/image050.png
+.. |image51| image:: /_static/module2/image051.png
+.. |image52| image:: /_static/module2/image052.png
+.. |image53| image:: /_static/module2/image053.png
+.. |image54| image:: /_static/module2/image054.png
+.. |image55| image:: /_static/module2/image055.png
+.. |image56| image:: /_static/module2/image056.png
+.. |image57| image:: /_static/module2/image057.png
+.. |image58| image:: /_static/module2/image058.png
+.. |image59| image:: /_static/module2/image059.png
+.. |image150| image:: /_static/module2/image150.png
+.. |image151| image:: /_static/module2/image151.png
+.. |image152| image:: /_static/module2/image152.png

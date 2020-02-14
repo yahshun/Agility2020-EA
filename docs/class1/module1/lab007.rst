@@ -56,13 +56,13 @@ Task - Access mtls.acme.com
 
 
 
-.. |image43| image:: /_static/class1/module1/image043.png
-.. |image44| image:: /_static/class1/module1/image044.png
-.. |image45| image:: /_static/class1/module1/image045.png
-.. |image46| image:: /_static/class1/module1/image046.png
-.. |image47| image:: /_static/class1/module1/image047.png
-.. |image48| image:: /_static/class1/module1/image048.png
-.. |image49| image:: /_static/class1/module1/image049.png
-.. |image50| image:: /_static/class1/module1/image050.png
-.. |image51| image:: /_static/class1/module1/image051.png
-.. |image53| image:: /_static/class1/module1/image053.png
+.. |image43| image:: /_static/module1/image043.png
+.. |image44| image:: /_static/module1/image044.png
+.. |image45| image:: /_static/module1/image045.png
+.. |image46| image:: /_static/module1/image046.png
+.. |image47| image:: /_static/module1/image047.png
+.. |image48| image:: /_static/module1/image048.png
+.. |image49| image:: /_static/module1/image049.png
+.. |image50| image:: /_static/module1/image050.png
+.. |image51| image:: /_static/module1/image051.png
+.. |image53| image:: /_static/module1/image053.png
