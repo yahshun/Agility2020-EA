@@ -155,8 +155,8 @@ Task - Create a Per-Request Policy
 
    This iRule event triggers the code from the previously attached iRule. This iRule must be used when inserting a certificate using C3D in a per-request policy.
 
-.. code-block:: tcl
-   :linenos::
+.. code-block:: none
+   :linenos:
 
    when ACCESS_PER_REQUEST_AGENT_EVENT {
       set cert [ACCESS::session data get {session.ssl.cert.whole}]
