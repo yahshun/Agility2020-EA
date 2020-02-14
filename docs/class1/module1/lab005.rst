@@ -6,7 +6,7 @@ In this section you create a pool that contains the IP address of the CentOS ser
 Task - Create the Pool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Navigate to Local Traffic>>Pools>>Pool List, then click the **+** (plus symbol) to create a new Pool
+1. Navigate to **Local Traffic >> Pools >> Pool List**, then click the **+** (plus symbol) to create a new Pool
 
 |image30|
 

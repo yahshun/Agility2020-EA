@@ -8,7 +8,7 @@ Task - Create a HTTP Connector Transport
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-1. Navigate to Access >> Authentication >> HTTP Connector >> HTTP Connector Transport  Click the  **+** (plus symbol)
+1. Navigate to **Access >> Authentication >> HTTP Connector >> HTTP Connector Transport** and click the  **+** (plus symbol)
 
 |image54|
 
@@ -22,7 +22,7 @@ Task - Create a HTTP Connector Transport
 Task - Create a HTTP Connector Request
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-6. Navigate to Access >> Authentication >> HTTP Connector >> HTTP Connector Request.  Click the  **+** (plus symbol)
+6. Navigate to **Access >> Authentication >> HTTP Connector >> HTTP Connector Request** and click the  **+** (plus symbol)
 
 |image56|
 

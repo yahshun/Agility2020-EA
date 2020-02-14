@@ -1,12 +1,12 @@
 Lab - Create the SSL Profiles
 ------------------------------------------------
 
-In this section, you will define the virtual server IP address its SSL profile settings 
+In this section, you will define the virtual server IP address and its SSL profile settings.
 
 Task - Create a Client SSL Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Navigate to Local Traffic>>Profiles>>SSL>>Client, then click the **+** (plus symbol) to create a new SSL Profile
+1. Navigate to **Local Traffic >> Profiles >> SSL >> Client**, then click the **+** (plus symbol) to create a new SSL Profile
 
 |image23|
 
@@ -34,7 +34,7 @@ Task - Create a Client SSL Profile
 Task - Create a Server SSL Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-11. Navigate to Local Traffic >> Profiles >> SSL >> Server, then click the **+** (plus symbol) to create a new SSL Profile
+11. Navigate to **Local Traffic >> Profiles >> SSL >> Server**, then click the **+** (plus symbol) to create a new SSL Profile
 
 |image27|
 
