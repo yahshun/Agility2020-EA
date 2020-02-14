@@ -76,5 +76,5 @@ components:
 |                        | - Internal   10.1.20.8  |                          | 
 +------------------------+-------------------------+--------------------------+      
 
-.. |image0| image:: /_static/class1/image000.png
+.. |image0| image:: /_static/labinfo/image000.png
 
