@@ -14,7 +14,7 @@ Task - Configure Virtual Server
 
 2. Enter **mtls_vs** for the **Name**
 3. Enter **10.1.10.105** for the **DestinationAddress/Mask**
-4. Enter **443** for the **Service Por**t
+4. Enter **443** for the **Service Port**
 5. Select **http** for **HTTP Profile (Client)**
 6. Select **client_certsso** from the **SSL Profile (Client)** List
 
@@ -35,7 +35,7 @@ Task - Configure Virtual Server
 .. note:: 
 	The following iRule must be used when inserting custom extensions using C3D.
 
-.. code::
+.. code-block:: tcl
    when SERVERSSL_CLIENTHELLO_SEND {
 	   set username [ACCESS::session data get "session.logon.last.username"]
 	   set domain [ACCESS::session data get "session.ad.last.actualdomain"]
