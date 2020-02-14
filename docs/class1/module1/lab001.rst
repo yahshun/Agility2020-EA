@@ -10,7 +10,7 @@ Task - Create an Active Directory AAA Object
 
 |image0|
 
-2. Navigate to Authentication >> Active Directory, then click the **+ plus symbol** to create a new AAA object
+2. Navigate to **Authentication >> Active Directory**, then click the **+** (plus symbol) to create a new AAA object
 
 |image1|
 
@@ -23,7 +23,8 @@ Task - Create an Active Directory AAA Object
 - Domain Controller Hostname: **dc.f5lab.local**
 - admin name: **admin**
 - admin Password: **admin**
-- Click **Finished**
+
+4. Click **Finished**
 
 |image2|
 
@@ -31,22 +32,20 @@ Task - Create an Active Directory AAA Object
 Task - Create a RADIUS AAA Object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-4. From the webbrowser, click on the **Access** tab located on the lefthand side.
+1. From the webbrowser, click on the **Access** tab located on the lefthand side.
 
-|image0|
-
-5. 4. Navigate to Authentication>RADIUS, then click the **+ plus symbol** to create a new AAA object
+2. Navigate to **Authentication >> RADIUS**, then click the **+** (plus symbol) to create a new AAA object
 
 |image3|
 
-6. Enter the following information for the AD Authentication Object
+3. Enter the following information for the AD Authentication Object
 
 - Name: **radius_servers**
 - Server Pool Name: **radius_pool**
 - Server Addresses: **10.1.20.8**
 - Secret password: **secret**
-- Click **Finished**
 
+4. Click **Finished**
 
 |image4|
 
