@@ -1,14 +1,13 @@
 Lab - Test Dynamic Certificate Injection
 ------------------------------------------------
 
-In this section you will test how HTTP Connector can used to retrieve dynamic content for use in C3D.
+In this section, you will learn how the HTTP Connector can used to retrieve dynamic content for use in C3D.
 
 
 Task - Access mtls.acme.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-#. From the jumpbox's webbrowser,  access https://mtls.acme.com
+#. From the web browser on the jumphost, access https://mtls.acme.com
 
 |image43|
 
@@ -17,20 +16,18 @@ Task - Access mtls.acme.com
 |image44|
 
 #. You will be logged into the site displaying the Cert userID for **user1@f5lab.local**
+
 #. Click the **Expand Certificate Data Array** to see the contents of the certificate.
 
 |image45|
 
-#. Scroll down the Certificate contents and you will see in Subject Array the commonName of the certificate is **user1**. This certificate was build using the contents of the certificate retrieve using HTTP Connector.
+#. Scroll down the certificate contents and you will see in **Subject Array** that the **commonName** of the certificate is **user1**. This certificate was built using the contents of the certificate retrieved using HTTP Connector.
 
 |image85|
 
-#. Continue to scroll down to the extension array section and you will see the subjectAltName extension of user1@f5lab.local has been inserted into the minted certificate.  
+#. Continue to scroll down to the **extension array** section and you will see the **subjectAltName** extension of **user1@f5lab.local** has been inserted into the minted certificate.
 
 |image86|
-
-
-
 
 
 .. |image43| image:: /_static/module1/image043.png
