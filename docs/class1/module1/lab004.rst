@@ -11,19 +11,19 @@ Task - Create a Client SSL Profile
 |image23|
 
 2. Enter the name **client_certsso**
-3. **Check** Custom box to the right of Certificate Key Chain
+3. **Check** the **custom** box to the right of **Certificate Key Chain**
 4. **Click** add
 
 |image24|
 
-5. Select **acme.com-wildcard.crt** from the certificate dropdown box
-6. Select **acme.com-wildcard.key** from the key dropdown box
+5. Select **acme.com-wildcard.crt** from the **certificate** dropdown box
+6. Select **acme.com-wildcard.key** from the **key** dropdown box
 7. **Click** Add
 
 |image25|
 
-8. **Check** the custom box to the right of Client Certificate Constrained Delegation
-9. Select **Enabled** from the Client Certificate Constrained Delegation Dropdown box
+8. **Check** the **custom** box to the right of **Client Certificate Constrained Delegation**
+9. Select **Enabled** from the **Client Certificate Constrained Delegation** dropdown box
 10. Click **Finished**
 
 |image26|
@@ -39,16 +39,16 @@ Task - Create a Server SSL Profile
 |image27|
 
 12. Enter **server_certsso** for profile name
-13. **Check** the two custom boxes next to Certificate and Key
-14. Select **F5CertSSO.f5lab.local.crt** from the certificate dropbox box
-15. Select **F5CertSSO.f5lab.local.key** from the key dropdown box
+13. **Check** the two custom boxes next to **Certificate** and **Key**
+14. Select **F5CertSSO.f5lab.local.crt** from the **certificate** dropbox box
+15. Select **F5CertSSO.f5lab.local.key** from the **key** dropdown box
 
 |image28|
 
-16. Check the **custom** box about the Client Certificate Constrained Delegation box 
-17. Select **Enabled** from the Client Certificate Constrained Delegation Dropdown Box
-18. Select **F5SubCA.f5lab.local.crt** from the CA Certificate dropdown box
-19. Select **F5SubCA.f5lab.local.key** from the CA Key dropdown box
+16. Check the **custom** box about the **Client Certificate Constrained Delegation** box
+17. Select **Enabled** from the **Client Certificate Constrained Delegation** dropdown box
+18. Select **F5SubCA.f5lab.local.crt** from the **CA Certificate** dropdown box
+19. Select **F5SubCA.f5lab.local.key** from the **CA Key dropdown** box
 20. **Click** Finished
 
 |image29|
