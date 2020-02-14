@@ -12,7 +12,7 @@ Task - Open Visual Policy Editor
 
 |image8|
 
-2. Click the **+ plus symbol** located on the fallback branch located between the Start and Deny boxes
+2. Click the **+** (plus symbol) located on the fallback branch located between the Start and Deny boxes
 
 |image9|
 
@@ -30,7 +30,7 @@ Task - Open Visual Policy Editor
 
 |image12|
 
-11. Click the **+ plus symbol** located on the fallback branch located between the Logon Page and Deny boxes
+11. Click the **+** (plus symbol) located on the fallback branch located between the Logon Page and Deny boxes
 
 |image13|
 
@@ -46,7 +46,7 @@ Task - Open Visual Policy Editor
 
 |image15|
 
-18. Click the **+ plus symbol** located on the Successful branch located between RADIUS Auth and Deny boxes
+18. Click the **+** (plus symbol) located on the Successful branch located between RADIUS Auth and Deny boxes
 
 
 |image16|
@@ -62,7 +62,7 @@ Task - Open Visual Policy Editor
 
 |image18|
 
-23. Click the **+ plus symbol** located on the Successful branch located between AD Auth and Deny box
+23. Click the **+** (plus symbol) located on the Successful branch located between AD Auth and Deny box
 24. Click **Add Item**
 
 |image10|

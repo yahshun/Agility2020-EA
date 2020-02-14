@@ -8,7 +8,7 @@ Task - Configure Virtual Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-1. Navigate to Local Traffic>>Virtual Servers>>Virtual Server List, then click the **+ plus symbol** to create a new virtual Server
+1. Navigate to Local Traffic>>Virtual Servers>>Virtual Server List, then click the **+** (plus symbol) to create a new virtual Server
 
 |image32|
 

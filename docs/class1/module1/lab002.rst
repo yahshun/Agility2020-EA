@@ -1,7 +1,7 @@
 Lab - Create an Access profile
 ------------------------------------------------
 
-In this section, you will create and define the setting of the access profile
+In this section, you will create and define the settings of the APM Access Profile.
 
 Task - Create the cert_sso Access Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -9,9 +9,7 @@ Task - Create the cert_sso Access Profile
 
 1. From the webbrowser, click on the **Access** tab located on the left side.
 
-|image0|
-
-2. Navigate to Profile/ Policies >> Access Profile(Per-Session Policies), then click the **+ plus symbol** to create a new Access Profile
+2. Navigate to **Profile/ Policies >> Access Profile(Per-Session Policies)**, then click the **+** (plus symbol) to create a new Access Profile
 
 |image5|
 

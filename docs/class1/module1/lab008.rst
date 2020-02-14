@@ -8,7 +8,7 @@ Task - Create a HTTP Connector Transport
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-1. Navigate to Access >> Authentication >> HTTP Connector >> HTTP Connector Transport  Click the  **+ plus Symbol**
+1. Navigate to Access >> Authentication >> HTTP Connector >> HTTP Connector Transport  Click the  **+** (plus symbol)
 
 |image54|
 
@@ -22,7 +22,7 @@ Task - Create a HTTP Connector Transport
 Task - Create a HTTP Connector Request
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-6. Navigate to Access >> Authentication >> HTTP Connector >> HTTP Connector Request.  Click the  **+ plus symbol**
+6. Navigate to Access >> Authentication >> HTTP Connector >> HTTP Connector Request.  Click the  **+** (plus symbol)
 
 |image56|
 
@@ -40,7 +40,7 @@ Task - Create a Per-Request Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-13. Navigate to Access >> Profiles/Policies >> Per-Request Policies  Click the  **+ Plus Symbol**
+13. Navigate to Access >> Profiles/Policies >> Per-Request Policies  Click the  **+** (plus symbol)
 
 |image58|
 
@@ -63,11 +63,11 @@ Task - Create a Per-Request Policy
 
 |image62|
 
-21. Expand the subroutine by click the **+ plus symbol**
+21. Expand the subroutine by click the **+** (plus symbol)
 
 |image63|
 
-22. Click the **+ plus symbol** on the fallback branch.
+22. Click the **+** (plus symbol) on the fallback branch.
 
 |image64|
 
@@ -105,7 +105,7 @@ Task - Create a Per-Request Policy
 
 |image71|
 
-36. Click the **+ plus symbol** on the successful branch
+36. Click the **+** (plus symbol) on the successful branch
 
 |image72|
 
@@ -131,7 +131,7 @@ Task - Create a Per-Request Policy
 
 |image76|
 
-47. Click the **+ plus symbol** located between Start and Allow in the policy
+47. Click the **+** (plus symbol) located between Start and Allow in the policy
 
 |image77|
 
@@ -141,7 +141,7 @@ Task - Create a Per-Request Policy
 
 |image78|
 
-51. Click the **+ plus symbol** on the success branch of Request Cert
+51. Click the **+** (plus symbol) on the success branch of Request Cert
 
 |image79|
 
