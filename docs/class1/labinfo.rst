@@ -14,13 +14,12 @@ To access your dedicated student lab environment, you will require a web browser
 2. Access the BIG-IP GUI https://10.1.1.4 (you can click on the BIG-IP1 bookmark from Chrome).
 
 3. Login into the **BIG-IP Configuration Utility** with the following credentials:
-User: **admin**
-Password: **admin**
+
+- User: **admin**
+- Password: **admin**
 
 .. NOTE::
-   All work for this lab will be performed exclusively from the Windows
-   jumphost. No installation or interaction with your local system is
-	required.
+   All work for this lab will be performed exclusively from the Windows jumphost. No installation or interaction with your local system is required.
 
 Lab Topology
 ~~~~~~~~~~~~
