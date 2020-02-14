@@ -32,16 +32,17 @@ Task - Configure Virtual Server
 12. Click **Finished**
 
 
-.. note:: 
+.. note::
+
 	The following iRule must be used when inserting custom extensions using C3D.
 
-.. code::
+.. code-block:: tcl
    :linenos:
 
    when SERVERSSL_CLIENTHELLO_SEND {
-	   set username [ACCESS::session data get "session.logon.last.username"]
-	   set domain [ACCESS::session data get "session.ad.last.actualdomain"]
-  		SSL::c3d extension 1.1.1.1 "Minted Extension=$username@$domain"
+      set username [ACCESS::session data get "session.logon.last.username"]
+      set domain [ACCESS::session data get "session.ad.last.actualdomain"]
+      SSL::c3d extension 1.1.1.1 "Minted Extension=$username@$domain"
 	}
 
 |image35|
