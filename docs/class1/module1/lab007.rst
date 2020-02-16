@@ -15,19 +15,23 @@ Task - Access mtls.acme.com
 
 |image44|
 
-3. You will be logged into the site displaying the Cert userID for **user1@f5lab.local**
+3. You will be logged into the site as **User1**. 
 
-4. Click the **Expand Certificate Data Array** to see the contents of the certificate.
+.. note ::  
+
+        The contents of the certificate used for logging into the website was the CertSSO certificate copied into Per-Session Policy. The irule attached inserted the custom extension 1.1.1.1 with the value containing the user's logon name.   Notice the Subject Name is CertSSO, the Subject Alternative Name is empty and the custom extension is user1@f5lab.local
+        
+ 	| Cert Subject: **f5certsso**
+	| Subject Alt: **<empty>**
+	| Custom Ext: **user1@f5lab.local**
+	
+
+        
+
+
 
 |image45|
 
-5. Scroll down the Certificate contents and you will see in **Subject Array** that the commonName of the certificate is **F5CertSSO**. This certificate was built using the contents of the certificate copied into the APM policy.
-
-|image46|
-
-6. Continue to scroll down to the **extensions array** section and you will see that a custom extension of **1.1.1.1** has been inserted into the minted certificate.  The value is **user1@f5lab.local** base64 encoded.
-
-|image47|
 
 7. Open a new incognito browser window so you can test access to mtls.acme.com with different user credentials.
 
@@ -35,34 +39,32 @@ Task - Access mtls.acme.com
 
 |image49|
 
-
-
-8. Login with the username: **user2** and password: **user2**
+8. Login with the username: **user2** and password: **User2**
 
 |image50|
 
-9. You will be logged into the site displaying the Cert userID for **user2@f5lab.local**
-10. Click the **Expand Certificate Data Array** to see the contents of the certificate
+9. You will be logged into the site as **user2@f5lab.local**
+
+.. note ::  
+
+        Notice that user2's Cert Subject is the same as User1, but the custom extension name is different containing user2@f5lab.local.        
+ 	
+        | Cert Subject: **f5certsso**
+	| Subject Alt: **<empty>**
+	| Custom Ext: **user2@f5lab.local**
 
 |image51|
 
-11. Scroll down the Certificate contents and you will see in **Subject Array** that the commonName of the certificate is **F5CertSSO**. This certificate was built using the contents of the certificate copied into the APM policy.
 
-|image46|
-
-12. Continue to scroll down to the **extension array** section and you will see that a custom extension of **1.1.1.1** has been inserted into the minted certificate.  The value is **user2@f5lab.local** base64 encoded.
-
-|image53|
 
 
 
 .. |image43| image:: /_static/module1/image043.png
 .. |image44| image:: /_static/module1/image044.png
 .. |image45| image:: /_static/module1/image045.png
-.. |image46| image:: /_static/module1/image046.png
-.. |image47| image:: /_static/module1/image047.png
+
 .. |image48| image:: /_static/module1/image048.png
 .. |image49| image:: /_static/module1/image049.png
 .. |image50| image:: /_static/module1/image050.png
 .. |image51| image:: /_static/module1/image051.png
-.. |image53| image:: /_static/module1/image053.png
+
