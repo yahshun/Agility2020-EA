@@ -24,10 +24,12 @@ The following resources will be defined for the lab environment:
 +-------------------------+------------------------------------------------------------------+-------------+
 | LDAPS\_proxy\_vs\_IP    | Virtual server IP address of LDAPS proxy service                 | 10.1.20.104 |
 +-------------------------+------------------------------------------------------------------+-------------+
-| LDAP\_server\_IP        | IP Address of site LDAP or AD server (required for LDAP use)     | 10.1.20.104 |
+| LDAP\_server\_IP        | IP Address of site LDAP or AD server (required for LDAP use)     | 10.1.20.7   |
 +-------------------------+------------------------------------------------------------------+-------------+
-| RADIUS\_server\_IP      | IP Address of site RADIUS server (if RADIUS bypass is used)      | 10.1.20.104 |
+| RADIUS\_server\_IP      | IP Address of site RADIUS server (if RADIUS bypass is used)      | 10.1.20.7   |
 +-------------------------+------------------------------------------------------------------+-------------+
 
 .. TODO::
-   Are the above IP addreses correct?
+
+   Are the above Virtual Server IP addresses correct?
+
