@@ -2,11 +2,11 @@ Lab - Executing the PUA Script
 ------------------------------------------------
 **Overview**
 
-The ./build_pua.sh script will do a pre-flight check to ensure all the pre-requisites are met and will invoke a UCS backup by default before making any changes. If this script is run on a BIG-IP with a trial license, you must use the -s or --sanity option to prevent checking for licensing restrictions, this should only be done in a non-production environment as this may cause issues with production systems.  
+The ./build_pua.sh script will do a pre-flight check to ensure all the pre-requisites are met and will invoke a UCS backup by default before making any changes. If this script is run on a BIG-IP with a trial license, you must use the -s or --sanity option to prevent checking for licensing restrictions, this should only be done in a non-production environment as this may cause issues with production systems.
 
-After each invocation, a log file will be left in /var/log called f5-pua-install-xxxx.log which will outline all the actions taken along with the result or any errors encountered. This log file may be requested by support or an F5 engineer to assist in any troubleshooting. 
+After each invocation, a log file will be left in /var/log called f5-pua-install-xxxx.log which will outline all the actions taken along with the result or any errors encountered. This log file may be requested by support or an F5 engineer to assist in any troubleshooting.
 
-**Usage** 
+**Usage**
 
 Invoking ./build_pua.sh with "-h" or "--help" will alert you to the potential options you may use to modify the behavior of the script. As of this document and version 1.1.3 the current options are:
 
@@ -16,7 +16,7 @@ Invoking ./build_pua.sh with "-h" or "--help" will alert you to the potential op
     :header-rows: 1
 
     * - **Options**
-      - **Descriptions**    
+      - **Descriptions**
     * - -h, -\\-help
       - This Notice
     * - -s -\\-sanity
@@ -68,7 +68,7 @@ Task - Running Installation Script
 
 #. Change Directory to **/var/tmp/pua**
 
-   .. code-block:: bash
+   .. code-block:: console
 
       cd /var/tmp/pua
 
@@ -76,7 +76,7 @@ Task - Running Installation Script
 
 #. Unzip the PUA Build Script
 
-   .. code-block:: bash
+   .. code-block:: console
 
       unzip build_pua-151-1.1.5-rc17.zip
 
@@ -84,7 +84,7 @@ Task - Running Installation Script
 
 #. Verify the **pua_config.sh** 
 
-   .. code-block:: bash
+   .. code-block:: console
 
       cat pua_config.sh
 
@@ -92,14 +92,14 @@ Task - Running Installation Script
 
 #. Run the PUA installation script **./build_pua.sh**
 
-   .. code-block:: bash
-     
-      ./build_pua-151.sh
-  
- 
    .. code-block:: console
-     
-      [admin@bigip1:Active:Standalone] pua # ./build_pua-151.sh 
+
+      ./build_pua-151.sh
+
+
+   .. code-block:: console
+
+      [admin@bigip1:Active:Standalone] pua # ./build_pua-151.sh
 
       /var/tmp/pua/build_pua-151.sh - v1.1.5-rc17 on BIG-IP v15.1.0
       Reading config from /var/tmp/pua/pua_config.sh...
@@ -222,8 +222,6 @@ Task - Running Installation Script
       Now go build an APM policy for PUA!
       
       Cleaning up...
-
-
 
 
       /var/tmp/pua/build_pua-151.sh - v1.1.5-rc17 on BIG-IP v15.1.0
