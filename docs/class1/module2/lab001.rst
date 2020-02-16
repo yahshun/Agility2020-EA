@@ -1,22 +1,15 @@
-Lab - Priviledge User Access (PUA) Requirements
-------------------------------------------------------------
+Lab - Priviledged User Access (PUA) Requirements
+------------------------------------------------
 
-**Prerequisties and Deployment Notes**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In order to deploy the F5 PUA solution, you will require the following:
 
-**Plaform Requirements**
+   - F5 BIG-IP Access Policy Manager (APM)
+   - iRules LX licensed and provisioned
+   - F5 PUA platform and device licenses
+   - F5 PUA installation script ("build_pua.zip") - for this release of PUA
 
-  - F5 BIG-IP 
-  - APM, and iRules LX licensed and provisioned
-  - F5 PUA plaftorm and device Licenses
 
-**Prerequisties**
-
-  - The "build_pua.zip" installation script provided by your F5 Account Team or your F5 Partner
-  - 1-4 IP addresses for virtual servers ( see Resource Table)
-
-Resource Table
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The following resources will be defined for the lab environment:
 
 +-------------------------+------------------------------------------------------------------+-------------+
 | **Resource**            | **Description**                                                  | **Value**   |
@@ -36,3 +29,5 @@ Resource Table
 | RADIUS\_server\_IP      | IP Address of site RADIUS server (if RADIUS bypass is used)      | 10.1.20.104 |
 +-------------------------+------------------------------------------------------------------+-------------+
 
+.. TODO::
+   Are the above IP addreses correct?
