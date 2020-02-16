@@ -18,38 +18,38 @@ Task - Access mtls.acme.com
 #. You will be logged into the site as **user1@f5lab.local**
 
 
-.. note ::  
+.. note::
 
-        The contents of the certificate used for logging into the website were from certificate retrieved via HTTP connector in Active Directory. The irule continues to 	insert the custom extension 1.1.1.1 with the value containing the user's logon name.   Notice the Subject Name is user1, the Subject Alternative Name is u		ser1@f5lab.local and the custom extension is user1@f5lab.local
-        
- 	| Cert Subject: **user1**
-	| Subject Alt: **user1@f5lab.local**
-	| Custom Ext: **user1@f5lab.local**
-	
+   The contents of the certificate used for logging into the website were from certificate retrieved via HTTP connector in Active Directory. The irule continues to 	insert the custom extension 1.1.1.1 with the value containing the user's logon name.   Notice the Subject Name is user1, the Subject Alternative Name is u		ser1@f5lab.local and the custom extension is user1@f5lab.local
+   |
+      Cert Subject: **user1**
+      Subject Alt: **user1@f5lab.local**
+      Custom Ext: **user1@f5lab.local**
+
 
 |image85|
 
-7. Open a new incognito browser window so you can test access to mtls.acme.com with different user credentials.
+#. Open a new incognito browser window so you can test access to mtls.acme.com with different user credentials.
 
 |image48|
 
 |image49|
 
-8. Login with the username: **user2** and password: **User2**
+#. Login with the username: **user2** and password: **User2**
 
 |image50|
 
-9. You will be logged into the site as **user2@f5lab.local**
+#. You will be logged into the site as **user2@f5lab.local**
 
-.. note ::  
+.. note::
 
-	 Notice that user2's Cert Subject is now user2 and the subject alt is user2@f5lab.local.  The irule continues to insert the custom extension.   	
-        | Cert Subject: **user2**
-	| Subject Alt: **user2@f5lab.local**
-	| Custom Ext: **user2@f5lab.local**
+   Notice that user2's Cert Subject is now user2 and the subject alt is user2@f5lab.local.  The irule continues to insert the custom extension.
+   |
+      Subject: **user2**
+      Subject Alt: **user2@f5lab.local**
+      Custom Ext: **user2@f5lab.local**
 
 |image86|
-
 
 
 .. |image43| image:: /_static/module1/image043.png
