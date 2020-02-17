@@ -7,7 +7,7 @@ Task - Create the cert_sso Access Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-1. From the webbrowser, click on the **Access** tab located on the left side.
+1. From the web browser, click on the **Access** tab located on the left side.
 
 2. Navigate to **Profile/ Policies >> Access Profile(Per-Session Policies)**, then click the **+** (plus symbol) to create a new Access Profile
 

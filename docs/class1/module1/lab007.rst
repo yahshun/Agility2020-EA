@@ -7,7 +7,7 @@ In this section, you will test access to an NGINX web site requiring mTLS.
 Task - Access mtls.acme.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. From the jumpbox's webbrowser,  access https://mtls.acme.com
+#. From the jumpbox's web browser,  access https://mtls.acme.com
 
 |image43|
 

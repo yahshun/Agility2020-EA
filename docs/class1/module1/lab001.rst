@@ -6,7 +6,7 @@ The first step in deploying CertSSO is creating the objects required for the use
 Task - Create an Active Directory AAA Object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. From the webbrowser, click on the **Access** tab located on the left side.
+1. From the web browser, click on the **Access** tab located on the left side.
 
 |image0|
 
@@ -31,7 +31,7 @@ Task - Create an Active Directory AAA Object
 Task - Create a RADIUS AAA Object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. From the webbrowser, click on the **Access** tab located on the lefthand side.
+1. From the web browser, click on the **Access** tab located on the lefthand side.
 
 2. Navigate to **Authentication >> RADIUS**, then click the **+** (plus symbol) to create a new AAA object
 
