@@ -8,20 +8,21 @@ Task - Adding Device to the PUA Webtop
 
    |image70|
 
-#. Click Create 
+#. Click Create
 
    |image71|
 
 #. Make the following changes
-    - Provide a Name Host01
-    - Change the Link Type pull down to Application URI
-    - Update the Application URI with  **https://%{session.server.network.name}/ssh/host/10.1.20.8**
-    - Click Finish
+
+   - Provide a Name Host01
+   - Change the Link Type pull down to Application URI
+   - Update the Application URI with  **https://%{session.server.network.name}/ssh/host/10.1.20.8**
+   - Click Finish
 
    |image72|
 
 #. Click **Access** >> **Profiles/Policies** >> **Access Profiles (Per-Session Polices)**
-   
+
    |image73|
 
 #. Click the **Edit** button on the **pua** row
@@ -44,7 +45,7 @@ Task - Adding Device to the PUA Webtop
 
    |image78|
 
-.. note:: Finally Click Apply Access Policy
+#. Click **Apply Access Policy**
 
    |image79|
 
