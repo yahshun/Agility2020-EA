@@ -1,7 +1,7 @@
 Lab - Certificate Update
-------------------------------------------------
+--------------------------
 
-In this section. you will modify the SSL profile to present an internally signed certifcate for the PUA webtop and select a trusted Certificate Authority to validate user certificates.
+In this section, you will modify the SSL profile to present an internally signed certifcate for the PUA webtop and select a trusted Certificate Authority to validate user certificates.
 
 Task - Update the SSL Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
