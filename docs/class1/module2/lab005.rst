@@ -33,12 +33,10 @@ The LDAP macro will verify that the requesting user has a valid account and the 
 
 #. Update the **Properties** tab by modifying the **Server**, **SearchDN**, **SearchFilter**, and **Fetch Groups** settings
 
-   .. code-block:: console
-
-      Server = **/Common/prebuilt-f5lab.local**
-      SearchDN = **DC=f5lab,DC=local**
-      SearchFilter = **UserPrincipalName=%{session.custom.ephemeral.upn}**
-      Fetch groups to which the user or group belong = **Direct**
+   - Server = **/Common/prebuilt-f5lab.local**
+   - SearchDN = **DC=f5lab,DC=local**
+   - SearchFilter = **UserPrincipalName=%{session.custom.ephemeral.upn}**
+   - Fetch groups to which the user or group belong = **Direct**
 
    |image35|
 
