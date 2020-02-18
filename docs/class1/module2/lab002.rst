@@ -1,4 +1,4 @@
-Lab - Executing the PUA Script
+Lab 2.2 - Executing the PUA Script
 ------------------------------------------------
 
 **Overview**

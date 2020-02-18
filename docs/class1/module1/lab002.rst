@@ -1,5 +1,5 @@
-Lab - Create an Access profile
-------------------------------------------------
+Lab 1.2 - Create an Access profile
+-----------------------------------
 
 In this section, you will create and define the settings of the APM Access Profile.
 

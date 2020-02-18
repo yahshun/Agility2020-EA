@@ -1,5 +1,5 @@
-Lab -  Verification Testing
------------------------------
+Lab 2.11 - Verification Testing
+-------------------------------------
 
 Task - Test the updated Webtop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

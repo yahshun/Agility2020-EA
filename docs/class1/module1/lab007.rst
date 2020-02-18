@@ -1,4 +1,4 @@
-Lab - Test the Configuration
+Lab 1.7 - Test the Configuration
 ------------------------------------------------
 
 In this section, you will test access to an NGINX web site requiring mTLS.

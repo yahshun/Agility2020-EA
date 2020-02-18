@@ -1,5 +1,5 @@
-Lab - Certificate Update
---------------------------
+Lab 2.8 - Certificate Update
+------------------------------
 
 In this section, you will modify the SSL profile to present an internally signed certifcate for the PUA webtop and select a trusted Certificate Authority to validate user certificates.
 
