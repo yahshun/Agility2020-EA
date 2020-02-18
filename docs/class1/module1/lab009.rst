@@ -1,4 +1,4 @@
-Lab - Test Dynamic Certificate Injection
+Lab 1.9 - Test Dynamic Certificate Injection
 ------------------------------------------------
 
 In this section, you will learn how the HTTP Connector can used to retrieve dynamic content for use in C3D.

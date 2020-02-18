@@ -1,5 +1,5 @@
-Lab - Adding Devices to the webtop
------------------------------------
+Lab 2.9 - Adding Devices to the webtop
+-----------------------------------------
 
 Task - Adding Device to the PUA Webtop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

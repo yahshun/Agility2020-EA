@@ -1,4 +1,4 @@
-Lab - Validating the PUA Script Installation
+Lab 2.3 - Validating the PUA Script Installation
 ------------------------------------------------
 
 In this section, you will test the initial installation of the PUA deployment.

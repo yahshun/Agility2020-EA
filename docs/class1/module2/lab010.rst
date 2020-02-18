@@ -1,5 +1,5 @@
-Lab - Modifying Radius Configurations
---------------------------------------
+Lab 2.10 - Modifying Radius Configurations
+-----------------------------------------------
 
 Task - Modifying the Radius Server secret password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

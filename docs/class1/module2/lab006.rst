@@ -1,5 +1,5 @@
-Lab - Creating an APM Policy - CAC Authentication
--------------------------------------------------
+Lab 2.6 - Creating an APM Policy - CAC Authentication
+--------------------------------------------------------
 
 In this section, you will build a macro to request the user certificate.
 

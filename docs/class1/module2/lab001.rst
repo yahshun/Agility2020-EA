@@ -1,5 +1,5 @@
-Lab - Priviledged User Access (PUA) Requirements
-------------------------------------------------
+Lab 2.1 - Priviledged User Access (PUA) Requirements
+------------------------------------------------------
 
 In order to deploy the F5 PUA solution, you will require the following:
 

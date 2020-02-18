@@ -1,5 +1,5 @@
-Lab - Implement Dynamic Certificate Injection
-------------------------------------------------
+Lab 1.8 - Implement Dynamic Certificate Injection
+--------------------------------------------------
 
 In this section, we will use the HTTP Connector to retrieve a user's certificate from Active Directory and use it in the BIG-IP Certificate minting process.
 
