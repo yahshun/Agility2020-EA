@@ -8,6 +8,9 @@ Github Repo: https://github.com/yahshun/Agility2020-EA
 RTD Preview: https://agility2020-ea-dev.readthedocs.io/en/latest/index.html
 
 
+F5 Agility Lab Template
+=======================
+
 Introduction
 ------------
 
