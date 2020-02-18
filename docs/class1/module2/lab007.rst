@@ -33,6 +33,7 @@ Task - Update the Initial Access Policy
    |image55|
 
 #. Make the following changes
+
    - Change the right hand pull down setting to AAA Atribute
    - Change the Agent Type to LDAP
    - Change the Atribute type to USE LDAP attribute

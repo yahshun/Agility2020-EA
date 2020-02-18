@@ -1,5 +1,12 @@
-F5 Agility Lab Template
-=======================
+F5 Agility Lab - Ephemeral Access
+==================================
+
+This repo contains the source content for the Ephemeral Access lab guide.
+
+Github Repo: https://github.com/yahshun/Agility2020-EA
+
+RTD Preview: https://agility2020-ea-dev.readthedocs.io/en/latest/index.html
+
 
 Introduction
 ------------
