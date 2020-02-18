@@ -7,56 +7,47 @@ In this section, you will test access to an NGINX web site requiring mTLS.
 Task - Access mtls.acme.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. From the jumpbox's webbrowser,  access https://mtls.acme.com
+#. From the jumpbox's web browser,  access https://mtls.acme.com
 
 |image43|
 
-2. Login with the username: **user1** and password: **user1**
+#. Login with the username: **user1** and password: **user1**
 
 |image44|
 
-3. You will be logged into the site as **User1**. 
+#. You will be logged into the site as **User1**.
 
-.. note ::  
+.. note::
 
-        The contents of the certificate used for logging into the website was the CertSSO certificate copied into Per-Session Policy. The irule attached inserted the custom extension 1.1.1.1 with the value containing the user's logon name.   Notice the Subject Name is CertSSO, the Subject Alternative Name is empty and the custom extension is user1@f5lab.local
-        
- 	| Cert Subject: **f5certsso**
-	| Subject Alt: **<empty>**
-	| Custom Ext: **user1@f5lab.local**
-	
-
-        
-
-
+   The contents of the certificate used for logging into the website was the CertSSO certificate copied into Per-Session Policy. The iRule that was attached inserted the custom extension 1.1.1.1 with the value of the user's logon name.  Notice that the Subject Name is CertSSO, the Subject Alternative Name is empty, and the custom extension is user1@f5lab.local.
+   |
+      Cert Subject: **f5certsso**
+      Subject Alt: **<empty>**
+      Custom Ext: **user1@f5lab.local**
 
 |image45|
 
-
-7. Open a new incognito browser window so you can test access to mtls.acme.com with different user credentials.
+#. Open a new incognito browser window so you can test access to mtls.acme.com with different user credentials.
 
 |image48|
 
 |image49|
 
-8. Login with the username: **user2** and password: **User2**
+#. Login with the username: **user2** and password: **User2**
 
 |image50|
 
-9. You will be logged into the site as **user2@f5lab.local**
+#. You will be logged into the site as **user2@f5lab.local**
 
-.. note ::  
+.. note::
 
-        Notice that user2's Cert Subject is the same as User1, but the custom extension name is different containing user2@f5lab.local.        
- 	
-        | Cert Subject: **f5certsso**
-	| Subject Alt: **<empty>**
-	| Custom Ext: **user2@f5lab.local**
+   Notice that user2's Cert Subject is the same as in User1, but the custom extension name is different (now user2@f5lab.local).
+   |
+      Cert Subject: **f5certsso**
+      Subject Alt: **<empty>**
+      Custom Ext: **user2@f5lab.local**
 
 |image51|
-
-
-
 
 
 .. |image43| image:: /_static/module1/image043.png

@@ -1,13 +1,13 @@
 Lab -  Verification Testing
-------------------------------------------------
+-----------------------------
 
 Task - Test the updated Webtop
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Access the webtop via http://pua.acme.com
 
-#. A placeholder for a Warning and Banner should appear, click **"Click here to continue"**
-   
+#. A Warning Banner page (customizable) should appear, click the **Click here to continue** link.
+
    |image90|
 
 #. Select the certificate for user1 and click OK
@@ -23,19 +23,19 @@ Task - Test the updated Webtop
    |image93|
 
 #. Close the browser window and return to webtop
- 
+
 
 #. Click the Host01 icon
 
    |image92|
 
 #. Observer the the username at the bottom left corner
-   
+
    |image94|
-   
+
 
 #. Escalate Priviledges
-   
+
    - type **sudo -i**
    - click the **Menu** button
    - click click **Credentials** button
@@ -43,9 +43,7 @@ Task - Test the updated Webtop
    |image95|
 
 .. note::
-   The Credentials button sends the password to terminal 
-
-
+   The Credentials button sends the password to terminal
 
 
 .. |image90| image:: /_static/module2/image090.png

@@ -6,21 +6,21 @@ In this section, you will review the inital APM policy created by the PUA Build 
 Task - Review the APM Policy Created by the PUA Build Script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Open a web browser to the management IP address of the BIG-IP https://10.1.1.4
+#. Open a web browser and log into the BIG-IP via its management address: https://10.1.1.4
 
-#. Click **Access** >> **Profiles/Policies** >> **Access Profiles (Per-Session Polices)**
+#. Navigate to **Access >> Profiles/Policies >> Access Profiles (Per-Session Polices)**.
 
    |image20|
 
-#. Click the Edit button on the pua row
+#. Click the **Edit** link for the **pua** Access Profile.
 
    |image21|
 
-#. Expanded the Macros by clicking the square box with the plus sign inside
+#. Expanded the Macros by clicking the square box with the plus sign inside.
 
    |image22|
 
-#. Here is the policy created by the PUA Build Script
+#. Here is the policy created by the PUA Build Script:
 
    |image23|
 

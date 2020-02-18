@@ -1,26 +1,26 @@
 Lab - Validating the PUA Script Installation
 ------------------------------------------------
 
-In this section, you will test the initial installation of the PUA. 
+In this section, you will test the initial installation of the PUA deployment.
 
 Task - Accessing the BIG-IP via APM Webtop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Open a web browser and navigate to https://10.1.10.104
 
-#. A placeholder for a Warning and Banner should appear, click **"Click here to continue"**
+#. A Warning Banner page (customizable) should appear, click the **Click here to continue** link.
 
    |image10|
 
-#. Enter a random username and any password. Click **Logon**
-   
+#. You should now see a logon page. Enter a random username and any password. Then, click the **Logon** button.
+
    |image11|
 
-#. You should be directed to the webtop, click the **BIG-IP** icon.
+#. You should be directed to the webtop. Click the **BIG-IP** tile.
 
    |image12|
 
-#. You should be presented with a WebSSH@ screen, logging into the BIG-IP with the username provided in step 3.
+#. You should then see a WebSSH screen. Notice that you were logged into the BIG-IP with the username that you entered at the logon page.
 
    |image13|
 

@@ -1,14 +1,15 @@
-Lab - Creating an APM Policy - LDAP 
+Lab - Creating an APM Policy - LDAP
 ------------------------------------------------
 
-PUA requires a Directory Service to authenticate users. In this section you will build a LDAP macro to perform the authenction function.
+PUA requires a Directory Service to authenticate users. In this section you will build an LDAP macro to perform the authentication function.
 
-Task - Build a LDAP macro
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Task - Build an LDAP macro
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. note::
-   This lab makes use of APM macros to make policies easy to view and manage 
 
-The LDAP Macro will verify that the requesting user has a valid account and the appropiate group premisssion 
+   This lab makes use of APM macros to make policies easy to view and manage.
+
+The LDAP macro will verify that the requesting user has a valid account and the appropiate group premisssion.
 
 #. Click the **Add New Macro** button
 
@@ -18,31 +19,32 @@ The LDAP Macro will verify that the requesting user has a valid account and the 
 
    |image31|
 
-#. Open the newly created macro by clicking the plus sign by the name:**Macro: LDAP_Query**
+#. Open the newly created macro by clicking the plus sign by the name: **Macro: LDAP_Query**
 
-   |image32| 
+   |image32|
 
 #. Adding the LDAP Query action by clicking the plus sign
 
    |image33|
 
-#. Select **Authentication** accross the top, select **LDAP Query** in the man page, and click **Add Item**
+#. Select the **Authentication** tab, select the **LDAP Query** agent, and then click **Add Item**
 
    |image34|
 
-#. Update the Properties Tab by modifying the Server, SearchDN, SearchFilter, and Fetch Group setting 
+#. Update the **Properties** tab by modifying the **Server**, **SearchDN**, **SearchFilter**, and **Fetch Groups** settings
 
-   .. code-block:: vim 
+   .. code-block:: console
 
-      SearchDN      = DC=f5lab,DC=local
-      SearchFilter  = UserPrincipalName=%{session.custom.ephemeral.upn}
-  
- |image35|
+      Server = **/Common/prebuilt-f5lab.local**
+      SearchDN = **DC=f5lab,DC=local**
+      SearchFilter = **UserPrincipalName=%{session.custom.ephemeral.upn}**
+      Fetch groups to which the user or group belong = **Direct**
 
-#. Update the Branch Rules by clicking **Branch Rules** accross the top of the menu
+   |image35|
 
+#. Click on the **Branch Rules** tab to edit the Branch Rules
 
-#. Click the **X** button beside User Group Membership, this will delete the Branch
+#. Click the **X** button beside **User Group Membership**. This will delete the branch
 
    |image36|
 
@@ -50,66 +52,68 @@ The LDAP Macro will verify that the requesting user has a valid account and the 
 
    |image37|
 
-#. Add a name to the branch and click the change button
-    
+#. Enter **LDAP Query** in the **Name** field and click the **Change** link
+
    |image38|
 
-#. Click **Add Expression**
-       
+#. Click the **Add Expression** button
+
    |image39|
-       
-#. Change the setting to:
+
+#. Change the **Context** setting to **LDAP Query** and the **Condition** setting to **LDAP Query Passed**. Ensure that **LDAP Query has** is set to **Passed**
 
    |image130|
 
-#. Click **Add Expression**
+#. Click the **Add Expression** button
 
-   |image131|    
+   |image131|
 
 #. Click **Finish**, and then click **Save**
 
-#. Next add Message a box, to alert when the LDAP query fails, by clicking the plus on the fallback branch between LDAP_Query and OUT terminal
+#. Now add a **Message Box** agent to alert when the LDAP query fails. Click on the plus sign on the **fallback** branch (between the **LDAP Query** and the **OUT** terminal)
 
    |image132|
 
-#. Select **General Purpose** tab accross the top, and select **Message Box** in the main section
+#. Select the **General Purpose** tab and then select **Message Box** in the main section
 
    |image133|
 
-#. Click Add Item
+#. Click on the **Add Item** button
 
-#. Provide a Name for the message box and the Expression below to report the user who failed the LDAP Query
+#. Enter the following values for the message box agent
 
-   .. code-block:: console 
-      
-      Name:    LDAP Failure
-      Message: LDAP Failure for user %{UserPrincipalName}
+   .. code-block:: console
+
+      Name:    **LDAP Failure**
+      Message: **LDAP Failure for user %{UserPrincipalName}**
 
    |image134|
 
-#. Click Save
+#. Click on the **Save** button
 
-#. Edit the terminal to report Success and Failure. Click Edit terminal
-   
+#. Click on the **Edit Terminals** button to change the terminals to report Success and Failure
+
    |image136|
 
-#. Change the Name from out to Success, and click Add terminal
-   
+#. Change the Name from **out** to **Success**, and then click on the **Add Terminal** button
+
    |image137|
 
-#. Change the name from Terminal 1 to Failure, and click save
-   
+#. Change the name from **Terminal 1** to **Failure**, and then click on **Save**
+
    |image138|
 
-#. Click the terminal beside the LDAP Failure, and change the setting from Success to Failure
+#. Click the terminal for the **LDAP Failure** branch and change the setting from **Success** to **Failure**
 
    |image139|
 
+.. TODO::
+   Image needs to be updated (Message Box is incorrect)
 
 #. Click **Save**
 
-.. note:: The completed LDAP Macro
-   
+Here is the completed macro.
+
    |image135|
 
 
