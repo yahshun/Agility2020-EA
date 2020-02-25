@@ -8,7 +8,7 @@ To access your dedicated student lab environment, you will require a web browser
 
 1. Establish an RDP connection to your jumphost and login with the following credentials:
 
-- User: **user1**
+- User: **f5lab\\user1**
 - Password: **user1**
 
 2. Access the BIG-IP GUI https://10.1.1.4 (you can click on the BIG-IP1 bookmark from Chrome).
