@@ -9,7 +9,7 @@ Task - Create an HTTP Connector Transport
 
 #. Navigate to **Access >> Authentication >> HTTP Connector >> HTTP Connector Transport** and click the  **+** (plus symbol)
 
-|image54|
+   |image54|
 
 #. Enter Name **demo-http-connector**
 
@@ -19,14 +19,14 @@ Task - Create an HTTP Connector Transport
 
 #. Click **Save**
 
-|image55|
+   |image55|
 
 Task - Create a HTTP Connector Request
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Navigate to **Access >> Authentication >> HTTP Connector >> HTTP Connector Request** and click the  **+** (plus symbol)
 
-|image56|
+   |image56|
 
 #. Enter name **get-cert**
 #. Select **demo-http-connector** from the dropdown
@@ -35,7 +35,7 @@ Task - Create a HTTP Connector Request
 #. Select **Parse** for the **Response Action**
 #. Click **Save**
 
-|image57|
+   |image57|
 
 
 Task - Create a Per-Request Policy
@@ -43,108 +43,108 @@ Task - Create a Per-Request Policy
 
 #. Navigate to **Access >> Profiles/Policies >> Per-Request Policies** and click the  **+** (plus symbol)
 
-|image58|
+   |image58|
 
 #. Enter the name **certsso_prp**
 #. Select the Language **English**
 #. Click **Finished**
 
-|image59|
+   |image59|
 
 #. Click **edit** under **Per-Request Policy**
 
-|image60|
+   |image60|
 
 #. Click **Add New Subroutine**
 
-|image61|
+   |image61|
 
 #. Enter the name **Request Cert**
 #. Click **Save**
 
-|image62|
+   |image62|
 
 #. Expand the subroutine by click the **+** (plus symbol)
 
-|image63|
+   |image63|
 
 #. Click the **+** (plus symbol) on the fallback branch.
 
-|image64|
+   |image64|
 
 #. Click the **General Purpose** tab
 #. Select **HTTP Connector**
 #. Click **Add Item**
 
-|image65|
+   |image65|
 
 #. Select **get-cert** drop the dropdown
 
-|image66|
+   |image66|
 
 #. Click **Edit Terminals**
 
-|image67|
+   |image67|
 
 #. Click **Add Terminal**
 
-|image68|
+   |image68|
 
 #. Change the name for the default branch to **Fail**
 #. Change the default branch text to **Red**
 #. Enter the name **Success** for the new branch
 #. Change the color of the new branch to **Success**
 
-|image69|
+   |image69|
 
 #. Click the **Fail** terminal at the end of the **Successful** branch
 
-|image70|
+   |image70|
 
 #. Select the **Success** terminal
 #. Click **Save**
 
-|image71|
+   |image71|
 
 #. Click the **+** (plus symbol) on the **successful** branch
 
-|image72|
+   |image72|
 
 #. Click the **Assignment** tab
 #. Select **Variable Assign**
 #. Click **Add Item**
 
-|image73|
+   |image73|
 
 #. Click **Add new entry**
 #. Click **change**
 
-|image74|
+   |image74|
 
 #. Enter **session.ssl.cert.whole** for the **Custom Variable**
 #. Select **Session Variable** from the dropdown
 #. Enter **subsession.http_connector.body.certificate** for the **Session Variable**
 #. Click **Finished**
 
-|image75|
+   |image75|
 
 #. Click **Save**
 
-|image76|
+   |image76|
 
 #. Click the **+** (plus symbol) located between **Start** and **Allow** in the policy
 
-|image77|
+   |image77|
 
 #. Click the **Subroutines** tab
 #. Select the **Request Cert** subroutine
 #. Click **Add Item**
 
-|image78|
+   |image78|
 
 #. Click the **+** (plus symbol) on the success branch of **Request Cert**
 
-|image79|
+   |image79|
 
 #. Click the **General Purpose** tab
 #. Select **irule Event**
@@ -167,36 +167,39 @@ Task - Create a Per-Request Policy
 
 |image80|
 
-#. Enter **lab** for the **ID**
-#. Click **Save**
+43. Enter **lab** for the **ID**
+44. Click **Save**
 
 |image81|
 
 Task - Attach the PRP to the mTLS Virtual Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Navigate to **Local Traffic >> Virtual Servers**.  Click **Virtual Server List**
+1. Navigate to **Local Traffic >> Virtual Servers**.  Click **Virtual Server List**
 
 |image82|
 
-#. Click **mtls_vs**
+2. Click **mtls_vs**
 
 |image83|
 
-#. Navigate to the **Access Policy** section and select **certsso_prp** from the **Per-Request Policy** dropdown
-#. Click **Update**
+3. Navigate to the **Access Policy** section and select **certsso_prp** from the **Per-Request Policy** dropdown
+4. Click **Update**
 
 
 |image84|
 
 
 .. |image54| image:: /_static/module1/image054.png
+	:width: 800px
 .. |image55| image:: /_static/module1/image055.png
 .. |image56| image:: /_static/module1/image056.png
 .. |image57| image:: /_static/module1/image057.png
 .. |image58| image:: /_static/module1/image058.png
 .. |image59| image:: /_static/module1/image059.png
+	:width: 800px
 .. |image60| image:: /_static/module1/image060.png
+	:width: 1000px
 .. |image61| image:: /_static/module1/image061.png
 .. |image62| image:: /_static/module1/image062.png
 .. |image63| image:: /_static/module1/image063.png

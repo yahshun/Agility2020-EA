@@ -6,50 +6,54 @@ The first step in deploying CertSSO is creating the objects required for the use
 Task - Create an Active Directory AAA Object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. From the web browser, click on the **Access** tab located on the left side.
+#. From the web browser, click on the **Access** tab located on the left side.
 
-|image0|
+   |image0|
 
-2. Navigate to **Authentication >> Active Directory**, then click the **+** (plus symbol) to create a new AAA object
+#. Navigate to **Authentication >> Active Directory**, then click the **+** (plus symbol) to create a new AAA object
 
-|image1|
+   |image1|
 
-3. Enter the following information for the AD Authentication Object
+#. Enter the following information for the AD Authentication Object
 
-- Name: **ad_servers**
-- Domain Name: **f5lab.local**
-- Domain Controller Pool Name: **ad_pool**
-- Domain Controller IP address: **10.1.20.7**
-- Domain Controller Hostname: **dc.f5lab.local**
-- admin name: **admin**
-- admin Password: **admin**
+   - Name: **ad_servers**
+   - Domain Name: **f5lab.local**
+   - Domain Controller Pool Name: **ad_pool**
+   - Domain Controller IP address: **10.1.20.7**
+   - Domain Controller Hostname: **dc.f5lab.local**
+   - admin name: **admin**
+   - admin Password: **admin**
 
-|image2|
+   |image2|
 
-4. Click **Finished**
+#. Click **Finished**
 
 Task - Create a RADIUS AAA Object
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. From the web browser, click on the **Access** tab located on the lefthand side.
+#. From the web browser, click on the **Access** tab located on the lefthand side.
 
-2. Navigate to **Authentication >> RADIUS**, then click the **+** (plus symbol) to create a new AAA object
+#. Navigate to **Authentication >> RADIUS**, then click the **+** (plus symbol) to create a new AAA object
 
-|image3|
+   |image3|
 
-3. Enter the following information for the AD Authentication Object
+#. Enter the following information for the AD Authentication Object
 
-- Name: **radius_servers**
-- Server Pool Name: **radius_pool**
-- Server Addresses: **10.1.20.8**
-- Secret password: **secret**
+   - Name: **radius_servers**
+   - Server Pool Name: **radius_pool**
+   - Server Addresses: **10.1.20.8**
+   - Secret password: **secret**
 
-|image4|
+   |image4|
 
-4. Click **Finished**
+#. Click **Finished**
 
 .. |image0| image:: /_static/module1/image000.png
+	:width: 800px
 .. |image1| image:: /_static/module1/image001.png
 .. |image2| image:: /_static/module1/image002.png
+	:width: 800px
 .. |image3| image:: /_static/module1/image003.png
 .. |image4| image:: /_static/module1/image004.png
+	:width: 700px
+

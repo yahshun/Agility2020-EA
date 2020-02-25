@@ -32,7 +32,7 @@ Task - Update the SSL Profile
    - Change the Trusted Certificate from ca. pua.lab.cer to ca.f5lab.local.crt
    - Change the Advertised Certificate from ca. pua.lab.cer to ca.f5lab.local.crt
 
-      |image65|
+   |image65|
 
 #. Click Update
 
