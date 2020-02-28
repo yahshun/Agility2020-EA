@@ -76,7 +76,7 @@ The LDAP macro will verify that the requesting user has a valid account and the 
 
    |image133|
 
-#. Click on the **Add Item** button
+#. Click the **Add Item** button
 
 #. Enter the following values for the message box agent
 
@@ -87,9 +87,9 @@ The LDAP macro will verify that the requesting user has a valid account and the 
 
    |image134|
 
-#. Click on the **Save** button
+#. Click the **Save** button
 
-#. Click on the **Edit Terminals** button to change the terminals to report Success and Failure
+#. Click the **Edit Terminals** button to change the terminals to report Success and Failure
 
    |image136|
 
@@ -105,8 +105,7 @@ The LDAP macro will verify that the requesting user has a valid account and the 
 
    |image139|
 
-.. TODO::
-   Image needs to be updated (Message Box is incorrect)
+
 
 #. Click **Save**
 

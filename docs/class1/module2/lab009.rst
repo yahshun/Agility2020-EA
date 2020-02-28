@@ -42,9 +42,9 @@ Task - Adding Device to the PUA Webtop
 
    |image77|
 
-#. Click the **Webtop Links** tab and enable the **/Common/Host1** checkbox
+#. Click the **Webtop Links** tab and check the **/Common/Host1** box
 
-#. Click **Update** and then click **Save**
+#. Click **Update**, and then click **Save**
 
    |image78|
 

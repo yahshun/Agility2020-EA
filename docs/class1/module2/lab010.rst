@@ -14,16 +14,16 @@ Task - Modifying the Radius Server secret password
 
 #. Change the Radius Secret
 
-   - Highlight RADIUS_SECRET in the String Records window
-   - Click Edit
+   - Highlight **RADIUS_SECRET** in the **String Records** window
+   - Click **Edit**
 
    |image82|
 
-#. Change the Value from radius_secret to **secret**
+#. Change the value from **radius_secret** to **secret**
 
    |image83|
 
-#. Click ADD, and Click
+#. Click **ADD**, and then click **Update**
 
 .. TODO::
    Missing step

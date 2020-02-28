@@ -22,7 +22,7 @@ Task - Build CAC AUTH Macro
 
    |image42|
 
-#. Leave the Auth mode set to the default Request, and click save
+#. Leave the Auth mode set to the default Request, and click **Save**
 
    |image43|
 
@@ -30,15 +30,15 @@ Task - Build CAC AUTH Macro
 
    |image44|
 
-#. Click the tab **Macros** across the top, select the **GET UPN from CAC** button in the main page, and click Add Item
+#. Click the tab **Macros** across the top, select the **GET UPN from CAC** button in the main page, and click **Add Item**
 
    |image45|
 
-#. Click the plus sign on the found branch
+#. Click the plus sign on the Found branch
 
    |image46|
 
-#. Select **Macros** across the top, select the **LDAP_Query** button in the main page, and click Add Item
+#. Select **Macros** across the top, select the **LDAP_Query** button in the main page, and click **Add Item**
 
    |image47|
 
@@ -46,11 +46,11 @@ Task - Build CAC AUTH Macro
 
    |image48|
 
-#. Click the tabl **General Purpose** across the top, select **Message Box** in the main page, and click Add Item
+#. Click the tabl **General Purpose** across the top, select **Message Box** in the main page, and click **Add Item**
 
    |image49|
 
-#. Provide a name for the message box, enter message, and click save
+#. Provide a name for the message box, enter message, and click **Save**
 
    |image140|
 
@@ -62,7 +62,7 @@ Task - Build CAC AUTH Macro
 
    |image142|
 
-#. Change the default name to Failure
+#. Change the default name from Termainal 1 to Failure
 
    |image143|
 
@@ -70,7 +70,7 @@ Task - Build CAC AUTH Macro
 
    |image147|
 
-#. Click the terminals on the Not Found, Failure, Fallback branches and change them from Success to Failure. Remember to click Save!
+#. Click the terminals on the **Not Found**, **Failure**, and **Fallback branches** and change the terminals from Success to Failure. Remember to click **Save**!
 
    |image144|
 

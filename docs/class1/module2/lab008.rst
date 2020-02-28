@@ -15,26 +15,32 @@ Task - Update the SSL Profile
    |image61|
 
 
-#. Update the **Certificate Key Chain**
+#. During the following steps you will update the **Certificate Key Chain**
 
-   - Check the custom box beside Certificate Key Chain
-   - Highlight the default key chain and click delete
+   - Check the custom box beside **Certificate Key Chain**
+      |image67|
+
+   - Select the default **Key Chain**, and click **Delete**
       |image62|
-   - Click ADD
+
+   - Click **Add**
       |image63|
+
    - Change the Certificate to **acme.com-wildcard.crt**
+
    - Change the Key to **acme.com-wildcard.key**
-   - Click ADD
+
+   - Click **Add**
       |image64|
 
-#. Update the Certificate Authorities
+#. Update the **Certificate Autentication** section
 
-   - Change the Trusted Certificate from ca. pua.lab.cer to ca.f5lab.local.crt
-   - Change the Advertised Certificate from ca. pua.lab.cer to ca.f5lab.local.crt
+   - Change the **Trusted Certificate** from **ca.pua.lab.cer** to **ca.f5lab.local.crt**
+   - Change the **Advertised Certificate** from **ca.pua.lab.cer** to **ca.f5lab.local.crt**
 
    |image65|
 
-#. Click Update
+#. Click **Update** 
 
    |image66|
 
@@ -47,3 +53,4 @@ Task - Update the SSL Profile
 .. |image64| image:: /_static/module2/image064.png
 .. |image65| image:: /_static/module2/image065.png
 .. |image66| image:: /_static/module2/image066.png
+.. |image67| image:: /_static/module2/image067.png
