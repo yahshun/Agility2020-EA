@@ -12,21 +12,16 @@ Task - Modifying the Radius Server secret password
 
    |image81|
 
-#. Change the Radius Secret
+#. Change the **Radius Secret**
 
    - Highlight **RADIUS_SECRET** in the **String Records** window
    - Click **Edit**
 
    |image82|
 
-#. Change the value from **radius_secret** to **secret**
+#. Change the value from **radius_secret** to **secret**, click **ADD**, and then click **Update**
 
    |image83|
-
-#. Click **ADD**, and then click **Update**
-
-.. TODO::
-   Missing step
 
 
 Task - Modifying the BIG-IP radius secret
