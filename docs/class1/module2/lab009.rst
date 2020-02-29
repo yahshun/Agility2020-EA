@@ -42,11 +42,13 @@ Task - Adding Device to the PUA Webtop
 
    |image77|
 
-#. Click the **Webtop Links** tab and check the **/Common/Host1** box
-
-#. Click **Update**, and then click **Save**
+#. Click the **Webtop Links** tab, check the **/Common/Host1** box, and click **Update**
 
    |image78|
+
+#. Click **Save**
+
+   |image170|
 
 #. Click **Apply Access Policy**
 
@@ -63,3 +65,4 @@ Task - Adding Device to the PUA Webtop
 .. |image77| image:: /_static/module2/image077.png
 .. |image78| image:: /_static/module2/image078.png
 .. |image79| image:: /_static/module2/image079.png
+.. |image170| image:: /_static/module2/image170.png

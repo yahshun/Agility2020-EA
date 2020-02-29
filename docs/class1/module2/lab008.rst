@@ -6,7 +6,7 @@ In this section, you will modify the SSL profile to present an internally signed
 Task - Update the SSL Profile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Click Local Traffic >> Profiles >> SSL >> Client
+#. Click **Local Traffic** >> **Profiles** >> **SSL** >> **Client**
 
    |image60|
 
@@ -18,19 +18,23 @@ Task - Update the SSL Profile
 #. During the following steps you will update the **Certificate Key Chain**
 
    - Check the custom box beside **Certificate Key Chain**
+
       |image67|
 
    - Select the default **Key Chain**, and click **Delete**
+
       |image62|
 
    - Click **Add**
+
       |image63|
 
-   - Change the Certificate to **acme.com-wildcard.crt**
+   - Change the **Certificate** to **acme.com-wildcard.crt**
 
-   - Change the Key to **acme.com-wildcard.key**
+   - Change the **Key** to **acme.com-wildcard.key**
 
    - Click **Add**
+
       |image64|
 
 #. Update the **Certificate Autentication** section

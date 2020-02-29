@@ -9,13 +9,13 @@ Task - Build an LDAP macro
 
    This lab makes use of APM macros to make policies easy to view and manage.
 
-The LDAP macro will verify that the requesting user has a valid account and the appropiate group premisssion.
+The LDAP macro will verify that the requesting user has a valid account and the appropriate group premisssion.
 
 #. Click the **Add New Macro** button
 
    |image30|
 
-#. Give the macro a name and click save
+#. Give the macro a **name** and click **Save**
 
    |image31|
 
@@ -23,11 +23,11 @@ The LDAP macro will verify that the requesting user has a valid account and the 
 
    |image32|
 
-#. Adding the LDAP Query action by clicking the plus sign
+#. Adding the **LDAP Query** action by clicking the plus sign
 
    |image33|
 
-#. Select the **Authentication** tab, select the **LDAP Query** agent, and then click **Add Item**
+#. Select the **Authentication** tab,  select the **LDAP Query** agent, and then click **Add Item**
 
    |image34|
 
@@ -58,42 +58,38 @@ The LDAP macro will verify that the requesting user has a valid account and the 
 
    |image39|
 
-#. Change the **Context** setting to **LDAP Query** and the **Condition** setting to **LDAP Query Passed**. Ensure that **LDAP Query has** is set to **Passed**
+#. Change the **Context** setting to **LDAP Query** and the **Condition** setting to **LDAP Query Passed**. Ensure that **LDAP Query has** is set to **Passed**. Then click **Add Expression**
 
    |image130|
 
-#. Click the **Add Expression** button
+#. Click **Finish**, and then click **Save**
 
    |image131|
 
-#. Click **Finish**, and then click **Save**
 
-#. Now add a **Message Box** agent to alert when the LDAP query fails. Click on the plus sign on the **fallback** branch (between the **LDAP Query** and the **OUT** terminal)
+#. Now add a **Message Box** agent to alert when the LDAP query fails. Click on the plus sign on the **fallback** branch (between the **LDAP Query** and the **Out** terminal)
 
    |image132|
 
-#. Select the **General Purpose** tab and then select **Message Box** in the main section
+#. Select the **General Purpose** tab, then select **Message Box** in the main section, and click the **Add Item** button
 
    |image133|
 
-#. Click the **Add Item** button
-
-#. Enter the following values for the message box agent
+#. Enter the following values for the message box agent, and click the **Save** button 
 
    .. code-block:: console
 
-      Name:    **LDAP Failure**
-      Message: **LDAP Failure for user %{UserPrincipalName}**
+      Name: LDAP Failure
+      Message: LDAP Failure for user %{UserPrincipalName}
 
    |image134|
 
-#. Click the **Save** button
 
 #. Click the **Edit Terminals** button to change the terminals to report Success and Failure
 
    |image136|
 
-#. Change the Name from **out** to **Success**, and then click on the **Add Terminal** button
+#. Change the Name from **Out** to **Success**, and then click the **Add Terminal** button
 
    |image137|
 
@@ -101,15 +97,17 @@ The LDAP macro will verify that the requesting user has a valid account and the 
 
    |image138|
 
-#. Click the terminal for the **LDAP Failure** branch and change the setting from **Success** to **Failure**
+#. Click the **Success** terminal beside the **LDAP Failure** action branch 
 
    |image139|
 
 
 
-#. Click **Save**
+#. Change the setting from **Success** to **Failure**, and click **Save**
 
-Here is the completed macro.
+   |image230|
+
+.. note:: Here is the completed macro.
 
    |image135|
 
@@ -134,3 +132,4 @@ Here is the completed macro.
 .. |image137| image:: /_static/module2/image137.png
 .. |image138| image:: /_static/module2/image138.png
 .. |image139| image:: /_static/module2/image139.png
+.. |image230| image:: /_static/module2/image230.png
