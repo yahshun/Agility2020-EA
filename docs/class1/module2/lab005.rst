@@ -9,7 +9,7 @@ Task - Build an LDAP macro
 
    This lab makes use of APM macros to make policies easy to view and manage.
 
-The LDAP macro will verify that the requesting user has a valid account and the appropriate group premisssion.
+The LDAP macro will verify that the requesting user has a valid account and the appropriate group permission.
 
 #. Click the **Add New Macro** button
 
@@ -23,7 +23,7 @@ The LDAP macro will verify that the requesting user has a valid account and the 
 
    |image32|
 
-#. Adding the **LDAP Query** action by clicking the plus sign
+#. Modify the macro by clicking the plus sign
 
    |image33|
 
@@ -40,9 +40,7 @@ The LDAP macro will verify that the requesting user has a valid account and the 
 
    |image35|
 
-#. Click on the **Branch Rules** tab to edit the Branch Rules
-
-#. Click the **X** button beside **User Group Membership**. This will delete the branch
+#. Click on the **Branch Rules** tab. Next, delete the branch rule by clicking **X** button beside **User Group Membership** 
 
    |image36|
 
@@ -50,7 +48,7 @@ The LDAP macro will verify that the requesting user has a valid account and the 
 
    |image37|
 
-#. Enter **LDAP Query** in the **Name** field and click the **Change** link
+#. Enter **LDAP Passed** in the **Name** field and click the **Change** link
 
    |image38|
 
@@ -75,7 +73,7 @@ The LDAP macro will verify that the requesting user has a valid account and the 
 
    |image133|
 
-#. Enter the following values for the message box agent, and click the **Save** button 
+#. Enter the following values for the message box agent, then click  **Save**  
 
    .. code-block:: console
 

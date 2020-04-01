@@ -30,7 +30,7 @@ Task - Adding Device to the PUA Webtop
 
    |image74|
 
-#. Click the plus sign beside the **Macro: Admin Access**
+#. Click the plus sign beside **Macro: Admin Access**
 
    |image75|
 

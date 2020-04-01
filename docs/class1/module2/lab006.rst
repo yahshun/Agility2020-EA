@@ -14,7 +14,7 @@ Task - Build CAC AUTH Macro
 
    |image40|
 
-#. Open the newly created macro by clicking the plus sign by the name **CAC Auth**
+#. Open the newly created macro by clicking the plus sign by the name **CAC Auth**. Next, click the plus sign between **In** and **Out**
 
    |image41|
 
@@ -26,7 +26,7 @@ Task - Build CAC AUTH Macro
 
    |image43|
 
-#. Click the plus sign beside the Successful branch
+#. Click the plus sign on the **Successful** branch
 
    |image44|
 
@@ -34,7 +34,7 @@ Task - Build CAC AUTH Macro
 
    |image45|
 
-#. Click the plus sign on the Found branch
+#. Click the plus sign on the **Found** branch
 
    |image46|
 
@@ -62,7 +62,7 @@ Task - Build CAC AUTH Macro
 
    |image142|
 
-#. Change the default **Name** from **Termainal 1** to **Failure**
+#. Change the default **Name** from **Termainal 2** to **Failure**
 
    |image143|
 
@@ -71,7 +71,7 @@ Task - Build CAC AUTH Macro
 
    |image147|
 
-#. Click the terminals on the **Not Found**, **Failure**, and **Fallback branches** and change the terminals from Success to Failure. Remember to click **Save**!
+#. Click the terminals on the **Not Found**, **Failure**, and **Fallback** and change the terminals from Success to Failure. Remember to click **Save**!
 
    |image144|
 
